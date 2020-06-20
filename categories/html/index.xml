@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/categories/html/</link>
+    <description>Recent content in HTML on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:23:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML学习2</title>
+      <link>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A02/</link>
+      <pubDate>Sun, 21 Jun 2020 01:23:02 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A02/</guid>
+      <description>##HTML常用标签 学习标签的时候，最重要的是记住标签的含义，即这个标签是用来干什么的！合理的添加标签，可以让网页界面更清晰易读！ 标题标签 H</description>
+    </item>
+    
+    <item>
+      <title>HTML学习1</title>
+      <link>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:20:26 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A01/</guid>
+      <description>###Web构成： 主要包括结构（structure）、表现（presentation）和行为（behavior）三个方面。 标准 说明 结构 结构用</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ProGit学习3 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="配置用户信息 安装完Git之后，要做的第一件事情就是设置你的用户名和邮件地址。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A03/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="ProGit学习3" />
+<meta property="og:description" content="配置用户信息 安装完Git之后，要做的第一件事情就是设置你的用户名和邮件地址。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A03/" />
+<meta property="article:published_time" content="2020-06-21T01:18:20+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:18:20+08:00" />
+<meta itemprop="name" content="ProGit学习3">
+<meta itemprop="description" content="配置用户信息 安装完Git之后，要做的第一件事情就是设置你的用户名和邮件地址。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你">
+<meta itemprop="datePublished" content="2020-06-21T01:18:20&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:18:20&#43;08:00" />
+<meta itemprop="wordCount" content="1862">
+
+
+
+<meta itemprop="keywords" content="proGit," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ProGit学习3"/>
+<meta name="twitter:description" content="配置用户信息 安装完Git之后，要做的第一件事情就是设置你的用户名和邮件地址。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">ProGit学习3</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> Git </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#配置用户信息">配置用户信息</a></li>
+      </ul>
+    </li>
+    <li><a href="#git基础">Git基础</a>
+      <ul>
+        <li><a href="#获取git仓库">获取Git仓库</a></li>
+        <li><a href="#记录每次更新到仓库">记录每次更新到仓库</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="配置用户信息">配置用户信息</h3>
+<p>安装完Git之后，要做的第一件事情就是设置你的<strong>用户名</strong>和<strong>邮件地址</strong>。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你的每一次提交中，不可更改：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ git config --global user.name &#34;John Doe&#34;
+$ git config --global user.email johndoe@example.com   
+</code></pre></td></tr></table>
+</div>
+</div><p>再次强调，如果使用了 <strong>&ndash;global</strong> 选项，那么该命令只需要运行一次，因为之后无论你在该系统上做任何事情， Git 都会使用那些信息。 当你想针对特定项目使用不同的用户名称与邮件地址时，可以在那个项目目录下运 行没有 &ndash;global 选项的命令来配置。</p>
+<h2 id="git基础">Git基础</h2>
+<h3 id="获取git仓库">获取Git仓库</h3>
+<p>通常有两种方式：</p>
+<ol>
+<li>
+<p>将尚未进行版本控制的本地目录转换为 Git 仓库，使用命令 <strong>git init</strong>。该命令将创建一个名为 <strong>.git</strong> 的子目录，这个子目录含有你初始化的 Git 仓库中所有的必须文件，这些文件是 Git 仓库的骨干。 但是，在这个时候，我们仅仅是做了一个初始化的操作，你的项目里的文件还没有被跟踪。</p>
+</li>
+<li>
+<p>从其它服务器 <strong>克隆</strong> 一个已存在的 Git 仓库。克隆仓库的命令是 <strong>git clone  <!-- raw HTML omitted --></strong> 。比如，要克隆 Git 的链接库 libgit2，可以用下面的命令: <em>$ git clone <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a></em>.这会在当前目录下创建一个名为 “libgit2” 的目录，并在这个目录下初始化一个 .git 文件夹， 从远程仓库拉 取下所有数据放入 .git 文件夹，然后从中读取最新版本的文件的拷贝。 如果你进入到这个新建的 libgit2 文 件夹，你会发现所有的项目文件已经在里面了，准备就绪等待后续的开发和使用。</p>
+<p>如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以通过额外的参数指定新的目录名: <em>$ git clone <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a> mylibgit</em>. 这会执行与上一条命令相同的操作，但目标目录名变为了 <strong>mylibgit</strong>。</p>
+</li>
+</ol>
+<h3 id="记录每次更新到仓库">记录每次更新到仓库</h3>
+<p>对于Git仓库中的文件都不外乎两种状态：<strong>已跟踪</strong> 或 <strong>未跟踪</strong>。</p>
+<ul>
+<li>
+<p>$\color{red}{已跟踪文件}$：指那些被纳入版本控制的文件，<strong>在上一次快照中有它们的记录</strong>，在工作一段时候后，它们的状态可能是<strong>未修改</strong>、<strong>已修改</strong> 或 <strong>已放入暂存区</strong>。简而言之，就是Git已经知道的文件。</p>
+<p>初次克隆某个仓库的时候，工作目录中的所有文件都属于已跟踪文件，并处于未修改状态，因为 Git 刚刚检出了它们， 而你尚未编辑过它们</p>
+</li>
+<li>
+<p>$\color{red}{未跟踪文件}$：除了已跟踪外的所有文件。它们既不存在快照中，也没有被放入暂存区。比如：刚刚提交一次新的快照后新建的文件。</p>
+</li>
+</ul>
+<p><img src="/git_file.png" alt=""></p>
+<p>Figure1: 文件的状态变化周期</p>
+<p><strong>检查当前文件状态：git status</strong>。</p>
+<p><strong>跟踪新文件：git add xxfile</strong>。即给新文件一个快照。<strong>git add命令是精确地将文件状态添加到下一次提交中</strong>，也就是说在你提交以前，只要是对文件有新的操作，都应该再此执行此命令，才能保证把最新的修改提交上去。</p>
+<p><strong>查看已暂存和未暂存的修改：git diff</strong>。此命令比较的是工作目录中当前文件和暂存区域快照之间的差异。 也就是修改之后还没有暂存起来的变化内容。若要查看已暂存的将要添加到下次提交里的内容，可以用 **git diff &ndash;staged **命令。 这条命令将比对已暂存 文件与最后一次提交的文件差异。</p>
+<p><strong>提交更新：git commit</strong>。另外，你也可以在 commit 命令后添加 -m 选项，将提交信息与命令放在同一行，如下所示:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> $ git commit -m &#34;Story 182: Fix benchmarks for speed&#34;
+  [master 463dc4f] Story 182: Fix benchmarks for speed
+   2 files changed, 2 insertions(+)
+   create mode 100644 README
+</code></pre></td></tr></table>
+</div>
+</div><p>好，现在你已经创建了第一个提交! 可以看到，提交后它会告诉你，当前是在哪个分支(master)提交的，本 次提交的完整 SHA-1 校验和是什么(463dc4f)，以及在本次提交中，有多少文件修订过，多少行添加和删改过。</p>
+<p><strong>跳过使用暂存区：git commit -a</strong>。只要在提交的时候，给 git commit 加上 -a 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过git add步骤。省去了，对暂存文件修改后，每次运行<strong>git add</strong>。</p>
+<p><strong>移除文件：git rm file</strong>。要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除(确切地说，是从暂存区域移除)，然后提交。 可以用git rm命令完成此项工作，并连带从工作目录中删除指定的文件，这样以后就不会出现在未跟踪文件清单中了。如果要删除之前修改过或已经放到暂存区的文件，则必须使用 强制删除选项 -f(译注:即 force 的首字母)。</p>
+<p><strong>改名文件：git mv file_from file_to</strong>。其实，运行git mv就相当于运行了下面三条命令:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> $ mv README.md README
+ $ git rm README.md
+ $ git add README
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>查看提交历史：git log</strong></p>
+<p><strong>取消暂存的文件：git reset HEAD <!-- raw HTML omitted -->&hellip; 来取消暂存</strong>。</p>
+<p><strong>取消对文件的修改：git checkout &ndash; <!-- raw HTML omitted --></strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working
+  directory
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>查看远程仓库：git remote</strong>。你也可以指定选项 -v，会显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL。</p>
+<p><strong>添加远程仓库：git remote add <!-- raw HTML omitted --> <!-- raw HTML omitted --> 添加一个新的远程 Git 仓库</strong>。</p>
+<p><strong>从远程仓库中抓取与拉取：git fetch <!-- raw HTML omitted -->，git clone, git pull</strong>。</p>
+<p><strong>推送到远程仓库：git push <!-- raw HTML omitted --> <!-- raw HTML omitted --></strong>。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/progit/">proGit</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/html%E5%AD%A6%E4%B9%A01/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">HTML学习1</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/progit%E5%AD%A6%E4%B9%A02/">
+            <span class="next-text nav-default">ProGit学习2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/progit%E5%AD%A6%E4%B9%A03/" class="leancloud_visitors" data-flag-title="ProGit学习3">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

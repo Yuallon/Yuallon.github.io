@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/series/</link>
+    <description>Recent content in Series on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:08:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pandas学习 Series_2</title>
+      <link>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_2/</link>
+      <pubDate>Sun, 21 Jun 2020 01:08:16 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_2/</guid>
+      <description>上一篇文章讲述了pandas.Series()函数，主要讲述函数的input和output的数据类型。既然在默认输出情况下，output的类</description>
+    </item>
+    
+    <item>
+      <title>Pandas学习 Series_1</title>
+      <link>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_1/</link>
+      <pubDate>Sun, 21 Jun 2020 01:02:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_1/</guid>
+      <description>###Intro to pandas 在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &amp;hellip;)。Pandas的出现正是为了专门处理这些类型数据</description>
+    </item>
+    
+  </channel>
+</rss>

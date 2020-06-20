@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web协议入门 on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/web%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in Web协议入门 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:24:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/web%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>互联网协议</title>
+      <link>https://yuallon.github.io/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Sun, 21 Jun 2020 01:24:55 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/</guid>
+      <description>前言： 这篇文章是学习 阮一峰 老师 互联网协议入门 相关文章的笔记。 概述 互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依</description>
+    </item>
+    
+  </channel>
+</rss>

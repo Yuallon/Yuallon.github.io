@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Requestes库 on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/requestes%E5%BA%93/</link>
+    <description>Recent content in Requestes库 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:29:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/requestes%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Requestes库</title>
+      <link>https://yuallon.github.io/post/requestes%E5%BA%93/</link>
+      <pubDate>Sun, 21 Jun 2020 01:29:34 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/requestes%E5%BA%93/</guid>
+      <description>Requestes库 Requestes库官方网站 安装方式：pip install requests（在终端） Requestes库的7个主要方法： 方法 说明 requestes.request() 构</description>
+    </item>
+    
+  </channel>
+</rss>

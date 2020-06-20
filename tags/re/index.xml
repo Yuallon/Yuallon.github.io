@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>re on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/re/</link>
+    <description>Recent content in re on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:47:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/re/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RE库学习</title>
+      <link>https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:47:00 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/</guid>
+      <description>前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。</description>
+    </item>
+    
+  </channel>
+</rss>

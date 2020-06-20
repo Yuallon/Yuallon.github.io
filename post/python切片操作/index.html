@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python切片操作 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="字符串（string） 在python中，我们可以通过在单引号（single quotes &amp;lsquo;&amp;hellip;&#39;）或 双引号（double quotes &amp;ld" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python切片操作" />
+<meta property="og:description" content="字符串（string） 在python中，我们可以通过在单引号（single quotes &lsquo;&hellip;&#39;）或 双引号（double quotes &ld" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" />
+<meta property="article:published_time" content="2020-06-21T01:48:32+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:48:32+08:00" />
+<meta itemprop="name" content="Python切片操作">
+<meta itemprop="description" content="字符串（string） 在python中，我们可以通过在单引号（single quotes &lsquo;&hellip;&#39;）或 双引号（double quotes &ld">
+<meta itemprop="datePublished" content="2020-06-21T01:48:32&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:48:32&#43;08:00" />
+<meta itemprop="wordCount" content="2017">
+
+
+
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python切片操作"/>
+<meta name="twitter:description" content="字符串（string） 在python中，我们可以通过在单引号（single quotes &lsquo;&hellip;&#39;）或 双引号（double quotes &ld"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python切片操作</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#字符串string">字符串（string）</a></li>
+        <li><a href="#第4次作业情况">第4次作业情况</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="字符串string">字符串（string）</h3>
+<p>在python中，我们可以通过在单引号（single quotes &lsquo;&hellip;'）或 双引号（double quotes &ldquo;&hellip;&quot;）来定义一个字符串。在字符串中，如果想保留单引号或者双引号，可以使用转义符 <strong>\</strong>（backslash）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str1 = &#39;abcd&#39;
+str2 = &#34;nihao&#34;
+str3 = &#39;It\&#39;s ok!&#39;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="字符串索引string-index">字符串索引（string index）</h4>
+<p><img src="/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B4%A2%E5%BC%95.jpg" alt="字符串索引"></p>
+<p>Figure1：字符串索引</p>
+<ul>
+<li>从最左端开始，字符串索引是从0开始，往右依次递增。</li>
+<li>如果从最右端开始，字符串索引是从 <strong>-1</strong> 开始，往左依次递减。（因为在python中，-0与0是等价的，所以从-1开始）</li>
+</ul>
+<p><strong>切片操作（slice operation）</strong></p>
+<p><strong>格式：string[start:end]</strong></p>
+<p>在字符串后面加上中括号（bracket）并给出起始位置，就可以获取字符串string对应下标范围内的子字符串。<strong>注意：[start : end]给出的是一个左闭右开区间</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str1 = &#39;abcde&#39;
+str1[1:3]
+#output
+&#39;bc&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>当我们对字符串切片操作时，默认的步长是1。如果想修改默认步长，可以这样 <strong>string[start : end: steps]</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str2 = &#39;abcdefg&#39;
+str2[0:5:2]
+#output
+&#39;ace&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>同样，我们也可以使用index值为负数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str3 = &#39;aabbccdd&#39;
+str3[-4:-2]
+#output
+&#39;cc&#39;
+##反向步长
+str3[-2:-6:-2]
+#output
+&#39;dc&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>关于string[start : end: steps]，有点绕的解释：（能理解就行，不理解不强求）</strong></p>
+<ol>
+<li>step值的的正负，表示我们是从那个端点开始计数，正数：最左端；负数：最右端</li>
+<li>step值的大小，表示我们的步长是多少</li>
+<li>如果采用step为正数值，则 start值&gt;end值。否则，返回空值。</li>
+<li>如果采用step为负数值，则 start值&lt;end值。否则，返回空值。</li>
+<li>关于3，4的解释：离起始端点远的index值，的绝对值一定大于，离起始端点近的index值。</li>
+<li>如果，start值或end值超出字符串本身长度，返回空值。</li>
+</ol>
+<h4 id="与字符串一些相关的函数">与字符串一些相关的函数</h4>
+<ul>
+<li>
+<p>str.find(sub, start, end)：返回子字符串 <strong>sub</strong> 在字符串切片 <strong>str[start : end]</strong> 中最小的index值，如果没有找到，返回 <strong>-1</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str4 = &#39;nihaonihao&#39;
+str4.find(&#39;ao&#39;)
+3
+</code></pre></td></tr></table>
+</div>
+</div><p>注：find函数用于你想知道子字符串在字符串中的确切位置。如果是为了检查字符串中是否含有子字符串，可以使用 in 操作符。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#39;py&#39; in &#39;python&#39;
+True
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>str.index(sub, start, end)：与find函数类似，唯一的区别是：找不到会报错（raise ValueError）。</p>
+</li>
+<li>
+<p>str.replace(old, new, counts)：在字符串中用new的字符串替换掉old字符串，counts表示替换的次数</p>
+</li>
+<li>
+<p>str.count(sub, start, end)：计算子字符串在字符串切片中出现的次数（未重合的部分。）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str5 = &#39;nihaoaaabbb&#39;
+str5.count(&#39;a&#39;)
+4
+str5.count(&#39;a&#39;, 4, 7)
+2
+str5.count(&#39;aa&#39;)
+1
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>str.split(sep=None, maxsplit=-1)：以sep参数方式方式对字符串进行分隔，默认不分隔。maxsplit后面跟的数值表示分隔的次数。默认是全部分隔。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">str6 = &#39;1,2,3&#39;
+str6.split(&#39;,&#39;)
+[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+str6.split(&#39;,&#39;,maxsplit=1)
+[&#39;1&#39;, &#39;2,3&#39;]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>其他对字符串的操作详见：<a href="https://docs.python.org/3/library/stdtypes.html#string-methods">String Methods</a></p>
+</li>
+</ul>
+<p>###列表（list）</p>
+<p>列表是python中最常用的数据类型，直接在方括号（square brackets []）中添加元素即可。添加的元素类型可以是任何一种python允许的类型。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [1, 7.7, &#39;Hello World&#39;, Ture, [6,6,6]]
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>list.append()：在列表的末尾，添加新的对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [1, 7.7, &#39;Hello World&#39;, True, [6,6,6]]
+list1.append(&#34;中国你好！&#34;)
+list1
+[1, 7.7, &#39;Hello World&#39;, True, [6, 6, 6], &#39;中国你好！&#39;]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>list.extend()：并合两个list数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [1, 7.7, &#39;Hello World&#39;, True, [6,6,6]]
+list2 = [0, &#39;aa&#39;]
+list1.extend(list2)
+list1
+[1, 7.7, &#39;Hello World&#39;, True, [6, 6, 6], 0, &#39;aa&#39;]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>list.index()：根据索引值，添加对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [1, 7.7, &#39;Hello World&#39;, True, [6,6,6]]
+list1.insert(0, &#39;aa&#39;)
+list1
+[&#39;aa&#39;, 1, 7.7, &#39;Hello World&#39;, True, [6, 6, 6]]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>list.remove()：移除列表中某个值的第一个匹配项</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [1, 7.7, &#39;Hello World&#39;, True, [6,6,6]]
+list1.remove(7.7)
+list1
+[1, &#39;Hello World&#39;, True, [6, 6, 6]]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>list.pop()：移除列表中的一个元素（默认最后一个），并且返回该元素的值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [1, 7.7, &#39;Hello World&#39;, True, [6,6,6]]
+list1.pop()
+[6, 6, 6]
+list1
+[1, 7.7, &#39;Hello World&#39;, True]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>list.reverse()：用于反向列表中的元素</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">list1 = [&#39;physics&#39;, &#39;Biology&#39;, &#39;chemistry&#39;, &#39;maths&#39;]
+list1.reverse()
+print (&#34;list now : &#34;, list1)
+list now :  [&#39;maths&#39;, &#39;chemistry&#39;, &#39;Biology&#39;, &#39;physics&#39;]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>list.sort(cmp=None, key=None, reverse=False)：用于对列表中的元素进行排序。</p>
+<ul>
+<li>
+<p>cpm：可选参数，按照指定的参数方法进行排序</p>
+</li>
+<li>
+<p>key：主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。</p>
+</li>
+<li>
+<p>reverse：排序规则，<strong>reverse = True</strong> 降序， <strong>reverse = False</strong> 升序（默认）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">a = [3,1,6,8,4,9]
+a.sort(reverse=True)
+print(a)
+[9, 8, 6, 4, 3, 1]
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h3 id="第4次作业情况">第4次作业情况</h3>
+<ol>
+<li>str.strip()函数可以去除首尾的空白</li>
+<li>str.lower()函数可以把字符串中有大写字母的单词，都变成小写字母</li>
+<li>str.title()函数可以把字符串中的每个单词首字母大写</li>
+<li>str.startswith(&lsquo;s&rsquo;)函数判断某个字符串是否以s字母开始</li>
+<li>str.endswith(&lsquo;e&rsquo;)函数判断字符串是否以e字母结尾</li>
+<li>对于作业第五题，我自己想的有些复杂化，一直纠结于字符串是不能更改的数据类型，想每次操作后都赋值一个新名字，其实每次依旧采取，words名字就行，只是虽然名字一样，但是物理地址不一样。</li>
+</ol>
+<p>###Reference</p>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/introduction.html#strings">An Informal Introduction to Python</a></li>
+<li><a href="https://www.w3schools.com/python/ref_string_find.asp">w3schools.com</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/css%E5%AD%A6%E4%B9%A01/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">CSS学习1</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/">
+            <span class="next-text nav-default">RE库学习</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/" class="leancloud_visitors" data-flag-title="Python切片操作">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

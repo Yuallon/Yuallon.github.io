@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/categories/git/</link>
+    <description>Recent content in Git on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:18:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ProGit学习3</title>
+      <link>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A03/</link>
+      <pubDate>Sun, 21 Jun 2020 01:18:20 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A03/</guid>
+      <description>配置用户信息 安装完Git之后，要做的第一件事情就是设置你的用户名和邮件地址。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你</description>
+    </item>
+    
+    <item>
+      <title>ProGit学习2</title>
+      <link>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A02/</link>
+      <pubDate>Sun, 21 Jun 2020 01:16:18 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A02/</guid>
+      <description>Git是什么？ Git与其他版本控制系统的主要差别在于Git对待数据的方法。CVS，Subversion，Perforce，Bazaar等系统</description>
+    </item>
+    
+    <item>
+      <title>ProGit学习1</title>
+      <link>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:14:31 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A01/</guid>
+      <description>什么是版本控制(version control)? **版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。 在平时的日常生活中</description>
+    </item>
+    
+    <item>
+      <title>Git学习1</title>
+      <link>https://yuallon.github.io/post/git%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:11:21 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/git%E5%AD%A6%E4%B9%A01/</guid>
+      <description>###前言： 虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的Gi</description>
+    </item>
+    
+  </channel>
+</rss>

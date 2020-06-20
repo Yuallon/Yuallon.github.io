@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python变量 on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/python%E5%8F%98%E9%87%8F/</link>
+    <description>Recent content in python变量 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:40:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/python%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python变量</title>
+      <link>https://yuallon.github.io/post/python%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Sun, 21 Jun 2020 01:40:44 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%8F%98%E9%87%8F/</guid>
+      <description>###注释 养成写注释的习惯，是良好的编程风格的开始！ 单行注释： # 符号 多行注释：3对单引号，或者3对双引号。 1 2 3 &amp;#39;&amp;#39;&amp;#39; 我是注释行 &amp;#39;&amp;#39;&amp;#39; python中</description>
+    </item>
+    
+  </channel>
+</rss>

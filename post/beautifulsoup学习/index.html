@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>BeautifulSoup学习 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="前言 理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。 当我们用Request库获取HTML的页面信息时，获取的信息其" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/beautifulsoup%E5%AD%A6%E4%B9%A0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="BeautifulSoup学习" />
+<meta property="og:description" content="前言 理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。 当我们用Request库获取HTML的页面信息时，获取的信息其" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/beautifulsoup%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-06-21T01:33:38+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:33:38+08:00" />
+<meta itemprop="name" content="BeautifulSoup学习">
+<meta itemprop="description" content="前言 理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。 当我们用Request库获取HTML的页面信息时，获取的信息其">
+<meta itemprop="datePublished" content="2020-06-21T01:33:38&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:33:38&#43;08:00" />
+<meta itemprop="wordCount" content="1160">
+
+
+
+<meta itemprop="keywords" content="BeautifulSoup," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BeautifulSoup学习"/>
+<meta name="twitter:description" content="前言 理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。 当我们用Request库获取HTML的页面信息时，获取的信息其"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">BeautifulSoup学习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%88%AC%E8%99%AB/"> 爬虫 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#beautifulsoup类的基本元素">BeautifulSoup类的基本元素</a></li>
+        <li><a href="#基于bs4库的html内容遍历方法">基于BS4库的HTML内容遍历方法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="前言">前言</h3>
+<p>理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。</p>
+<p>当我们用Request库获取HTML的页面信息时，获取的信息其实是HTML源代码，不方便我们提取一些感兴趣的信息。而BeautifulSoup库的功能就是对HTML页面源代码进行树状分析：即，对HTML标记语言进行类区分，以便我们对HTML页面标记语言的搜索。</p>
+<p>对HTML标签树：解析、遍历、维护。</p>
+<p>###BeautifulSoup库的引用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from bs4 import BeautifulSoup
+import bs4
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>安装小测：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import requests
+from bs4 import BeautifulSoup
+url = &#34;http://python123.io/ws/demo.html&#34;
+r = requests.get()
+print(r.text)
+print(&#39;\n&#39;)
+demo = r.text
+soup = BeatifulSoup(demo, &#39;html.parser&#39;)
+print(soup.prettify())
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="beautifulsoup类的基本元素">BeautifulSoup类的基本元素</h3>
+<p>**解释器：**在给BeautifulSoup库传递网页标记语言时，要有对应的解释器，才能把网页标记语言转换成BeautifulSoup类。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">soup = BeatifulSoup(demo, &#39;html.parser&#39;)
+</code></pre></td></tr></table>
+</div>
+</div><p>因为demo变量对应的是html标记语言，所以用 <strong>html.parser</strong> 解释器。</p>
+<p><strong>BeautifulSoup类的基本元素：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">基本元素</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Tag</td>
+<td align="center">标签，最基本的信息组织单元，分别用&lt;&gt;和&lt;/&gt;标明开头和结尾</td>
+</tr>
+<tr>
+<td align="center">Name</td>
+<td align="center">标签的名字，对应html的标签，如&lt;p&gt;&hellip;&lt;/p&gt;，格式：soup.name</td>
+</tr>
+<tr>
+<td align="center">Attributes</td>
+<td align="center">标签的属性，字典形式，对应是html语言中标签的属性值，格式：soup.attrs</td>
+</tr>
+<tr>
+<td align="center">NavigableString</td>
+<td align="center">标签内非属性字符串，包括空格，换行符，文本信息等。格式：soup.string</td>
+</tr>
+<tr>
+<td align="center">Comment</td>
+<td align="center">html语言内的注释部分，格式：soup.tag.comment</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">soup.title
+&lt;title&gt;This is a python demo page&lt;/title&gt;
+#获取a标签所有信息
+soup.a
+&lt;a class=&#34;py1&#34; href=&#34;http://www.icourse163.org/course/BIT-268001&#34; id=&#34;link1&#34;&gt;Basic Python&lt;/a&gt;
+#获取a标签的属性值，返回的是字典
+soup.a.attrs
+{&#39;href&#39;: &#39;http://www.icourse163.org/course/BIT-268001&#39;,
+ &#39;class&#39;: [&#39;py1&#39;],
+ &#39;id&#39;: &#39;link1&#39;}
+#获取a标签的非属性字符串信息，因为只有文本信息，所以输出的是文本
+soup.a.string
+&#39;Basic Python&#39;
+
+#html标签等级用父子关系来表示
+soup.a.name
+&#39;a&#39;
+soup.a.parent.name
+&#39;p&#39;
+soup.a.parent.parent.name
+&#39;body&#39;
+
+soup.parents.name
+ 
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>解释：</strong></p>
+<p><img src="/BeautifulSoup_tag.jpg" alt="BeautifulSoup_tag"></p>
+<h3 id="基于bs4库的html内容遍历方法">基于BS4库的HTML内容遍历方法</h3>
+<h4 id="下行遍历">下行遍历</h4>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.contents</td>
+<td align="center">字节点的列表，将&lt;tag&gt;所有儿子节点（包含换行符等）存入列表</td>
+</tr>
+<tr>
+<td align="center">.children</td>
+<td align="center">字节点的迭代类型，与.contents类似，用于遍历儿子节点</td>
+</tr>
+<tr>
+<td align="center">.descendants</td>
+<td align="center">子孙节点的迭代类型，包含所有子孙节点，用于循环遍历</td>
+</tr>
+</tbody>
+</table>
+<h4 id="上行遍历">上行遍历</h4>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.parent</td>
+<td align="center">节点的父亲标签</td>
+</tr>
+<tr>
+<td align="center">.parents</td>
+<td align="center">节点的先辈标签，迭代类型</td>
+</tr>
+</tbody>
+</table>
+<p>根标签html其parent标签就是其本身</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for parent in soup.a.parents:
+    if parent is  None:
+        print(parent)
+    else:
+        print(parent.name)
+
+p
+body
+html
+[document]
+</code></pre></td></tr></table>
+</div>
+</div><p>遍历所有先辈节点，包括soup本身，所以要区别判断。</p>
+<h4 id="平行遍历">平行遍历</h4>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.next_sibling</td>
+<td align="center">返回按照HTML文本顺序的下一个平行节点标签</td>
+</tr>
+<tr>
+<td align="center">.previous_sibling</td>
+<td align="center">返回按照HTML文本顺序的上一个平行节点标签</td>
+</tr>
+<tr>
+<td align="center">.next_siblings</td>
+<td align="center">迭代类型，返回按照HTML文本顺序的后面所有平行节点标签</td>
+</tr>
+<tr>
+<td align="center">.previous_siblings</td>
+<td align="center">迭代类型，返回按照HTML文本顺序的前面所有平行节点标签</td>
+</tr>
+</tbody>
+</table>
+<p>注：平行遍历发生在<strong>同一个父节点下</strong>！节点含义，包含所有跟标签并列关系。要好好理解。</p>
+<p><img src="/BeautifulSoup_%E9%81%8D%E5%8E%86.jpg" alt="BeautifulSoup_遍历"></p>
+<h4 id="prettify方法">prettify()方法</h4>
+<p>使得HTML文件更友好的显示，而且可用于标签。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;tag&gt;.prettify()
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/beautifulsoup/">BeautifulSoup</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">大学排名爬取</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A01/">
+            <span class="next-text nav-default">爬虫学习1</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/beautifulsoup%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="BeautifulSoup学习">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

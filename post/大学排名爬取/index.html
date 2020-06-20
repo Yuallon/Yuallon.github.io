@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>大学排名爬取 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="###基于BS4库的HTML内容查找方法 函数： 1 &amp;lt;&amp;gt;.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果 name：对标签名称的检索，字符串类型。可以输入字" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="大学排名爬取" />
+<meta property="og:description" content="###基于BS4库的HTML内容查找方法 函数： 1 &lt;&gt;.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果 name：对标签名称的检索，字符串类型。可以输入字" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/" />
+<meta property="article:published_time" content="2020-06-21T01:35:39+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:35:39+08:00" />
+<meta itemprop="name" content="大学排名爬取">
+<meta itemprop="description" content="###基于BS4库的HTML内容查找方法 函数： 1 &lt;&gt;.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果 name：对标签名称的检索，字符串类型。可以输入字">
+<meta itemprop="datePublished" content="2020-06-21T01:35:39&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:35:39&#43;08:00" />
+<meta itemprop="wordCount" content="1313">
+
+
+
+<meta itemprop="keywords" content="BeautifulSoup," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="大学排名爬取"/>
+<meta name="twitter:description" content="###基于BS4库的HTML内容查找方法 函数： 1 &lt;&gt;.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果 name：对标签名称的检索，字符串类型。可以输入字"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">大学排名爬取</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%88%AC%E8%99%AB/"> 爬虫 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#实例">实例</a></li>
+        <li><a href="#爬取最好大学网上面2020年最新大学排名">爬取最好大学网上面2020年最新大学排名</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>###基于BS4库的HTML内容查找方法</p>
+<p><strong>函数：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;&gt;.find_all(name, attrs, recursive, string, **kwargs)
+</code></pre></td></tr></table>
+</div>
+</div><p>返回一个列表类型，存储查找的结果</p>
+<ul>
+<li>name：对标签名称的检索，字符串类型。可以输入字符串列表。</li>
+<li>attrs：对标签属性值进行检索</li>
+<li>recursive：是否对子孙全部检索，默认为True</li>
+<li>string：对标签内字符串区域检索</li>
+</ul>
+<p>注：tag(..) 等价于 tag.find_all()；soup(..) 等价于 soup.find_all(..)</p>
+<p>扩展方法：</p>
+<ol>
+<li>&lt;&gt;.find()：只返回一个结果</li>
+<li>&lt;&gt;.find_parents()：返回一个列表</li>
+<li>&lt;&gt;.find_parent()</li>
+<li>&lt;&gt;.find_next_siblings()</li>
+<li>&lt;&gt;.find_next_sibling()</li>
+<li>&lt;&gt;.find_previous_siblings()</li>
+<li>&lt;&gt;.find_previous_sibling()</li>
+</ol>
+<h3 id="实例">实例</h3>
+<p>提取HTML中所有URL链接</p>
+<p>思路：</p>
+<ol>
+<li>找到所有的 <strong>a</strong> 标签</li>
+<li>解析 <strong>a</strong> 标签，提取href后的链接内容</li>
+</ol>
+<p><strong>代码实现：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">from bs4 import BeautifulSoup
+import requests
+url = &#34;http://python123.io/ws/demo.html&#34;
+r = requests.get()
+demo = r.text
+soup = BeatifulSoup(demo, &#39;html.parser&#39;)
+for link in soup.find_all(&#39;a&#39;):
+	print(link.get(&#39;herf&#39;))
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="爬取最好大学网上面2020年最新大学排名">爬取最好大学网上面2020年最新大学排名</h3>
+<h4 id="目标">目标：</h4>
+<ul>
+<li>在 <em>最好大学网</em> 找到2020年全国大学排名页面，分析html页面构成</li>
+<li>利用爬虫方法实现对：大学排名的爬取，并存到Excel表格里面</li>
+</ul>
+<h4 id="程序的结构设计">程序的结构设计：</h4>
+<ul>
+<li>步骤1: 从网络上获取2020年大学排名的网页内容，可用Requests库实现</li>
+<li>步骤2: 提取网页内容中信息到合适的数据结构</li>
+<li>步骤3: 存取提取到的数据到Excel</li>
+</ul>
+<p>参考网站：<a href="http://www.zuihaodaxue.com/zuihaodaxuepaiming-zongbang-2020.html">2020软科中国大学排名（总榜）</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+#url = &#34;http://www.zuihaodaxue.com/zuihaodaxuepaiming-zongbang-2020.html&#34;
+#步骤1
+def getHTMLText(url):
+	try:
+		r = requests.get(url)
+		r.raise_for_status()
+		r.encoding = r.apparent_encoding
+		return r.text
+	except:
+		return &#34;爬取异常&#34;
+        
+
+#html = getHTMLText(url)
+#步骤2
+def UnivList(html):
+    try:
+        soup = BeautifulSoup(html, &#39;html.parser&#39;)
+        ulist=[]
+        #找到数据列表主体&lt;body&gt;...&lt;/body&gt;
+        body = soup.find(&#39;body&#39;)
+        #数据行&lt;tr&gt;...&lt;/tr&gt;表示每一个学校的信息
+        trs = body.find_all(&#39;tr&#39;)
+        for tr in trs[1:]:
+            #提取每一个数据行中的数据块string信息
+            tds = tr.find_all(&#39;td&#39;)
+            a = []
+            for td in tds:
+                a.append(td.string)
+            ulist.append(a)
+        return ulist   
+    except:
+        return &#34;异常&#34;
+        
+#步骤3       
+def dfList(ulist, columns):
+    try:
+        df = pd.DataFrame(ulist)
+        #列表第一行信息
+        df.columns = columns
+        return df
+    except:
+        print(&#34;获取列表异常&#34;)
+    
+ 
+def main():
+    url = &#34;http://www.zuihaodaxue.com/zuihaodaxuepaiming-zongbang-2020.html&#34;
+    columns=[&#39;排名&#39;,&#39;学校名称&#39;,&#39;省市&#39;,&#39;学校类型&#39;,&#39;总分&#39;]
+    html = getHTMLText(url)
+    University_list = UnivList(html)
+    df = dfList(University_list, columns)
+    df.to_excel(&#34;uList.xlsx&#34;, index=False)
+    print(&#34;爬取成功&#34;)
+main()
+</code></pre></td></tr></table>
+</div>
+</div><p>我的思路跟嵩老师的不一样， 嵩老师是通过RE库的命令来优化大学排名在打印时候的美观性。爬虫的目的是爬取信息，所以我选择直接存储到Excel文件中。</p>
+<p>在写代码的时候遇到了一个问题：对一个变量修改后再赋予同一个变量名，会引发NoneType</p>
+<p>例如：步骤2中我返回的变量是ulist，如果我在main函数中，把UnivList函数返回的结果再赋值给ulist，则就会出现报错</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ulist = UnivList(html)
+</code></pre></td></tr></table>
+</div>
+</div><p>这时候要采用新的变量名。</p>
+<h4 id="嵩老师代码">嵩老师代码：</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#CrawUnivRankingB.py
+import requests
+from bs4 import BeautifulSoup
+import bs4
+
+def getHTMLText(url):
+    try:
+        r = requests.get(url, timeout=30)
+        r.raise_for_status()
+        r.encoding = r.apparent_encoding
+        return r.text
+    except:
+        return &#34;&#34;
+
+def fillUnivList(ulist, html):
+    soup = BeautifulSoup(html, &#34;html.parser&#34;)
+    for tr in soup.find(&#39;tbody&#39;).children:
+        if isinstance(tr, bs4.element.Tag):
+            tds = tr(&#39;td&#39;)
+            ulist.append([tds[0].string, tds[1].string, tds[3].string])
+
+def printUnivList(ulist, num):
+    tplt = &#34;{0:^10}\t{1:{3}^10}\t{2:^10}&#34;
+    print(tplt.format(&#34;排名&#34;,&#34;学校名称&#34;,&#34;总分&#34;,chr(12288)))
+    for i in range(num):
+        u=ulist[i]
+        print(tplt.format(u[0],u[1],u[2],chr(12288)))
+    
+def main():
+    uinfo = []
+    url = &#39;http://www.zuihaodaxue.cn/zuihaodaxuepaiming2016.html&#39;
+    html = getHTMLText(url)
+    fillUnivList(uinfo, html)
+    printUnivList(uinfo, 20) # 20 univs
+main()
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/beautifulsoup/">BeautifulSoup</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python运算符</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/beautifulsoup%E5%AD%A6%E4%B9%A0/">
+            <span class="next-text nav-default">BeautifulSoup学习</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/" class="leancloud_visitors" data-flag-title="大学排名爬取">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

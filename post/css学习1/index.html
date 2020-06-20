@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CSS学习1 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="CSS 简介 语法规范： CSS 规则由两个主要的部分构成：选择器 和 一条或多条声明。 Figure1: 选择器&amp;ndash;表示给h1标签修改样式；声明&amp;ndash;怎样去修" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/css%E5%AD%A6%E4%B9%A01/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="CSS学习1" />
+<meta property="og:description" content="CSS 简介 语法规范： CSS 规则由两个主要的部分构成：选择器 和 一条或多条声明。 Figure1: 选择器&ndash;表示给h1标签修改样式；声明&ndash;怎样去修" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/css%E5%AD%A6%E4%B9%A01/" />
+<meta property="article:published_time" content="2020-06-21T01:50:03+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:50:03+08:00" />
+<meta itemprop="name" content="CSS学习1">
+<meta itemprop="description" content="CSS 简介 语法规范： CSS 规则由两个主要的部分构成：选择器 和 一条或多条声明。 Figure1: 选择器&ndash;表示给h1标签修改样式；声明&ndash;怎样去修">
+<meta itemprop="datePublished" content="2020-06-21T01:50:03&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:50:03&#43;08:00" />
+<meta itemprop="wordCount" content="2371">
+
+
+
+<meta itemprop="keywords" content="css," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS学习1"/>
+<meta name="twitter:description" content="CSS 简介 语法规范： CSS 规则由两个主要的部分构成：选择器 和 一条或多条声明。 Figure1: 选择器&ndash;表示给h1标签修改样式；声明&ndash;怎样去修"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">CSS学习1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/css/"> CSS </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#css-简介">CSS 简介</a></li>
+        <li><a href="#css文本属性">CSS文本属性</a></li>
+        <li><a href="#css-引入方式">CSS 引入方式</a></li>
+        <li><a href="#emmet语法">Emmet语法</a></li>
+        <li><a href="#复合选择器">复合选择器</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="css-简介">CSS 简介</h3>
+<p><strong>语法规范：</strong></p>
+<p>CSS 规则由两个主要的部分构成：<strong>选择器</strong> 和 <strong>一条或多条声明</strong>。</p>
+<p><img src="/CSS%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83.jpg" alt="CSS语法规范"></p>
+<p>Figure1: 选择器&ndash;表示给h1标签修改样式；声明&ndash;怎样去修改。</p>
+<ul>
+<li>选择器：是用于指定CSS样式的HTML标签，花括号内是对该标签设置的具体样式。</li>
+<li>属性和属性值 <strong>以键值</strong> 对的形式出现，不同属性以分号分开。</li>
+<li>CSS语法是放在HTML标签head内的标签style中。</li>
+</ul>
+<h4 id="选择器的分类">选择器的分类</h4>
+<p>选择器可以分为 <strong>基础选择器</strong> 和 <strong>复合选择器</strong>。</p>
+<p>**基础选择器：**是由单个选择器构成的，基础选择器又分为：标签选择器、类选择器、id选择器和通配符选择器。</p>
+<ul>
+<li>**标签选择器：**是指用HTML标签名作为选择器，按标签名名分类，为页面中某一类标签指定统一的CSS样式。</li>
+<li>**类选择器：**单独选一个或者某几个标签，可以使用类选择器。首先定义一个类名，然后被选择的标签通过class属性引用类名，即可对该标签修改类定义的属性值。
+**注意：类名以点开头（.red ）类名是自定义的。不能用HTML标签名。 **
+此外，我们可以给一个标签指定多个类名，从而达到更多的选择目的。正如class含义一样。
+<ul>
+<li>多个类在class属性后面必须用空格分开</li>
+<li>多类名的好处就是提取共性！</li>
+</ul>
+</li>
+<li>**id选择器：**可以为标有 <strong>特定id的HTML元素</strong> 指定特定样式。HTML元素，以id属性来设置id选择器。css中id选择器以 <strong>#</strong> 定义。只能调用一次，别的标签不能使用。正如id含义一样。</li>
+<li>**通配符选择器：**在CSS中，通配符选择器使用 ***** 定义，<strong>它表示选取HTML页面中所有的元素（标签）</strong>。所以无需写名字。不需要取调用！</li>
+</ul>
+<p>###字体</p>
+<h4 id="字体系列">字体系列</h4>
+<p>CSS中，使用 <strong>font-family</strong> 属性定义文本的字体系列。可以定义多个字体，系统会优先选用第一个字体格式格式，如果没有改字体会移步到下一个，如果都没有，采用系统默认字体。一般会对把字体格式指定给body标签。多个字体标签，用英文逗号分开，一个字体有多个单词，用空格分隔。</p>
+<h4 id="字体大小">字体大小</h4>
+<p>CSS使用 <strong>font-size</strong> 属性定义字体大小。数字后面要带px单位。标题，需要单独指定文字大小。</p>
+<h4 id="字体粗细">字体粗细</h4>
+<p>CSS使用 <strong>font-weight</strong> 属性定义字体的粗细。详细在网上查找一些属性值！</p>
+<h4 id="文字样式">文字样式</h4>
+<p>CSS中使用 <strong>font-style</strong> 来设置字体样式。</p>
+<h4 id="字体的复合属性">字体的复合属性</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">font: font-style font-weight font-size/line-height font-family;
+</code></pre></td></tr></table>
+</div>
+</div><p>注意：<strong>不能颠倒上述顺序，font-size 和 font-family必须有</strong>。其他的可以省略。属性之间空格分开。</p>
+<h3 id="css文本属性">CSS文本属性</h3>
+<p>CSS Text（文本）属性可以定义文本的外观，比如文本字体的颜色，对齐文本，装饰文本，文本缩进，行间距等。</p>
+<h4 id="文本颜色">文本颜色</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">div{
+	color:red;
+}
+</code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th align="center">表示方式</th>
+<th align="center">属性值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">预定义的颜色值</td>
+<td align="center">red, green, blue &hellip;</td>
+</tr>
+<tr>
+<td align="center">十六进制</td>
+<td align="center">#FF0000, #FF6600, #29D794 &hellip;</td>
+</tr>
+<tr>
+<td align="center">RGB代码</td>
+<td align="center">rgb(255,0,0) or rgb(100%, 0%, 0%)</td>
+</tr>
+</tbody>
+</table>
+<p>注：开发中最常用的是十六进制</p>
+<h4 id="对齐文本">对齐文本</h4>
+<p><strong>text-align</strong> 属性用于设置元素内文本内容的 <strong>水平对齐方式</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">div {
+	text-align: center/left/right;
+}
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="装饰文本">装饰文本</h4>
+<p>比如，下划线，删除线，上划线等。使用 <strong>text-decoration</strong> 属性。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">div {
+	text-decoration: none/underline/line-through/overline;
+}
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="文本缩进">文本缩进</h4>
+<p>CSS中使用 <strong>text-indent</strong> 属性。通常是将段落的首行缩进。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">div {
+	text-indent: 20px/2em;
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>注：负值表示突进。<strong>em</strong> 是一个相对单位，1em就是当前元素1个文字的大小。如果当前元素没有设置大小，则会按照父元素的1个文字大小。</p>
+<h4 id="行间距">行间距</h4>
+<p>CSS中使用 <strong>line-height</strong> 属性用于设置行间距。可以控制文字行与行之间的距离。</p>
+<p><img src="/%E8%A1%8C%E9%97%B4%E8%B7%9D.jpg" alt="行间距"></p>
+<p>Figure2: 对行间距的设置是不会改变字体的大小，而是改变上间距与下间距。<strong>行高=文字高度+上间距+下间距</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">div {
+	line-height: 16px;
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="css-引入方式">CSS 引入方式</h3>
+<p>按照CSS样式书写的位置（引入的方式），可以分为三类：</p>
+<ol>
+<li>行内样式表（行内式）</li>
+<li>内部样式表（嵌入式）</li>
+<li>外部样式表（链接式）</li>
+</ol>
+<h4 id="内部样式表">内部样式表</h4>
+<p>内部样式表：是写到html页面内部，是将所有的CSS代码抽取出来，单独放到一个style标签中。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;style&gt;
+	div {
+		color: red;
+		font-size: 12px;
+	}
+&lt;/style&gt;
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>理论上，style标签可以放在HTML文档任何地方。但是一般会放在文档的head标签中。此种方式可以控制整个HTML页面中的元素。结构清晰，但是并没有完全分离。所以称之为：嵌入式。练习中经常使用！</li>
+</ul>
+<h4 id="行内样式表">行内样式表</h4>
+<p>行内样式表是在<strong>元素标签内部的 style属性中设定CSS样式</strong>。不推荐使用！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div stryle=&#34;color: red; font-size: 12px&#34;&gt;你好！&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="外部样式表">外部样式表</h4>
+<p>开发中最常使用的方法！<strong>核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML中。</strong></p>
+<ol>
+<li>
+<p>第一步：新建一个后缀名为 <strong>.css</strong> 的样式文件，把所有的CSS代码都放到此文件中。</p>
+</li>
+<li>
+<p>在HTM页面中，使用link标签，引入这个CSS文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;link rel=&#34;stylesheet&#34; href=&#34;CSS文件路径&#34;&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>rel：定义当前文档与被链接文档之间的关系，在这里需要指定 <strong>&ldquo;stylesheet&rdquo;</strong> 表示被链接的文档是一个样式表文件。</p>
+</li>
+</ol>
+<h3 id="emmet语法">Emmet语法</h3>
+<p>Emmet语法的前身是Zen coding，它使用缩写来提高html/css的编写速度。Vscode内部已经集成该语法。</p>
+<ol>
+<li>生成标签直接输入标签名+tab键即可</li>
+<li>如果想要生成多个相同标签，标签名后加上*和数字：div*3 + tab即可生成3个div标签。</li>
+<li>如果有父子级关系的标签，可以用 &gt;, 比如：ul&gt;li，中间没空格</li>
+<li>如果有兄弟关系标签，用 +, 比如：div+p，中间没空格</li>
+<li>如果生成带有类名或者id名字，直接写.demo 或者 #two+tab</li>
+<li>如果生成的div类名是有顺序的，可以用自增号$</li>
+<li>如果想生成的标签默认带有文字用{}</li>
+</ol>
+<h3 id="复合选择器">复合选择器</h3>
+<p>在CSS中，可以根据选择器的类型把选择器分为 基础选择器 和 复合选择器。复合选择器是建立在基础选择器之上，对基本选择器进行组合形成的。</p>
+<ul>
+<li>复合选择器可以更准确、高效的选择目标元素（标签）</li>
+<li>复合选择器是由两个或多个基础选择器，通过不同的的方式组合而成的</li>
+<li>常用的复合选择器包括：后代选择器、子选择器、并集选择器、伪类选择器等等</li>
+</ul>
+<h4 id="后代选择器重要">后代选择器（重要）</h4>
+<p>后代选择器又称包含选择器，可以选择父元素里面子元素，其写法就是把<strong>外层标签写在前面</strong>，<strong>内层标签写在后面</strong>，<strong>中间用空格分隔</strong>。当标签发生嵌套时，内层标签就称为外层标签的后代。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ol li {
+		color: green&#39;
+}
+#
+元素1 元素2 ··· {声明}
+</code></pre></td></tr></table>
+</div>
+</div><p>上述代码实现把ol标签下的li标签都设置为green颜色。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/css/">css</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python%E5%87%BD%E6%95%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python函数</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/">
+            <span class="next-text nav-default">Python切片操作</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/css%E5%AD%A6%E4%B9%A01/" class="leancloud_visitors" data-flag-title="CSS学习1">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

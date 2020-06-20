@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>互联网协议 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="前言： 这篇文章是学习 阮一峰 老师 互联网协议入门 相关文章的笔记。 概述 互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="互联网协议" />
+<meta property="og:description" content="前言： 这篇文章是学习 阮一峰 老师 互联网协议入门 相关文章的笔记。 概述 互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/" />
+<meta property="article:published_time" content="2020-06-21T01:24:55+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:24:55+08:00" />
+<meta itemprop="name" content="互联网协议">
+<meta itemprop="description" content="前言： 这篇文章是学习 阮一峰 老师 互联网协议入门 相关文章的笔记。 概述 互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依">
+<meta itemprop="datePublished" content="2020-06-21T01:24:55&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:24:55&#43;08:00" />
+<meta itemprop="wordCount" content="5502">
+
+
+
+<meta itemprop="keywords" content="Web协议入门," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="互联网协议"/>
+<meta name="twitter:description" content="前言： 这篇文章是学习 阮一峰 老师 互联网协议入门 相关文章的笔记。 概述 互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">互联网协议</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/web%E5%8D%8F%E8%AE%AE/"> Web协议 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言：</a></li>
+        <li><a href="#概述">概述</a></li>
+        <li><a href="#实体层">实体层</a></li>
+        <li><a href="#链接层">链接层</a></li>
+        <li><a href="#网络层">网络层</a></li>
+        <li><a href="#传输层">传输层</a></li>
+        <li><a href="#应用层">应用层</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="前言">前言：</h3>
+<p>这篇文章是学习 <strong>阮一峰</strong> 老师 <strong>互联网协议入门</strong> 相关文章的笔记。</p>
+<h3 id="概述">概述</h3>
+<p>互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依赖于下一层的支持，就像建筑物一样。</p>
+<p>平时用户接触到的只是最上面的一层：应用层，而没有感觉到下面一层，这便是分层结构的优点之一。</p>
+<p>不同的模型对互联网的分层层数不一，其实不管分为几层，只要理解层与层之间的关系，以及同一层内的协议作用，才是我们理解互联网的关键。下面我是采取阮老师的五层模型。</p>
+<p><img src="/%E4%BA%92%E8%81%94%E7%BD%91%E4%BA%94%E5%B1%82%E6%A8%A1%E5%9E%8B.jpg" alt=""></p>
+<p>Figure1: 五层模型：越下面的层越接近硬件；越上面的层越接近用户。</p>
+<p>其实互联网可以分几层，几层名字介绍并不重要。最重要的是：每一层的存在都是为了完成一种功能，为了实现这个功能，就需要一种层内规则，或者说：协议（protocol）。</p>
+<p>比如：普通话可以看作是中国内的语言协议，正是大家都说普通话我们出行在外交流起来才会很顺畅。协议的功能也是如此，保证同一层的某一类信息交流的顺畅。</p>
+<p>互联网的每一层都定义了很多protocol，这些协议的总称：<strong>互联网协议（Internet Protocol Suite：IPS）</strong>。</p>
+<h3 id="实体层">实体层</h3>
+<p>互联<strong>网</strong>，就说明是由多台电脑或者设备，构成的一个信息传输网络。电脑组网，第一件事就是通过物理方式链接起来(目前主要还是物理链接方式，未来或许可以实现卫星信号基站，然后无线链接)。</p>
+<p>这就需要用到：光缆，电缆等等。它们的作用就是把电脑通过物理方式链接起来，并通过电信号（0或1组合）实现电信号的传递。比如开关电路。这一层就叫做：<strong>实体层</strong>。</p>
+<h3 id="链接层">链接层</h3>
+<p>既然有了信号传递（电信号0或1组合），那就需要一种协议来规范它：如何输入？如何输出？</p>
+<p>链接层的功能就是为了 <strong>解读</strong> 实体层之间电信号的传递，即确定0和1的分组方式。</p>
+<p>早起时候，对于不同的电气生产公司，不同的公司有着自己的电信号分组方式。这当然不利于使用者。后来就出现了<strong>以太网协议</strong>。</p>
+<h4 id="以太网协议">以太网协议</h4>
+<p>以太网协议规定：一组电信号构成一个数据包，叫做 <strong>帧（Frame）</strong>。每一个数据包分成两部分：标头（Head）和数据（Data）。</p>
+<p><img src="/%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" alt=""></p>
+<p>Figure2: 以太网数据由Head和Data构成。</p>
+<ol>
+<li>Head：包含一些说明，如发送者信息、接受者信息、数据类型等等。<strong>长度固定为18字节</strong></li>
+<li>Data：则是数据包的具体内容。<strong>最短为46字节，最长为1500字节</strong></li>
+</ol>
+<p>所以以太网数据包最短为64字节，最长1518字节。如果数据很长，需要分割多次发送。<strong>如何保证分割后的数据被接受者完整拼接起来呢？</strong></p>
+<h4 id="mac地址">MAC地址</h4>
+<p>前面提到，以太网数据包Head部分包含了发送者和接受者信息。那么<strong>如何标识？</strong></p>
+<p><strong>以太网协议规定：所有连入网络的设备，都必须有一个网卡接口，每一个网卡结构都必须有一个标识信息，且独一无二！</strong></p>
+<p>网卡的标识信息，也叫做网卡的地址，就是以太网数据Head里面的发送地址和接受地址，叫做：<strong>MAC地址</strong>。</p>
+<p><img src="/MAC%E5%9C%B0%E5%9D%80.jpg" alt=""></p>
+<p>Figure3: 每一个网卡都有一个独一无二的MAC地址。</p>
+<p>MAC地址长度为48个二进制位，通常用12个十六进制数表示。前6个十六进制数是厂商编号，后6个十六进制数是该厂商的网卡流水号。</p>
+<p>网卡就好比我们的电话卡，网卡地址是电话卡密码。</p>
+<h4 id="广播broadcasting">广播（broadcasting）</h4>
+<p>现在有了有了MAC地址，那问题来了：<strong>一块网卡怎么会知道另一个网卡的MAC地址呢？</strong></p>
+<p>这个问题是由<strong>ARP协议</strong>解决！ARP协议留到后面内容！</p>
+<p>现在只需知道：以太网数据包必须知道接收方的MAC地址，才能实现数据传送。</p>
+<p><strong>假如：我们知道接收方的MAC地址，如何把数据发送过去呢？</strong></p>
+<p>这就涉及到了 <strong>广播</strong> 这个概念。</p>
+<p><img src="/%E5%B9%BF%E6%92%AD%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt=""></p>
+<p>Figure4: 广播示意图。</p>
+<p>在同一个以太网下，数据的发送是通过广播的方式。即，发送者会向本网络内所有的计算机发送数据，然后让每台计算机自己判断是否为接受者。</p>
+<p>上图中，1号计算机向2号计算机发送一个数据包，同一个子网络的3号、4号、5号计算机都会收到这个包。它们读取这个包的&quot;标头&rdquo;，找到接收方的MAC地址，然后与自身的MAC地址相比较，如果两者相同，就接受这个包，做进一步处理，否则就丢弃这个包。这种发送方式就叫做 <strong>&ldquo;广播&rdquo;（broadcasting）</strong>。</p>
+<p><strong>总结：现在有了数据包的定义（以太网数据结构）、网卡的MAC地址（每个MAC独一无二，且包含在Head中）、数据发送方式（广播：让同一网络下的每台计算机自己判断是否为接受者），我们就可以在 “链接层”不同的计算机之间传送数据了</strong>。</p>
+<p><em>问题：不同的网络如何实现数据间的传送呢？</em></p>
+<p>这便是 <strong>网络层</strong> 需要解决的问题。</p>
+<h3 id="网络层">网络层</h3>
+<p>以太网是通过 <strong>广播</strong> 来传输数据的</p>
+<ol>
+<li>优点：操作简单</li>
+<li>缺点：同一网络下每个计算机都会接受到数据，效率低；而且不同网络下的计算机，是不能接收到数据的（这是合理的，否则互联网上每一台电脑都在接受所有的的数据包，这是很可怕的）。</li>
+</ol>
+<p>既然以太网（MAC地址只与厂商有关，与所处网络无关）不能解决，不同网络下的计算机传送数据，<strong>网络层</strong> 便由此产生。</p>
+<p><strong>网络层引进了一套新的地址（有别于MAC地址），这个新的地址的作用使得我们可以区分两台计算机是否属于同一个子网络（以太网），这套新地址就是“网络地址”，简称“网址”。</strong></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E5%B1%82.jpg" alt=""></p>
+<p>Figure5: 所有的子网络通过“路由器”连接，构成网络层。</p>
+<p>网络层出现以后，于是每台计算机就有了两个地址：<strong>网络地址</strong> 和 <strong>MAC地址</strong>。两种地址没有任何联系，因为它们属于不同分层下的协议产物，这就是分层的好处。</p>
+<p>既然网络层包含以太网，所以当两台计算机进行数据传送的时候，必先处理网络地址，然后再处理MAC地址。</p>
+<h4 id="ip协议">IP协议</h4>
+<p>规定网络地址的协议，叫做 <strong>IP协议</strong>。它所定义的地址也被称为：<strong>IP地址</strong>。</p>
+<p>目前采用广泛的IP协议是第四版，简称IPv4。这个版本规定，网络地址由32个二进制位组成。</p>
+<p><img src="/IP%E5%9C%B0%E5%9D%80.jpg" alt=""></p>
+<p>Figure6: IP地址示意图。</p>
+<p>习惯上，我们用分成四段的十进制数表示IP地址，从0.0.0.0一直到255.255.255.255。</p>
+<p>互联网上的每一台计算机，都会被分配一个IP地址。**IP地址可以分为两部分：前一部分代表网络+后一部分代表计算机。**具体网络部分占多少位？计算机部分占多少位？是跟所在的子网层次有关。</p>
+<p>例如：IP地址172.16.254.1，这是一个32位的地址，假定它的网络部分是前24位（172.16.254），那么主机部分就是后8位（最后的那个1）。处于同一个子网络的电脑，它们IP地址的网络部分必定是相同的，也就是说172.16.254.2应该与172.16.254.1处在同一个子网络。</p>
+<p>因为IP地址的目的是为了比较两个计算机（IP地址）是否在同一个子网下，所以单独看一个IP地址来讲它的网络部分（网络层次）是没有意义的。</p>
+<p>这种方法目的是为了识别两台计算机（也就是两个IP地址）是否在同一个子网下。这便引出了 <strong>“子网掩码”</strong> 概念。</p>
+<p>我们可以这样想：如果两台计算机在同一个网络层次下，那么它们的IP地址中，网络部分的参数应该是一样的，那我们就可以做一个<strong>AND</strong>逻辑判断（如果两个数相同为1，否则为0），两个在同一网络下的计算机（IP地址）经过AND运算后，结果应该是网络层二进制数字不变，只有表示计算机的二进制部分为不同。</p>
+<p>例如：已知IP地址172.16.254.1和172.16.254.233，进行AND运算，结果是172.16.254.0，所以这两个IP地址属于172.16.254.X这个子网络。X表示该子网下计算机的编号。</p>
+<p>所谓**&ldquo;子网掩码&rdquo;**，就是表示子网络特征的一个参数。它在形式上等同于IP地址，也是一个32位二进制数字，它的网络部分全部为1，主机部分全部为0。比如，IP地址172.16.254.1，如果已知网络部分是前24位，主机部分是后8位，那么子网络掩码就是11111111.11111111.11111111.00000000，写成十进制就是255.255.255.0。**同一网络下的计算机与该网络的子网掩码做AND运算，会得到：IP地址中的网络部分+0··0部分。**</p>
+<p>所以比较两个IP地址，直接可以看它们的子网掩码是否相同即可。</p>
+<h4 id="ip数据包">IP数据包</h4>
+<p>由IP协议发出的数据，叫做IP数据包，里面包含了IP地址信息。</p>
+<p>以太网Head只包含MAC地址，并没有IP地址。很显然IP地址是放在以太网数据Data部分。</p>
+<p><img src="/IP%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" alt=""></p>
+<p>Figure7: IP数据结构</p>
+<p><img src="/%E6%B7%BB%E5%8A%A0IP%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg" alt=""></p>
+<p>Figure8: 添加IP数据的以太网数据结构</p>
+<p>这也是分层的优点：上层数据结构与下层数据结构无关。</p>
+<p>IP数据包的&quot;标头&quot;部分的长度为20到60字节，整个数据包的总长度最大为65,535字节。因此，理论上，一个IP数据包的&quot;数据&quot;部分，最长为65,515字节。前面说过，以太网数据包的&quot;数据&quot;部分，最长只有1500字节。因此，如果IP数据包超过了1500字节，它就需要分割成几个以太网数据包，分开发送了。</p>
+<h4 id="arp协议">ARP协议</h4>
+<p>既然，网络分层之间的协议不互相影响，也就是说IP协议给每台计算机的IP地址是唯一的，是否只要确定了IP就可以发送信息了呢？</p>
+<p>只有IP地址是不能发送数据的，因为在 <strong>链接层</strong> 数据的传送是通过获取接受者MAC地址来实现的。</p>
+<p>**ARP协议：是一种解决MAC地址问题的协议。**以目标IP地址为线索，用来定位下一个应该接受数据分包的网络设备对应的MAC地址。如果目标主机不在同一个子网络上时，可以通过ARP查找下一个路由器的MAC地址。<strong>ARP只适用于IPv4，不能用于IPv6</strong>。</p>
+<p>ARP如何知道MAC地址呢？简单的说：ARP是借助ARP请求与ARP响应两种类型的包确定MAC地址的。</p>
+<p><img src="/ARP%E5%8D%8F%E8%AE%AE%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt=""></p>
+<p>Figure9: 假定主机A向同一子网的上的主机B发送IP地址包，IP地址知道，它们互相不知道对方MAC地址。</p>
+<p>主机A为了获得主机B的MAC地址，首先通过广播发送一个ARP请求包。这个包中包含了想要了解其MAC地址的主机IP地址。在上图中，这个请求包包含了主机B的IP地址172.20.1.2。由于子网络中所有的 <strong>主机和路由器</strong> 都会接受这个数据包，因此当所有主机和路由器对数据包进行解析的时候，如果请求包中的IP地址与自己的IP地址一致，那么这个节点（主机或者路由器）就会将自己的MAC地址塞入ARP响应包返回给主机A。</p>
+<p>总之，从一个IP地址发送ARP请求包以了解其MAC地址，目标地址讲自己的MAC地址放入其中的ARP响应包，这样就通过IP地址获得了MAC地址，实现了子网内的IP通信（数据传送）。<strong>这也是为什么数据传送时，只要知道IP地址即可。</strong></p>
+<ol>
+<li><em>既然在同一子网络，只要知道MAC地址不就可以进行数据传送了吗？为何还要知道其IP地址？</em></li>
+<li><em>根据IP协议，每台计算机的IP都是唯一的，只要知道对方的IP也就可以进行数据传送，为啥要知道其MAC地址呢？</em></li>
+</ol>
+<p>这两个问题看起来，好像我们要求即知道IP地址又知道MAC地址很多余。但是，要知道这两个问题提出的是基于 <strong>同一个子网络</strong>！如果两台计算机不在同一子网络，就不难理解了。</p>
+<p><img src="/%E4%B8%8D%E5%90%8C%E5%AD%90%E7%BD%91%E7%BB%9CARP%E5%8D%8F%E8%AE%AE%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt=""></p>
+<p>Figure10: 主机A想要发送IP数据包给主机B</p>
+<p>在上图，主机A想发送数据给主机B，必须得经过路由器C。即使知道主机B的MAC地址（MAC地址只在同一个子网络有效），由于路由器C隔断两个网络，还是无法实现数据由主机A发送给主机B。此时，主机A必须得先将数据发送给路由器C的MAC地址C1。</p>
+<p>此外，假定MAC地址就用广播，那么路由器D也将会接受到该广播的信息，于是路由器D又将该消息转发给路由器C，导致数据包被重复发送。</p>
+<p>在以太网上，发送IP数据时，<strong>“下次要经由那个路由器发送数据包”</strong> 这一点非常重要。而这里的“下一个路由器”，就是相应的MAC地址。</p>
+<p>所以，<strong>IP地址和MAC地址缺一不可</strong>。所以就有将这两个地址关联起来的ARP协议。</p>
+<h3 id="传输层">传输层</h3>
+<p>有了MAC地址和IP地址，在互联网上就可以实现任意两台计算机之间的数据传送。</p>
+<p>接下来的问题是：一台计算机上会同时运行多个程序。比如：QQ、微信、浏览网页等等。到底这个数据是给那个软件呢？这里就需要引入一个新的参数：<strong>“端口（port）”</strong>。它其实是每一个使用网卡程序的编号。</p>
+<p>所以通过网络层传送过来的数据都会被发到主机特定的端口，这样不同的程序就会取得自己需要的数据了。</p>
+<p>&ldquo;端口&quot;是0到65535之间的一个整数，正好16个二进制位。0到1023的端口被系统占用，用户只能选用大于1023的端口。不管是浏览网页还是在线聊天，应用程序会随机选用一个端口，然后与服务器的相应端口联系。</p>
+<p>**&ldquo;传输层&quot;的功能，就是建立&quot;端口到端口&quot;的通信。相比之下，&ldquo;网络层&quot;的功能是建立&quot;主机到主机&quot;的通信。只要确定主机和端口，我们就能实现程序之间的交流。**因此，Unix系统就把主机+端口，叫做&quot;套接字&rdquo;（socket）。有了它，就可以进行网络应用程序开发了。</p>
+<h4 id="udp协议">UDP协议</h4>
+<p>在传输层为了加入端口信息，就需要新的协议——UDP/TCP协议。</p>
+<ol>
+<li>UDP协议：不具备可靠性的数据协议。优点是比较简单，容易实现。</li>
+<li>TCP协议：面向连接的、可靠的流协议。它的缺点是过程复杂、实现困难、消耗较多的资源。</li>
+</ol>
+<p>TCP和UDP协议，也是由Head和Data两部分组成。是放在IP数据的Data部分内。</p>
+<p><img src="/TCP%E5%8D%8F%E8%AE%AE.jpg" alt=""></p>
+<p>Figure11: TCP协议数据位置</p>
+<h3 id="应用层">应用层</h3>
+<p>应用程序收到&quot;传输层&quot;的数据，接下来就要进行解读。由于互联网是开放架构，数据来源五花八门，必须事先规定好格式，否则根本无法解读。</p>
+<p><strong>&ldquo;应用层&quot;的作用，就是规定应用程序的数据格式。</strong></p>
+<p>举例来说，TCP协议可以为各种各样的程序传递数据，比如Email、WWW、FTP等等。那么，必须有不同协议规定电子邮件、网页、FTP数据的格式，这些应用程序协议就构成了&quot;应用层&rdquo;。</p>
+<h3 id="reference">Reference</h3>
+<p><a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html">互联网协议入门（一）</a></p>
+<p>图解TCP/IP协议第五版</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/web%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A8/">Web协议入门</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/requestes%E5%BA%93/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Requestes库</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/html%E5%AD%A6%E4%B9%A02/">
+            <span class="next-text nav-default">HTML学习2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/" class="leancloud_visitors" data-flag-title="互联网协议">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

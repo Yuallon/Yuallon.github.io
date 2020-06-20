@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python_path on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/python_path/</link>
+    <description>Recent content in python_path on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:57:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/python_path/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python文件路径</title>
+      <link>https://yuallon.github.io/post/python%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 21 Jun 2020 01:57:48 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</guid>
+      <description>文件路径 在计算机中，我们可以用两种方式来描述文件的位置：绝对路径 和 相对路径 。这两个概念很好理解，跟我们在学习物理时，遇到的 绝对参考系 和相对参</description>
+    </item>
+    
+  </channel>
+</rss>

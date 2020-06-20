@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ProGit学习1 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="什么是版本控制(version control)? **版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。 在平时的日常生活中" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A01/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="ProGit学习1" />
+<meta property="og:description" content="什么是版本控制(version control)? **版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。 在平时的日常生活中" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A01/" />
+<meta property="article:published_time" content="2020-06-21T01:14:31+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:14:31+08:00" />
+<meta itemprop="name" content="ProGit学习1">
+<meta itemprop="description" content="什么是版本控制(version control)? **版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。 在平时的日常生活中">
+<meta itemprop="datePublished" content="2020-06-21T01:14:31&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:14:31&#43;08:00" />
+<meta itemprop="wordCount" content="1135">
+
+
+
+<meta itemprop="keywords" content="proGit," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ProGit学习1"/>
+<meta name="twitter:description" content="什么是版本控制(version control)? **版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。 在平时的日常生活中"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">ProGit学习1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> Git </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#什么是版本控制version-control">什么是版本控制(version control)?</a></li>
+        <li><a href="#版本控制系统的分类">版本控制系统的分类</a></li>
+        <li><a href="#集中化版本控制系统">集中化版本控制系统</a></li>
+        <li><a href="#分布式版本控制系统">分布式版本控制系统</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="什么是版本控制version-control">什么是版本控制(version control)?</h3>
+<p>**版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
+<p>在平时的日常生活中，最直观的体现是<strong>XX软件的更新</strong>。作为用户我们最关心的是更新后软件的体验，但是作为软件开发者，他们不仅要实现对软件的优化，更重要的是能对不同版本的代码文件有着良好的管理，以便为后续的开发服务。</p>
+<p>要想实现对上述项目开发过程中不同修订版本的管理，这就是<strong>版本控制系统(Version Control System: VCS)</strong> 产生的最主要的原因。通过VCS你就可以将选定的文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地 方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。即使后续的项目开发过程中误操作一些文件，也照样可以恢复到原先的版本。</p>
+<h3 id="版本控制系统的分类">版本控制系统的分类</h3>
+<h4 id="本地版本控制系统">本地版本控制系统</h4>
+<p>实现版本控制最简单的方式就是复制整个项目目录来保存不同时间的版本。但是这种方式特别容易犯错，一不小心写错文件or覆盖其他文件or混淆所在的工作目录等。</p>
+<p>其中最流行的一种是RCS，通过在硬盘上保存补丁集(补丁：指文件修订前后的变化)，通过应用所有的补丁，可以重新计算出各个版本的文件内容。</p>
+<p><img src="/localVCS.png" alt=""></p>
+<p>Figure1: 本地版本控制</p>
+<h3 id="集中化版本控制系统">集中化版本控制系统</h3>
+<p>要知道大型的项目开发过程中，有多个开发者共同参与，如何让不同系统上的开发者协同工作呢？显然，本地版本控制系统不能实现。于是，集中化版本控制系统(Centralized Version Control System: CVCS)应运而生。</p>
+<p>CVS，Subversion以及Perforce等属于这类系统。<strong>它们都有一个单一的集中管理的服务器，保存所有文件的修订版本，协同工作人员可以通过客户端连接到这台服务器，取出最新文件或者提交更新。</strong></p>
+<p><img src="/CVCS.png" alt=""></p>
+<p>Figure2: 集中化版本控制</p>
+<p>**优点：**相对于Local VCS而言，现在每个开发者可以在一定程度上看到项目中其他开发者正在做什么。而且管理一个CVCS要远比在各个客户端上维护本地数据库更加容易。</p>
+<p><strong>缺点：</strong> 最明显的缺点是，如果宕机一个小时，则谁都无法提交更新，也就无法协同工作。如果中心数据库所在磁盘发生损坏，有没有适当的备份，则将丢失最新变更的所有数据，只剩下每个开发者在各自机器上保留的单独快照(snapshots)，同时本地版本控制系统也有类似问题。</p>
+<h3 id="分布式版本控制系统">分布式版本控制系统</h3>
+<p>为了避免集中化版本控制系统所带来的缺点，于是<strong>分布式版本控制系统(Distributed Version Control System: DVCS)</strong> 出现了。这类系统有：Git，Mercurial，Bazaar以及Darcs等。</p>
+<p><strong>DCVS，客户端不只是提取最新的版本的文件快照，而是把代码仓库完整地镜像下来，包括完整的历史记录。</strong></p>
+<p><img src="/DVCS.png" alt=""></p>
+<p>Figure3: 分布式版本控制</p>
+<p>**优点：**每一个项目开发者的本地镜像都跟服务器上的项目源代码等同。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/progit/">proGit</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/progit%E5%AD%A6%E4%B9%A02/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">ProGit学习2</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/git%E5%AD%A6%E4%B9%A01/">
+            <span class="next-text nav-default">Git学习1</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/progit%E5%AD%A6%E4%B9%A01/" class="leancloud_visitors" data-flag-title="ProGit学习1">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

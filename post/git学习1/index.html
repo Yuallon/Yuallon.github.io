@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Git学习1 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="###前言： 虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的Gi" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/git%E5%AD%A6%E4%B9%A01/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Git学习1" />
+<meta property="og:description" content="###前言： 虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的Gi" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/git%E5%AD%A6%E4%B9%A01/" />
+<meta property="article:published_time" content="2020-06-21T01:11:21+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:11:21+08:00" />
+<meta itemprop="name" content="Git学习1">
+<meta itemprop="description" content="###前言： 虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的Gi">
+<meta itemprop="datePublished" content="2020-06-21T01:11:21&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:11:21&#43;08:00" />
+<meta itemprop="wordCount" content="1055">
+
+
+
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git学习1"/>
+<meta name="twitter:description" content="###前言： 虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的Gi"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Git学习1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> Git </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>###前言：</p>
+<p>虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的GitHub的repositories也是一个很好的习惯。所以，今天看了一些有关GitHub and git命令的教学视频，记录一下自己的学习。</p>
+<p>###创建repository</p>
+<p>在GitHub个人主页，点击个人头像，点击<strong>Your repositories</strong>即可创建一个仓库。在平时的天文数据处理中，我希望自己写的一些代码托管到GitHub上，所以很希望可以熟练使用git命令。</p>
+<p>今天的git学习视频来自：<a href="https://www.bilibili.com/video/BV1Xx411m7kn?p=9">【教程】学会Git玩转Github【全】</a>，其中对自己帮助最大的是<strong>P8 &amp; P9</strong>两个视频。这两个视频主要讲解了<strong>如何使用git命令创建仓库，并同步到GitHub上</strong>。也让自己对前面搭建个人blog时，遇到的一些git命令有了深刻的理解。</p>
+<p><img src="/git1.png" alt="Git工作区域"></p>
+<p><img src="/git2.png" alt="Git文件添加流程"></p>
+<p><strong>git命令</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#将当前目录转换为git仓库
+git init
+#查看当前文件的状况，是在工作区域还是在暂存区or仓库
+git status
+#添加文件
+git add xxx.py
+#添加当前文件夹所有的文件
+git add .
+#备注
+git commit -m &#34;内容&#34;
+#将本地文件同步到GitHub上
+git push -u origin master
+</code></pre></td></tr></table>
+</div>
+</div><p>###问题&amp;解决方式</p>
+<p>当我在本地创建了一个新的git仓库，在把仓库推送到GitHub上时，出现下面的问题</p>
+<p><img src="/git_error1.png" alt="远程库与本地库不一致"></p>
+<p>解决方式参考：<a href="https://blog.csdn.net/MBuger/article/details/70197532?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase">git push错误failed to push some refs to的解决</a></p>
+<p>根据文章的解释，我这个问题的出现是因为我在GitHub远程仓库中新添加了README文件，但是这个文件没有同步到本地的git仓库，这时候当运行<strong>push</strong>命令是就会出现这个报错。</p>
+<p><strong>问题总结：</strong> 当我们在github版本库中发现一个问题后，你在github上对它进行了在线的修改；或者你直接在github上的某个库中添加readme文件或者其他什么文件，但是没有对本地库进行同步。这个时候当你再次有commit想要从本地库提交到远程的github库中时就会出现push失败的问题。</p>
+<p><strong>解决方式：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git pull --rebase origin master
+</code></pre></td></tr></table>
+</div>
+</div><p>上述命令是把远程库同步到本地库。<strong>&ndash;rebase</strong>的作用是取消本地库中刚刚的commit，并把他们接到更新后的版本库之中。</p>
+<p><strong>注意：此处使用的是master分支，请根据自己的开发分支更换</strong></p>
+<p><strong>图例解释：</strong></p>
+<p><img src="/git_push1.png" alt="Git_push1"></p>
+<p>git pull &ndash;rebase origin master意为先取消commit记录，并且把它们临时 保存为补丁(patch)(这些补丁放到&rdquo;.git/rebase&quot;目录中)，之后同步远程库到本地，最后合并补丁到本地库之中。</p>
+<p><img src="/git_push2.png" alt="Git_push1"></p>
+<p>接下来就可以把本地库push到远程库当中了。</p>
+<p><img src="/git_push3.png" alt="Git_push1"></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/progit%E5%AD%A6%E4%B9%A01/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">ProGit学习1</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pandas%E5%AD%A6%E4%B9%A0-series_2/">
+            <span class="next-text nav-default">Pandas学习 Series_2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/git%E5%AD%A6%E4%B9%A01/" class="leancloud_visitors" data-flag-title="Git学习1">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

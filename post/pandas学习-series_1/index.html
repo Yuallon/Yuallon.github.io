@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Pandas学习 Series_1 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="###Intro to pandas 在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &amp;hellip;)。Pandas的出现正是为了专门处理这些类型数据" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Pandas学习 Series_1" />
+<meta property="og:description" content="###Intro to pandas 在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &hellip;)。Pandas的出现正是为了专门处理这些类型数据" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_1/" />
+<meta property="article:published_time" content="2020-06-21T01:02:12+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:02:12+08:00" />
+<meta itemprop="name" content="Pandas学习 Series_1">
+<meta itemprop="description" content="###Intro to pandas 在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &hellip;)。Pandas的出现正是为了专门处理这些类型数据">
+<meta itemprop="datePublished" content="2020-06-21T01:02:12&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:02:12&#43;08:00" />
+<meta itemprop="wordCount" content="1234">
+
+
+
+<meta itemprop="keywords" content="Series," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pandas学习 Series_1"/>
+<meta name="twitter:description" content="###Intro to pandas 在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &hellip;)。Pandas的出现正是为了专门处理这些类型数据"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Pandas学习 Series_1</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>###Intro to pandas</p>
+<p>在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &hellip;)。<strong>Pandas</strong>的出现正是为了专门处理这些类型数据。在Pandas中，<strong>Series</strong>和<strong>DataFrame</strong>是数据最基本的表现形式。其中Series是一维的、有索引的、支持任何类型的数据结构(整数，字符串，浮点数，python对象等等)，DataFrame是二维的数据结构。</p>
+<p><strong>Pandas</strong>通过对Series和DataFrame的操作，可以实现对数据进行切片，提取特定的行列信息，过滤，并合，拆分等从而更便于对数据统计分析。Pandas通过<strong>Matplotlib</strong>模块可以方便对数据进行绘图，此外Pandas还支持对时间序列数据的处理。总而言之，平时工作中遇到的任何数据格式都可以通过Pandas做数据分析。</p>
+<p><strong>Reference:</strong> <a href="https://pandas.pydata.org/docs/pandas.pdf">pandas: powerful Python data analysis toolkit</a></p>
+<p>###pandas.Series</p>
+<p>回想起自己刚开始学习编程语言时，很多教程都是让我们跟着他们机械的敲一些代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">print (&#34;Hello World!&#34;)
+</code></pre></td></tr></table>
+</div>
+</div><p>说实话，这种类型的教程前期给我的学习带来了很大困扰，因为我是一个很喜欢刨根问底的人，虽然我也能跟着在Terminal打印出“Hello World!”这句话，但是如果没能搞明白这段代码的原理，会影响自己后续的学习动力。</p>
+<p>其实，搞懂前面的问题也就一句话的事情。在编程语言的学习中，<strong>只要把每一个代码看成一个函数结构，每个函数结构又有一定的参数设置</strong>，这样我就会很好理解print这个函数了。而且有了这个概念在脑中时，以后凡事遇见一个命令时，我都会想考虑其中有那些函数？这个函数又有那些参数？</p>
+<p>因此在总结Pandas学习中，我希望自己能延续这个习惯(学习任何一个模块都应该这样吧)。首先从pandas.Series的参数结构开始说起，当然一开始只会总结一些主要的参数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)
+</code></pre></td></tr></table>
+</div>
+</div><p>在上面的语法结构中，<strong>=</strong>号后面表示默认的设置(data=None，默认没有数据，言外之意没有任何输入直接执行pandas.Series()是没有输出的)。</p>
+<p><strong>主要参数：</strong></p>
+<ol>
+<li>data: 可以是数组类型，可迭代结构，字典，或者常数</li>
+<li>index: 数组类型or指针
+index必须跟data有相同的长度，但是不要求每个index值是唯一的。如果没有给定，默认是(0, 1, 2, &hellip;, len(data)-1)。对于字典，在把dict转成Series过程中，如果给定index则会优先于dict的关键字，如果没有输入index默认把dict的key生成index。</li>
+<li>dtype: 如果没有要求生成的Series的数据类型，默认的数据类型来自于输入的数据类型</li>
+</ol>
+<p><strong>Reference:</strong> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html">pandas.Series</a></p>
+<h4 id="例子">例子</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#Customarily, we import as follows:
+import numpy as np
+import pandas as pd
+s = pd.Series([1,3,5,np.nan,6,8])
+#out
+0 1.0
+1 3.0
+2 5.0
+3 NaN
+4 6.0
+5 8.0 dtype: float64
+
+##from ndarry
+s = pd.Series(np.random.randn(5), index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
+#out
+a    0.469112
+b   -0.282863
+c   -1.509059
+d   -1.135632
+e    1.212112
+dtype: float64
+
+#index
+s.index
+#out
+Index([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;], dtype=&#39;object&#39;)
+
+#默认index
+pd.Series(np.random.randn(5))
+
+0   -0.173215
+1    0.119209
+2   -1.044236
+3   -0.861849
+4   -2.104569
+dtype: float64
+
+##from dict
+d = {&#39;b&#39;: 1, &#39;a&#39;: 0, &#39;c&#39;: 2}
+pd.Series(d)
+b    1
+a    0
+c    2
+dtype: int64
+
+pd.Series(d, index=[&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39;])
+b    1.0
+c    2.0
+d    NaN
+a    0.0
+dtype: float64
+
+##from scalar value
+pd.Series(5., index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
+a    5.0
+b    5.0
+c    5.0
+d    5.0
+e    5.0
+dtype: float64
+
+
+
+</code></pre></td></tr></table>
+</div>
+</div><p>###Reference:</p>
+<ol>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/dsintro.html#intro-to-data-structures">Intro to data structures</a></li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html">10 minutes to pandas</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/series/">Series</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E8%84%9A%E7%A8%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">脚程</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E5%B1%B1%E6%9D%91%E5%92%8F%E6%80%80/">
+            <span class="next-text nav-default">山村咏怀</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/pandas%E5%AD%A6%E4%B9%A0-series_1/" class="leancloud_visitors" data-flag-title="Pandas学习 Series_1">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

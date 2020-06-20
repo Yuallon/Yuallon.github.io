@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>天文 on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/categories/%E5%A4%A9%E6%96%87/</link>
+    <description>Recent content in 天文 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 00:43:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/categories/%E5%A4%A9%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>K改正</title>
+      <link>https://yuallon.github.io/post/k%E6%94%B9%E6%AD%A3/</link>
+      <pubDate>Sun, 21 Jun 2020 00:43:20 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/k%E6%94%B9%E6%AD%A3/</guid>
+      <description>$\color{red}{K-correction }$: it converts measurements of astronomical objects into $\color{red}{their\ respective\ rest\ frames}$. The correction acts on that object&amp;rsquo;s observed $\color{red}{magnitude}$ (or equivalently, its flux). Why should appeal to K-correction? Because astronomical observation often measure through a single filter or bandpass, observers only measure a fraction of the total spectrum, redshifted into the frame of the observer. Formula $K_{corr}=(m-M)-5(log_{10}D_L-1)$ Where, ​ $D_L$ is the luminosity distance measured in parsecs ​</description>
+    </item>
+    
+    <item>
+      <title>光度</title>
+      <link>https://yuallon.github.io/post/%E5%85%89%E5%BA%A6/</link>
+      <pubDate>Sun, 21 Jun 2020 00:39:07 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%85%89%E5%BA%A6/</guid>
+      <description>Luminosity $\color{red}{Luminosity}$ is an absolute measure of radiated of electromagnetic power, the radiant power emitted by a light-emitting object. $\color{red}{Particularly\ in\ astronomy}$, luminosity is the total amount of electromagnetic energy emitted per unit of time by a star, galaxy or other astronomical object. Flux density $F={L\over A}={L\over 4\pi r^2}$ Where, ​ A is the area of the illuminated surface ​ F is the flux density of the illuminated surface ​</description>
+    </item>
+    
+  </channel>
+</rss>

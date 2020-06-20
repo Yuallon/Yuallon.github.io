@@ -1,23 +1,122 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Even - A super concise theme for Hugo</title>
+    <title>Python on Even - A super concise theme for Hugo</title>
     <link>https://yuallon.github.io/categories/python/</link>
-    <description>Recent content in python on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Python on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jun 2020 21:23:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 01:59:18 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>PythonOS模块</title>
-      <link>https://yuallon.github.io/post/pythonos%E6%A8%A1%E5%9D%97/</link>
-      <pubDate>Sat, 20 Jun 2020 21:23:49 +0800</pubDate>
+      <title>Python SYS模块</title>
+      <link>https://yuallon.github.io/post/python-sys%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Sun, 21 Jun 2020 01:59:18 +0800</pubDate>
       
-      <guid>https://yuallon.github.io/post/pythonos%E6%A8%A1%E5%9D%97/</guid>
+      <guid>https://yuallon.github.io/post/python-sys%E6%A8%A1%E5%9D%97/</guid>
+      <description>前言 sys模块 提供了对解释器及相关功能的操作。主要用于操控python运行时的环境。 常用函数 sys.argv()：用于从命令行获取传入pyt</description>
+    </item>
+    
+    <item>
+      <title>Python文件路径</title>
+      <link>https://yuallon.github.io/post/python%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 21 Jun 2020 01:57:48 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</guid>
+      <description>文件路径 在计算机中，我们可以用两种方式来描述文件的位置：绝对路径 和 相对路径 。这两个概念很好理解，跟我们在学习物理时，遇到的 绝对参考系 和相对参</description>
+    </item>
+    
+    <item>
+      <title>PythonOS模块</title>
+      <link>https://yuallon.github.io/post/python-os%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Sun, 21 Jun 2020 01:56:36 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python-os%E6%A8%A1%E5%9D%97/</guid>
       <description>前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实</description>
+    </item>
+    
+    <item>
+      <title>Python中__name__==__main__作用</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/</link>
+      <pubDate>Sun, 21 Jun 2020 01:54:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/</guid>
+      <description>###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &amp;#39;__main__&amp;#39;: print(&amp;#34;This is test code!&amp;#34;) 这行代码到底是什么意思呢？或者有什么样的作用</description>
+    </item>
+    
+    <item>
+      <title>Python函数</title>
+      <link>https://yuallon.github.io/post/python%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:53:05 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%87%BD%E6%95%B0/</guid>
+      <description>###前言 在平时的工作中，我们会遇到很多需要重复的地方，比如统计一个班上所有同学的成绩。虽然我们可以通过循环实现，但是每次都去写一个循环结构</description>
+    </item>
+    
+    <item>
+      <title>Python切片操作</title>
+      <link>https://yuallon.github.io/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sun, 21 Jun 2020 01:48:32 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/</guid>
+      <description>字符串（string） 在python中，我们可以通过在单引号（single quotes &amp;lsquo;&amp;hellip;&#39;）或 双引号（double quotes &amp;ld</description>
+    </item>
+    
+    <item>
+      <title>RE库学习</title>
+      <link>https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:47:00 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/</guid>
+      <description>前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。</description>
+    </item>
+    
+    <item>
+      <title>Python中计时器</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</link>
+      <pubDate>Sun, 21 Jun 2020 01:45:10 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</guid>
+      <description>今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。 在python官网有 time模块</description>
+    </item>
+    
+    <item>
+      <title>Python If语句</title>
+      <link>https://yuallon.github.io/post/python-if%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Sun, 21 Jun 2020 01:43:38 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python-if%E8%AF%AD%E5%8F%A5/</guid>
+      <description>python条件语句 语法格式： 1 2 3 4 5 6 7 #if语句 if 判断条件1: 执行语句1 elif 判断条件2: 执行语句2 else: 执行语句3 注：其中 elif 语句可以有多个，</description>
+    </item>
+    
+    <item>
+      <title>Python变量</title>
+      <link>https://yuallon.github.io/post/python%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Sun, 21 Jun 2020 01:40:44 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%8F%98%E9%87%8F/</guid>
+      <description>###注释 养成写注释的习惯，是良好的编程风格的开始！ 单行注释： # 符号 多行注释：3对单引号，或者3对双引号。 1 2 3 &amp;#39;&amp;#39;&amp;#39; 我是注释行 &amp;#39;&amp;#39;&amp;#39; python中</description>
+    </item>
+    
+    <item>
+      <title>Python循环语句</title>
+      <link>https://yuallon.github.io/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Sun, 21 Jun 2020 01:39:05 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</guid>
+      <description>while循环语句 while循环基本语法 1 2 while 判断语句(condition): 执行语句(statements) 跟判断语句 if 对比来看，wile</description>
+    </item>
+    
+    <item>
+      <title>Python运算符</title>
+      <link>https://yuallon.github.io/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Sun, 21 Jun 2020 01:37:33 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>python运算符 算术运算符 +：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。 -：</description>
     </item>
     
   </channel>

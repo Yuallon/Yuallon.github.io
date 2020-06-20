@@ -6,27 +6,333 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jun 2020 21:23:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 01:59:18 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>PythonOS模块</title>
-      <link>https://yuallon.github.io/post/pythonos%E6%A8%A1%E5%9D%97/</link>
-      <pubDate>Sat, 20 Jun 2020 21:23:49 +0800</pubDate>
+      <title>Python SYS模块</title>
+      <link>https://yuallon.github.io/post/python-sys%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Sun, 21 Jun 2020 01:59:18 +0800</pubDate>
       
-      <guid>https://yuallon.github.io/post/pythonos%E6%A8%A1%E5%9D%97/</guid>
+      <guid>https://yuallon.github.io/post/python-sys%E6%A8%A1%E5%9D%97/</guid>
+      <description>前言 sys模块 提供了对解释器及相关功能的操作。主要用于操控python运行时的环境。 常用函数 sys.argv()：用于从命令行获取传入pyt</description>
+    </item>
+    
+    <item>
+      <title>Python文件路径</title>
+      <link>https://yuallon.github.io/post/python%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 21 Jun 2020 01:57:48 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</guid>
+      <description>文件路径 在计算机中，我们可以用两种方式来描述文件的位置：绝对路径 和 相对路径 。这两个概念很好理解，跟我们在学习物理时，遇到的 绝对参考系 和相对参</description>
+    </item>
+    
+    <item>
+      <title>PythonOS模块</title>
+      <link>https://yuallon.github.io/post/python-os%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Sun, 21 Jun 2020 01:56:36 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python-os%E6%A8%A1%E5%9D%97/</guid>
       <description>前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实</description>
     </item>
     
     <item>
-      <title>My_first_blog</title>
-      <link>https://yuallon.github.io/post/my_first_blog/</link>
-      <pubDate>Sat, 20 Jun 2020 18:10:23 +0800</pubDate>
+      <title>Python中__name__==__main__作用</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/</link>
+      <pubDate>Sun, 21 Jun 2020 01:54:12 +0800</pubDate>
       
-      <guid>https://yuallon.github.io/post/my_first_blog/</guid>
-      <description>Hello World! 你好 1 2 3</description>
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/</guid>
+      <description>###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &amp;#39;__main__&amp;#39;: print(&amp;#34;This is test code!&amp;#34;) 这行代码到底是什么意思呢？或者有什么样的作用</description>
+    </item>
+    
+    <item>
+      <title>Python函数</title>
+      <link>https://yuallon.github.io/post/python%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:53:05 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%87%BD%E6%95%B0/</guid>
+      <description>###前言 在平时的工作中，我们会遇到很多需要重复的地方，比如统计一个班上所有同学的成绩。虽然我们可以通过循环实现，但是每次都去写一个循环结构</description>
+    </item>
+    
+    <item>
+      <title>CSS学习1</title>
+      <link>https://yuallon.github.io/post/css%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:50:03 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/css%E5%AD%A6%E4%B9%A01/</guid>
+      <description>CSS 简介 语法规范： CSS 规则由两个主要的部分构成：选择器 和 一条或多条声明。 Figure1: 选择器&amp;ndash;表示给h1标签修改样式；声明&amp;ndash;怎样去修</description>
+    </item>
+    
+    <item>
+      <title>Python切片操作</title>
+      <link>https://yuallon.github.io/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sun, 21 Jun 2020 01:48:32 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/</guid>
+      <description>字符串（string） 在python中，我们可以通过在单引号（single quotes &amp;lsquo;&amp;hellip;&#39;）或 双引号（double quotes &amp;ld</description>
+    </item>
+    
+    <item>
+      <title>RE库学习</title>
+      <link>https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:47:00 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/</guid>
+      <description>前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。</description>
+    </item>
+    
+    <item>
+      <title>Python中计时器</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</link>
+      <pubDate>Sun, 21 Jun 2020 01:45:10 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/</guid>
+      <description>今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。 在python官网有 time模块</description>
+    </item>
+    
+    <item>
+      <title>Python If语句</title>
+      <link>https://yuallon.github.io/post/python-if%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Sun, 21 Jun 2020 01:43:38 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python-if%E8%AF%AD%E5%8F%A5/</guid>
+      <description>python条件语句 语法格式： 1 2 3 4 5 6 7 #if语句 if 判断条件1: 执行语句1 elif 判断条件2: 执行语句2 else: 执行语句3 注：其中 elif 语句可以有多个，</description>
+    </item>
+    
+    <item>
+      <title>Python变量</title>
+      <link>https://yuallon.github.io/post/python%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Sun, 21 Jun 2020 01:40:44 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%8F%98%E9%87%8F/</guid>
+      <description>###注释 养成写注释的习惯，是良好的编程风格的开始！ 单行注释： # 符号 多行注释：3对单引号，或者3对双引号。 1 2 3 &amp;#39;&amp;#39;&amp;#39; 我是注释行 &amp;#39;&amp;#39;&amp;#39; python中</description>
+    </item>
+    
+    <item>
+      <title>Python循环语句</title>
+      <link>https://yuallon.github.io/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Sun, 21 Jun 2020 01:39:05 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</guid>
+      <description>while循环语句 while循环基本语法 1 2 while 判断语句(condition): 执行语句(statements) 跟判断语句 if 对比来看，wile</description>
+    </item>
+    
+    <item>
+      <title>Python运算符</title>
+      <link>https://yuallon.github.io/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Sun, 21 Jun 2020 01:37:33 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>python运算符 算术运算符 +：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。 -：</description>
+    </item>
+    
+    <item>
+      <title>大学排名爬取</title>
+      <link>https://yuallon.github.io/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/</link>
+      <pubDate>Sun, 21 Jun 2020 01:35:39 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/</guid>
+      <description>###基于BS4库的HTML内容查找方法 函数： 1 &amp;lt;&amp;gt;.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果 name：对标签名称的检索，字符串类型。可以输入字</description>
+    </item>
+    
+    <item>
+      <title>BeautifulSoup学习</title>
+      <link>https://yuallon.github.io/post/beautifulsoup%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:33:38 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/beautifulsoup%E5%AD%A6%E4%B9%A0/</guid>
+      <description>前言 理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。 当我们用Request库获取HTML的页面信息时，获取的信息其</description>
+    </item>
+    
+    <item>
+      <title>爬虫学习1</title>
+      <link>https://yuallon.github.io/post/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:31:29 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A01/</guid>
+      <description>爬虫有风险，操作需谨慎！ 网络爬虫的限制 来源审查：判断 user-agent 进行限制 检查来访HTTP协议头的user-agent域，只响应浏览器或友好爬虫访问 发布</description>
+    </item>
+    
+    <item>
+      <title>Requestes库</title>
+      <link>https://yuallon.github.io/post/requestes%E5%BA%93/</link>
+      <pubDate>Sun, 21 Jun 2020 01:29:34 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/requestes%E5%BA%93/</guid>
+      <description>Requestes库 Requestes库官方网站 安装方式：pip install requests（在终端） Requestes库的7个主要方法： 方法 说明 requestes.request() 构</description>
+    </item>
+    
+    <item>
+      <title>互联网协议</title>
+      <link>https://yuallon.github.io/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Sun, 21 Jun 2020 01:24:55 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE/</guid>
+      <description>前言： 这篇文章是学习 阮一峰 老师 互联网协议入门 相关文章的笔记。 概述 互联网技术的广泛应用，是在多种层次结构上实现的。每一层都有这自己的功能，且依</description>
+    </item>
+    
+    <item>
+      <title>HTML学习2</title>
+      <link>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A02/</link>
+      <pubDate>Sun, 21 Jun 2020 01:23:02 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A02/</guid>
+      <description>##HTML常用标签 学习标签的时候，最重要的是记住标签的含义，即这个标签是用来干什么的！合理的添加标签，可以让网页界面更清晰易读！ 标题标签 H</description>
+    </item>
+    
+    <item>
+      <title>HTML学习1</title>
+      <link>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:20:26 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/html%E5%AD%A6%E4%B9%A01/</guid>
+      <description>###Web构成： 主要包括结构（structure）、表现（presentation）和行为（behavior）三个方面。 标准 说明 结构 结构用</description>
+    </item>
+    
+    <item>
+      <title>ProGit学习3</title>
+      <link>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A03/</link>
+      <pubDate>Sun, 21 Jun 2020 01:18:20 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A03/</guid>
+      <description>配置用户信息 安装完Git之后，要做的第一件事情就是设置你的用户名和邮件地址。这一点很重要，因为每个Git提交都会使用这些信息，它们会写入到你</description>
+    </item>
+    
+    <item>
+      <title>ProGit学习2</title>
+      <link>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A02/</link>
+      <pubDate>Sun, 21 Jun 2020 01:16:18 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A02/</guid>
+      <description>Git是什么？ Git与其他版本控制系统的主要差别在于Git对待数据的方法。CVS，Subversion，Perforce，Bazaar等系统</description>
+    </item>
+    
+    <item>
+      <title>ProGit学习1</title>
+      <link>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:14:31 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/progit%E5%AD%A6%E4%B9%A01/</guid>
+      <description>什么是版本控制(version control)? **版本控制：**是一种记录一个or若干文件内容变化，以便将来查阅特定版本修订情况的系统。 在平时的日常生活中</description>
+    </item>
+    
+    <item>
+      <title>Git学习1</title>
+      <link>https://yuallon.github.io/post/git%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:11:21 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/git%E5%AD%A6%E4%B9%A01/</guid>
+      <description>###前言： 虽然自己很早以前就注册了GitHub账号，最近因为看着教程搭建了个人blog，才频繁接触到git一些命令。而且，管理好自己的Gi</description>
+    </item>
+    
+    <item>
+      <title>Pandas学习 Series_2</title>
+      <link>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_2/</link>
+      <pubDate>Sun, 21 Jun 2020 01:08:16 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_2/</guid>
+      <description>上一篇文章讲述了pandas.Series()函数，主要讲述函数的input和output的数据类型。既然在默认输出情况下，output的类</description>
+    </item>
+    
+    <item>
+      <title>初夏绝句</title>
+      <link>https://yuallon.github.io/post/%E5%88%9D%E5%A4%8F%E7%BB%9D%E5%8F%A5/</link>
+      <pubDate>Sun, 21 Jun 2020 01:06:01 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%88%9D%E5%A4%8F%E7%BB%9D%E5%8F%A5/</guid>
+      <description>###初夏绝句 宋·陆游 纷纷红紫已成尘，布谷声中夏令新。 夹路桑麻行不尽，始知身是太平人。 ###注释： 红紫：红花与紫花，这里指春天开放的花。 夏令</description>
+    </item>
+    
+    <item>
+      <title>脚程</title>
+      <link>https://yuallon.github.io/post/%E8%84%9A%E7%A8%8B/</link>
+      <pubDate>Sun, 21 Jun 2020 01:04:41 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E8%84%9A%E7%A8%8B/</guid>
+      <description>今天妈妈带着妹妹和她的两个孩子出去游玩，我一个人坐在大门口时突然想到了奶奶。奶奶已经八十有三，平时奶奶的活动范围也就是在村庄里面走来走去，如</description>
+    </item>
+    
+    <item>
+      <title>Pandas学习 Series_1</title>
+      <link>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_1/</link>
+      <pubDate>Sun, 21 Jun 2020 01:02:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/pandas%E5%AD%A6%E4%B9%A0-series_1/</guid>
+      <description>###Intro to pandas 在平时的工作中，经常会遇到很多表格类型的数据(如：txt, csv, excel, sql, json, parquet, &amp;hellip;)。Pandas的出现正是为了专门处理这些类型数据</description>
+    </item>
+    
+    <item>
+      <title>山村咏怀</title>
+      <link>https://yuallon.github.io/post/%E5%B1%B1%E6%9D%91%E5%92%8F%E6%80%80/</link>
+      <pubDate>Sun, 21 Jun 2020 00:59:59 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%B1%B1%E6%9D%91%E5%92%8F%E6%80%80/</guid>
+      <description>###山村咏怀 宋·邵雍 一去二三里，烟村四五家。 亭台六七座，八九十枝花。 ###注释： 去：指距离 ###Reference: 古诗文网</description>
+    </item>
+    
+    <item>
+      <title>取快递</title>
+      <link>https://yuallon.github.io/post/%E5%8F%96%E5%BF%AB%E9%80%92/</link>
+      <pubDate>Sun, 21 Jun 2020 00:57:00 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%8F%96%E5%BF%AB%E9%80%92/</guid>
+      <description>昨天中午吃过午饭后休息时，想起因为前两天下雨而未取回的快递，便匆匆地骑着车子去取。当我看着紧闭的快递站点时，便意识到自己来的有些早了(下午1</description>
+    </item>
+    
+    <item>
+      <title>车遥遥篇</title>
+      <link>https://yuallon.github.io/post/%E8%BD%A6%E9%81%A5%E9%81%A5%E7%AF%87/</link>
+      <pubDate>Sun, 21 Jun 2020 00:54:37 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E8%BD%A6%E9%81%A5%E9%81%A5%E7%AF%87/</guid>
+      <description>###车遥遥篇 宋·范成大 车遥遥，马憧憧。 君游东山东复东，安得奋飞逐西风。 愿我如星君如月，夜夜流光相皎洁。 月暂晦，星长明。 留明待月复，三五共盈</description>
+    </item>
+    
+    <item>
+      <title>Hugo学习1</title>
+      <link>https://yuallon.github.io/post/hugo%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 00:52:04 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/hugo%E5%AD%A6%E4%B9%A01/</guid>
+      <description>###前言： ​ 搭建个人blog这个想法早在1年前就有了，直到最近这半个月看了一些视频教程and文字教程，才一步一步的搭建好最简单的样式。一开</description>
+    </item>
+    
+    <item>
+      <title>泰勒公式</title>
+      <link>https://yuallon.github.io/post/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</link>
+      <pubDate>Sun, 21 Jun 2020 00:48:56 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</guid>
+      <description>Motivation 假设$f(x)$在$x_0$处具有n阶导数，是否可以找出一个关于$(x-x_0)$的n次多项式来近似表达函数$f(x_0)$的值？ 即，$f</description>
+    </item>
+    
+    <item>
+      <title>K改正</title>
+      <link>https://yuallon.github.io/post/k%E6%94%B9%E6%AD%A3/</link>
+      <pubDate>Sun, 21 Jun 2020 00:43:20 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/k%E6%94%B9%E6%AD%A3/</guid>
+      <description>$\color{red}{K-correction }$: it converts measurements of astronomical objects into $\color{red}{their\ respective\ rest\ frames}$. The correction acts on that object&amp;rsquo;s observed $\color{red}{magnitude}$ (or equivalently, its flux). Why should appeal to K-correction? Because astronomical observation often measure through a single filter or bandpass, observers only measure a fraction of the total spectrum, redshifted into the frame of the observer. Formula $K_{corr}=(m-M)-5(log_{10}D_L-1)$ Where, ​ $D_L$ is the luminosity distance measured in parsecs ​</description>
+    </item>
+    
+    <item>
+      <title>光度</title>
+      <link>https://yuallon.github.io/post/%E5%85%89%E5%BA%A6/</link>
+      <pubDate>Sun, 21 Jun 2020 00:39:07 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%85%89%E5%BA%A6/</guid>
+      <description>Luminosity $\color{red}{Luminosity}$ is an absolute measure of radiated of electromagnetic power, the radiant power emitted by a light-emitting object. $\color{red}{Particularly\ in\ astronomy}$, luminosity is the total amount of electromagnetic energy emitted per unit of time by a star, galaxy or other astronomical object. Flux density $F={L\over A}={L\over 4\pi r^2}$ Where, ​ A is the area of the illuminated surface ​ F is the flux density of the illuminated surface ​</description>
+    </item>
+    
+    <item>
+      <title>踏莎行</title>
+      <link>https://yuallon.github.io/post/%E8%B8%8F%E8%8E%8E%E8%A1%8C/</link>
+      <pubDate>Sun, 21 Jun 2020 00:36:40 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E8%B8%8F%E8%8E%8E%E8%A1%8C/</guid>
+      <description>踏莎行 姜夔 自沔东来，丁末元日至金陵，江上感梦而作 燕燕轻盈，莺莺娇软，分明又向华胥见。夜长争得薄情知，春初早被相思染。 别后书辞，别时针线，离魂</description>
     </item>
     
   </channel>

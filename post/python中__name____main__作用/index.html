@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python中__name__==__main__作用 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &amp;#39;__main__&amp;#39;: print(&amp;#34;This is test code!&amp;#34;) 这行代码到底是什么意思呢？或者有什么样的作用" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python中__name__==__main__作用" />
+<meta property="og:description" content="###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &#39;__main__&#39;: print(&#34;This is test code!&#34;) 这行代码到底是什么意思呢？或者有什么样的作用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/" />
+<meta property="article:published_time" content="2020-06-21T01:54:12+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:54:12+08:00" />
+<meta itemprop="name" content="Python中__name__==__main__作用">
+<meta itemprop="description" content="###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &#39;__main__&#39;: print(&#34;This is test code!&#34;) 这行代码到底是什么意思呢？或者有什么样的作用">
+<meta itemprop="datePublished" content="2020-06-21T01:54:12&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:54:12&#43;08:00" />
+<meta itemprop="wordCount" content="668">
+
+
+
+<meta itemprop="keywords" content="__name__," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python中__name__==__main__作用"/>
+<meta name="twitter:description" content="###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &#39;__main__&#39;: print(&#34;This is test code!&#34;) 这行代码到底是什么意思呢？或者有什么样的作用"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python中__name__==__main__作用</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#reference">Reference：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>###前言</p>
+<p>在平常阅读python代码时，在代码末尾，我们经常会看见如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">if __name__ == &#39;__main__&#39;:
+		print(&#34;This is test code!&#34;)
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>这行代码到底是什么意思呢？或者有什么样的作用呢？</strong></p>
+<p>###解释</p>
+<p>首先，利用终端Terminal，我在Desktop创建了两个py文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">touch test.py
+touch quote.py
+</code></pre></td></tr></table>
+</div>
+</div><p>test.py内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">def test():
+    print(&#34;This is a test code!&#34;)
+
+print(__name__)
+</code></pre></td></tr></table>
+</div>
+</div><p>quote.py内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import test
+test.test()
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>在Terminal先运行test.py，发现打印出来的值是 **_<em>main</em>_**</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">python quote.py
+__main__
+</code></pre></td></tr></table>
+</div>
+</div><p>解释：当我们运行 <strong>当前py文件</strong> 时，python的解释器，会默认的 **_<em>name</em>_** = **__main__**</p>
+<p>即，默认把main赋值给name，这是运行当前py文件时。</p>
+<ul>
+<li>如果我们运行quote.py，发现 **print(_<em>name</em>_)** 打印出来的是 **test** 和 **This is a test code!**</li>
+</ul>
+<p>解释：当运行quote.py文件时，我们只是导入test文件，并调用了里面的test函数。所以打印出来的内容有 <em>This is a test code!</em> 是在意料之中。可是与前面直接运行的 test 文件相比，print(_<em>name</em>_) 输出的是 test。这说明，**当我们调用这个文件时，python的解释器会把文件名，赋值给  __name__，这就是直接运行与调用文件时，python解释器对 name 的赋值不同。**</p>
+<p><strong>总结：</strong></p>
+<ol>
+<li>
+<p>当直接运行一个python代码时，python解释器对 name 赋值 为 main。</p>
+</li>
+<li>
+<p>当在一个python文件调用另一python个代码时（test.py），python解释器对 name 的赋值为所调用文件的名字（test）。</p>
+</li>
+<li>
+<p>用途：所以当我们写好一个代码，在最后写上一行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">if __name__ == &#34;__main__&#34;:
+ test()
+</code></pre></td></tr></table>
+</div>
+</div><p>这样可以起到测试代码，且别人引用该代码时，不会输出两次。</p>
+</li>
+</ol>
+<h3 id="reference">Reference：</h3>
+<p><a href="https://www.bilibili.com/video/BV1T7411v7n8">Python小技巧#1：<strong>name</strong> == &lsquo;<strong>main</strong>&rsquo; 是做什么用的？</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/__name__/">__name__</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python-os%E6%A8%A1%E5%9D%97/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">PythonOS模块</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python%E5%87%BD%E6%95%B0/">
+            <span class="next-text nav-default">Python函数</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/" class="leancloud_visitors" data-flag-title="Python中__name__==__main__作用">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

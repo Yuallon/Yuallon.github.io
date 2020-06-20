@@ -6,26 +6,107 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Jun 2020 21:23:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 01:59:18 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://yuallon.github.io/categories/python/</link>
-      <pubDate>Sat, 20 Jun 2020 21:23:49 +0800</pubDate>
+      <pubDate>Sun, 21 Jun 2020 01:59:18 +0800</pubDate>
       
       <guid>https://yuallon.github.io/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>测试</title>
-      <link>https://yuallon.github.io/categories/%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Sat, 20 Jun 2020 18:10:23 +0800</pubDate>
+      <title>CSS</title>
+      <link>https://yuallon.github.io/categories/css/</link>
+      <pubDate>Sun, 21 Jun 2020 01:50:03 +0800</pubDate>
       
-      <guid>https://yuallon.github.io/categories/%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://yuallon.github.io/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>爬虫</title>
+      <link>https://yuallon.github.io/categories/%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Sun, 21 Jun 2020 01:35:39 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/%E7%88%AC%E8%99%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web协议</title>
+      <link>https://yuallon.github.io/categories/web%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Sun, 21 Jun 2020 01:24:55 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/web%E5%8D%8F%E8%AE%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://yuallon.github.io/categories/html/</link>
+      <pubDate>Sun, 21 Jun 2020 01:23:02 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://yuallon.github.io/categories/git/</link>
+      <pubDate>Sun, 21 Jun 2020 01:18:20 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>https://yuallon.github.io/categories/pandas/</link>
+      <pubDate>Sun, 21 Jun 2020 01:08:16 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/pandas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>文学</title>
+      <link>https://yuallon.github.io/categories/%E6%96%87%E5%AD%A6/</link>
+      <pubDate>Sun, 21 Jun 2020 01:06:01 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/%E6%96%87%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日记</title>
+      <link>https://yuallon.github.io/categories/%E6%97%A5%E8%AE%B0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:04:41 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/%E6%97%A5%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客搭建</title>
+      <link>https://yuallon.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sun, 21 Jun 2020 00:52:04 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>天文</title>
+      <link>https://yuallon.github.io/categories/%E5%A4%A9%E6%96%87/</link>
+      <pubDate>Sun, 21 Jun 2020 00:43:20 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/categories/%E5%A4%A9%E6%96%87/</guid>
       <description></description>
     </item>
     

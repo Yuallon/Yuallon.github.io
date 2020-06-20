@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BeautifulSoup on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/beautifulsoup/</link>
+    <description>Recent content in BeautifulSoup on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:35:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/beautifulsoup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大学排名爬取</title>
+      <link>https://yuallon.github.io/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/</link>
+      <pubDate>Sun, 21 Jun 2020 01:35:39 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/</guid>
+      <description>###基于BS4库的HTML内容查找方法 函数： 1 &amp;lt;&amp;gt;.find_all(name, attrs, recursive, string, **kwargs) 返回一个列表类型，存储查找的结果 name：对标签名称的检索，字符串类型。可以输入字</description>
+    </item>
+    
+    <item>
+      <title>BeautifulSoup学习</title>
+      <link>https://yuallon.github.io/post/beautifulsoup%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 21 Jun 2020 01:33:38 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/beautifulsoup%E5%AD%A6%E4%B9%A0/</guid>
+      <description>前言 理解BeautifulSoup库的一些命令，需要提前学习HTML标记语言。 当我们用Request库获取HTML的页面信息时，获取的信息其</description>
+    </item>
+    
+  </channel>
+</rss>

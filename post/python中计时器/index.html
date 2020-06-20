@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python中计时器 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。 在python官网有 time模块" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python中计时器" />
+<meta property="og:description" content="今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。 在python官网有 time模块" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/" />
+<meta property="article:published_time" content="2020-06-21T01:45:10+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:45:10+08:00" />
+<meta itemprop="name" content="Python中计时器">
+<meta itemprop="description" content="今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。 在python官网有 time模块">
+<meta itemprop="datePublished" content="2020-06-21T01:45:10&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:45:10&#43;08:00" />
+<meta itemprop="wordCount" content="1148">
+
+
+
+<meta itemprop="keywords" content="Time模块," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python中计时器"/>
+<meta name="twitter:description" content="今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。 在python官网有 time模块"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python中计时器</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#程序实例">程序实例：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>今天用python写了一个求取10,000以内的质数算法，想着查看程序运行的的时间。来对比不同算法执行时间。</p>
+<p>在python官网有 <strong>time模块</strong>计数器的介绍：<a href="https://docs.python.org/3/library/time.html?highlight=time%20clock#time.process_time">time-Time access and conversion</a>。现在写一下自己的理解。</p>
+<p><strong>部分术语：</strong></p>
+<ol>
+<li>**纪元（epoch）：**是指时间开始的最初时刻点，它对系统（platform）有依赖性。对于 <strong>Unix系统</strong> 纪元是指：1970年1月1日0时0分0秒（世界时UTC）。执行 <em>time.gmtime(0)</em> 可以查看系统的纪元。</li>
+<li>**自纪元以来秒数：**是指从纪元开始以来，总共流逝的时间。这里面不包含跳秒。</li>
+</ol>
+<p><strong>函数对比：</strong></p>
+<ul>
+<li>**time.perf_counter()：**返回 <strong>系统计数器的值</strong>（以秒为单位，包含小数值）。它是系统内分辨率最高的计数器，可以给出很小的执行时间。返回值是系统层面上的，包含系统休眠时间。参考的时间起点不明确（因为不同的电脑升级or安装Unix系统的时间轴不是固定的？），所以取两次返回值的差才是有意义的。
+<strong>所以，我们可以在一个程序（process）开始 和 结束 分别取值，差值就是系统对程序的响应时间。</strong></li>
+<li>**time.process_time()：**返回的值是 <strong>系统</strong> 和 <strong>CPU</strong> 对当前程序（current process）运行的总时间（以秒为单位，包含小数值）。它不包含系统的休眠时间（因为你要执行程序，就需要激活系统状态）。所以它是全过程的（process-wide）。参考的时间点不明确，只有差值有意义。
+<strong>所以，可以利用这个差值查看一个程序，在某台电脑上，系统和CPU的总响应时间。</strong></li>
+<li>**time.time()：**返回自 <strong>纪元</strong> 以来的 <strong>秒数</strong>（以秒为单位，浮点数）。纪元的具体日期和对跳秒的处理方式取决于不同的系统。在Windows和大部分的Unix系统，纪元都是设定在 January 1, 1970, 00:00:00 (UTC) 且 不包含跳秒。
+<strong>所以，这个返回值是系统对于纪元的时间长度，有明确的时间起点，也可以用差值计算程序的系统响应时间。</strong>
+<strong>注意⚠️：尽管它总是给出一个浮点数值，并不是所有的系统的时间精度都好于1秒，虽然这个函数通常返回非递减值，如果在两次响应之间系统时间被回调，第二次的返回值可能会比第一次返回值要小。</strong></li>
+</ul>
+<h3 id="程序实例">程序实例：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import time
+start1 = time.process_time()
+start2 = time.perf_counter()
+start3 = time.time()
+#value = int(input(&#34;请输入查找的范围：&#34;))
+value = 10000
+prime_number = []
+for number in range(value+1):
+#    number = int(input(&#34;请输入查找的范围：&#34;))
+    if number &gt;=2:
+        n = 0
+        for i in range(number):
+            i += 1
+            if (number % i) == 0:
+                n += 1
+        if n == 2:
+            #print(number, end = &#39;\t&#39;)
+            prime_number.append(number)
+        #else:
+            #print(&#34;不是质数&#34;)
+#else:
+  #print(&#34;查找失败，请检查输入的数字&#34;)
+end1 = time.process_time()
+end2 = time.perf_counter()
+end3 = time.time()
+sum1_time = end1 - start1
+sum2_time = end2 - start2
+sum3_time = end3 - start3
+print(&#34;process_time:%.3f&#34; % sum1_time)
+print(&#34;perf_time:%.3f&#34; % sum2_time)
+print(&#34;time_time:%.3f&#34; % sum3_time)
+
+#output:我的电脑响应时间对比
+process_time:16.129
+perf_time:8.173
+time_time:8.173
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/time%E6%A8%A1%E5%9D%97/">Time模块</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">RE库学习</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python-if%E8%AF%AD%E5%8F%A5/">
+            <span class="next-text nav-default">Python If语句</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/" class="leancloud_visitors" data-flag-title="Python中计时器">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

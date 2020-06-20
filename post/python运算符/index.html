@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python运算符 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="python运算符 算术运算符 &#43;：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。 -：" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python运算符" />
+<meta property="og:description" content="python运算符 算术运算符 &#43;：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。 -：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/" />
+<meta property="article:published_time" content="2020-06-21T01:37:33+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:37:33+08:00" />
+<meta itemprop="name" content="Python运算符">
+<meta itemprop="description" content="python运算符 算术运算符 &#43;：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。 -：">
+<meta itemprop="datePublished" content="2020-06-21T01:37:33&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:37:33&#43;08:00" />
+<meta itemprop="wordCount" content="1023">
+
+
+
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python运算符"/>
+<meta name="twitter:description" content="python运算符 算术运算符 &#43;：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。 -："/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python运算符</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#python运算符">python运算符</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="python运算符">python运算符</h3>
+<ul>
+<li>
+<h4 id="算术运算符">算术运算符</h4>
+<ul>
+<li>+：实现对象相加，可用于数值类型，字符串类型（字符串拼接），元组类型（元组元素拼接），列表类型（元素拼接）。</li>
+<li>-：得到一个数的负数 or 一个数减去另一个数</li>
+<li>*：两个数相乘 or 重复若干次的字符串、元组、列表内的元素</li>
+<li>/：除 运算符；x/y</li>
+<li>%：取余数</li>
+<li>**：幂次运算</li>
+<li>//取整运算</li>
+</ul>
+</li>
+<li>
+<h4 id="比较运算符">比较运算符</h4>
+<ul>
+<li>==：等于，比较两个对象是否相等</li>
+<li>!=：不等于</li>
+<li>&gt;：大于</li>
+<li>&lt;：小于</li>
+<li>&gt;=：大于等于</li>
+<li>&lt;=：小于等于</li>
+</ul>
+</li>
+<li>
+<h4 id="赋值运算符">赋值运算符</h4>
+<ul>
+<li>=：简单的赋值运算符</li>
+<li>+=：加法赋值运算符</li>
+<li>-=：减法赋值运算符</li>
+<li>*=：乘法赋值运算符</li>
+<li>/=：除法赋值运算符</li>
+<li>%=：取余赋值运算符</li>
+<li>**=：幂赋值运算符</li>
+<li>//=：取整赋值运算符</li>
+</ul>
+</li>
+<li>
+<h4 id="逻辑运算符">逻辑运算符</h4>
+<ul>
+<li>and：a and y，布尔值，如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。</li>
+<li>or：x or y，布尔值，如果 x 是非 0，它返回 x 的值，否则它返回 y 的计算值。</li>
+<li>not：not x，布尔值，如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。</li>
+</ul>
+</li>
+<li>
+<h4 id="位运算符">位运算符</h4>
+<p>位运算符，是吧 <strong>数字</strong> 看作 <strong>二进制</strong> 来进行计算。注意下方数字x，y会转换成二进制。</p>
+<ul>
+<li>x &amp; y：与运算符，二进制位都为1，位运算结果为1。</li>
+<li>x | y：或运算符，二进制位有一个为1，位运算结果为1。</li>
+<li>^x：异或运算符，二进制位相异时，位运算结果为1。</li>
+<li>~x：取反运算符，二进制位位取反，即0变1，1变0。</li>
+<li>x &laquo; n：左移运算符，所有二进制位向左移动n位。</li>
+<li>x &raquo; n：右移运算符，所有二进制位向右移动n位。</li>
+</ul>
+</li>
+<li>
+<h4 id="成员运算符">成员运算符</h4>
+<p>测试某个成员是否在一个对象中，包括字符串、列表、元组。</p>
+<ul>
+<li>x in y：如果x在y中返回True，否则返回False。</li>
+<li>x not in y：如果x不在y中，返回True，否则返回False。</li>
+</ul>
+</li>
+<li>
+<h4 id="身份运算符">身份运算符</h4>
+<p>比较两个对象是否来自相同的存储单元。</p>
+<ul>
+<li>x is y：如果x,y两个对象来自相同的存储单元，返回True。类似：id(x) == id(y)</li>
+<li>x is not y：如果x,y来自不同的存储单元，返回True。类似：id(x) != id(y)</li>
+</ul>
+</li>
+<li>
+<h4 id="运算符优先级">运算符优先级</h4>
+<p>从上到下优先级依次递减！</p>
+<ul>
+<li>**：指数 (最高优先级)</li>
+<li>~, +, - ：按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)</li>
+<li>*, /, %, // ：乘，除，取模和取整除</li>
+<li>+, - ：加法减法</li>
+<li>&laquo;, &raquo; ：左移，右移运算符</li>
+<li>&amp; ：位 AND</li>
+<li>^, | ：位运算符</li>
+<li>&lt;=, &lt;, &gt;, &gt;= ：比较运算符</li>
+<li>==, != ：等于运算符</li>
+<li>=, %=, /=, //=, -=, +=, *=, **= ：赋值运算符</li>
+<li>is, is not ：身份运算符</li>
+<li>in, not in ：成员运算符</li>
+<li>not, and, or ：逻辑运算符</li>
+</ul>
+</li>
+</ul>
+<p>注：只要这些运算符放在小括号()里面则优先级就是最高的。而且做比较的时候，要养成用小括号()给出判断顺序，使得代码可读性更好！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python循环语句</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E7%88%AC%E5%8F%96/">
+            <span class="next-text nav-default">大学排名爬取</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/" class="leancloud_visitors" data-flag-title="Python运算符">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

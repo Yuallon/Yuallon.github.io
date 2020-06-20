@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>RE库学习 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="RE库学习" />
+<meta property="og:description" content="前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-06-21T01:47:00+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:47:00+08:00" />
+<meta itemprop="name" content="RE库学习">
+<meta itemprop="description" content="前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。">
+<meta itemprop="datePublished" content="2020-06-21T01:47:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:47:00&#43;08:00" />
+<meta itemprop="wordCount" content="2615">
+
+
+
+<meta itemprop="keywords" content="re," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RE库学习"/>
+<meta name="twitter:description" content="前言 正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">RE库学习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#正则表达式的常用操作符">正则表达式的常用操作符</a></li>
+        <li><a href="#re库介绍">Re库介绍</a></li>
+        <li><a href="#re库的另一种等价用法">Re库的另一种等价用法</a></li>
+        <li><a href="#match对象介绍">Match对象介绍</a></li>
+        <li><a href="#贪婪匹配和最小匹配">贪婪匹配和最小匹配</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="前言">前言</h3>
+<p>正则表达式（regular expression：RE）就是为了，在诸多string、数字等组合的数据中，给出某一类数据的通用代码表达式。方便我们对信息的提取。</p>
+<p><img src="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%A4%BA%E4%BE%8B.jpg" alt="正则表达式示例"></p>
+<p>Figure1: 正则表达式示例，一行胜千言！</p>
+<p><strong>用途：</strong></p>
+<ul>
+<li>表达文本类型的特征（病毒、入侵等）</li>
+<li>同时查找或替换一组字符串</li>
+<li>匹配字符串的全部或部分</li>
+<li>。。。</li>
+</ul>
+<h3 id="正则表达式的常用操作符">正则表达式的常用操作符</h3>
+<table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">说明</th>
+<th align="center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.</td>
+<td align="center">表示任何单个字符</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">[]</td>
+<td align="center">字符集，对单个字符给出取值范围</td>
+<td align="center">[a,b,c]表示a、b、c，[a-z]表示a到z单个字符</td>
+</tr>
+<tr>
+<td align="center">[^ ]</td>
+<td align="center">非字符集，对单个字符给出排除范围</td>
+<td align="center">[^abc]表示非a非b非c的单个字符</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">前一个字符0次或无穷多次扩展</td>
+<td align="center">abc*表示：ab, abc, abcc, &hellip;</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">表示前一个字符1次或无穷次扩展</td>
+<td align="center">abc+表示：abc, abcc, &hellip;</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="center">前一个字符0次或1次扩展</td>
+<td align="center">abc?表示：ab, abc</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">或运算，左右表达式任意一个</td>
+<td align="center">abc|def表示：abc 或 def</td>
+</tr>
+<tr>
+<td align="center">{m}</td>
+<td align="center">扩展前一个字符m次</td>
+<td align="center">ab{2}c表示：abbc</td>
+</tr>
+<tr>
+<td align="center">{m,n}</td>
+<td align="center">扩展前一个字符m至n次（含n次）</td>
+<td align="center">ab{1,2}c表示：abc, abbc</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">匹配字符串开头</td>
+<td align="center">abc^表示abc且在一个字符串的开头</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">匹配字符串结尾</td>
+<td align="center">abc$表示abc且在一个字符串的结尾</td>
+</tr>
+<tr>
+<td align="center">()</td>
+<td align="center">分组标记，内部只能用|操作符</td>
+<td align="center">(abc)表示abc，(abc|def)表示abc、def</td>
+</tr>
+<tr>
+<td align="center">\d</td>
+<td align="center">十进制数字，等价于[0-9]</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">\w</td>
+<td align="center">单词字符，等价于[a-zA-Z0-9_]</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>语法示例：</strong></p>
+<ul>
+<li>P(Y|YT|YTH|YTHO)?N: PN, PYN, PYTN, PYTHN, PYTHON</li>
+<li>PYTHON+: PYTHON, PYTHONN, &hellip;</li>
+<li>PY[TH]ON: PYTON, PYHON</li>
+<li>PY[^TH] ?ON: PYON, PYaON, PYbON, &hellip;</li>
+<li>PY{:3}N: PN, PYN, PYYN, PYYYN</li>
+</ul>
+<p><strong>经典组合：</strong></p>
+<ul>
+<li>^[A-Za-z]+$：由26个字母组成的字符串</li>
+<li>^[A-Za-z0-9]+$：由26个字母和数字组成的字符串</li>
+<li>^-?\d+$：整数形式的字符串</li>
+<li>^[0-9]*[1-9][0-9]*$：整数形式的字符串</li>
+<li>[1-9]\d{5}：中国境内邮政编码，6位</li>
+<li>[\u4e00-\u9fa5]：匹配中文字符</li>
+<li>\d{3}-\d{8}|\d{4}-\d{7}：国内电话号码，010-68913536</li>
+<li>\d+.\d+.\d+.\d+ 或 \d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}：IP地址字符串形式
+精确写法：
+<ol>
+<li>0-99: [0-9]?\d</li>
+<li>100-199: 1\d{2}</li>
+<li>200-249: 2[0-4]\d</li>
+<li>250-255: 25[0-5]</li>
+</ol>
+</li>
+</ul>
+<h3 id="re库介绍">Re库介绍</h3>
+<p>Re库是python的标准库，主要用于字符串匹配</p>
+<p><strong>调用方式：import re</strong></p>
+<p>最好采用raw string类型（原生字符串类型）：r&rsquo;text&rsquo;。不包含对转义符再次转义的字符串。</p>
+<p>###Re库重要功能函数</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">re.search()</td>
+<td align="center">在一个字符串中搜索匹配正则表达式的第一个位置，返回mathc对象</td>
+</tr>
+<tr>
+<td align="center">re.match()</td>
+<td align="center">从一个字符串的开始位置起匹配正则表达式，返回match对象</td>
+</tr>
+<tr>
+<td align="center">re.findall()</td>
+<td align="center">搜索字符串，以列表类型返回全部能匹配的字串</td>
+</tr>
+<tr>
+<td align="center">re.split()</td>
+<td align="center">将一个字符串按照正则表达式匹配结果进行分割，返回列表类型</td>
+</tr>
+<tr>
+<td align="center">re.finditer()</td>
+<td align="center">搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象</td>
+</tr>
+<tr>
+<td align="center">re.sub()</td>
+<td align="center">在一个字符串中替换所有匹配正则表达式的字串，返回替换后的字符串</td>
+</tr>
+</tbody>
+</table>
+<p>在一个字符串中搜索匹配正则表达式的第一个位置，返回match对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">re.search(pattern, string, flags=0)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>pattern：正则表达式字符串</li>
+<li>string：待匹配字符串</li>
+<li>flags：正则表达式使用时的控制标记
+<ul>
+<li>re.I或re.IGNORECASE：忽略正则表达式的大小写，[A-Z]能够匹配小写字符</li>
+<li>re.M或re.MULTTLINE：正则表达式中的^操作符能够将给定字符串的每行当作匹配开始</li>
+<li>re.S或re.DOTALL：正则表达式中的.操作符能够匹配所有字符，默认匹配除换行符外的所有字符</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">re.findall(pattern, string, flags=0)
+re.split(pattern, string, maxsplit=0,flags=0)
+#maxsplit:最大分割数，剩余部分作为最后一个元素输出
+re.finditer(pattern, string, flags=0)
+re.sub(pattern, repl, string, count=0, flags)
+#repl：替换匹配字符串的字符串；count：匹配的最大替换次数
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="re库的另一种等价用法">Re库的另一种等价用法</h3>
+<p><img src="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BC%96%E8%AF%91.jpg" alt="正则表达式编译">
+Figure2: 将正则表达式的字符串形式编译成正则表达式对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">regex.search()</td>
+<td align="center">在一个字符串中搜索匹配正则表达式的第一个位置，返回mathc对象</td>
+</tr>
+<tr>
+<td align="center">regex.match()</td>
+<td align="center">从一个字符串的开始位置起匹配正则表达式，返回match对象</td>
+</tr>
+<tr>
+<td align="center">regex.findall()</td>
+<td align="center">搜索字符串，以列表类型返回全部能匹配的字串</td>
+</tr>
+<tr>
+<td align="center">regex.split()</td>
+<td align="center">将一个字符串按照正则表达式匹配结果进行分割，返回列表类型</td>
+</tr>
+<tr>
+<td align="center">regex.finditer()</td>
+<td align="center">搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象</td>
+</tr>
+<tr>
+<td align="center">regex.sub()</td>
+<td align="center">在一个字符串中替换所有匹配正则表达式的字串，返回替换后的字符串</td>
+</tr>
+</tbody>
+</table>
+<h3 id="match对象介绍">Match对象介绍</h3>
+<p>在上面的函数操作中，返回的对象是match对象。下面介绍一些该对象的特征。</p>
+<p>Match对象是一次匹配结果，包含匹配的很多信息。</p>
+<p><strong>属性：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.string</td>
+<td align="center">待匹配的文本</td>
+</tr>
+<tr>
+<td align="center">.re</td>
+<td align="center">匹配时使用的patter对象（正则表达式）</td>
+</tr>
+<tr>
+<td align="center">.pos</td>
+<td align="center">正则表达式搜索文本的开始位置</td>
+</tr>
+<tr>
+<td align="center">.endpos</td>
+<td align="center">正则表达式搜索文本的结束位置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>方法：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.group(0)</td>
+<td align="center">获取匹配后的字符串</td>
+</tr>
+<tr>
+<td align="center">.start()</td>
+<td align="center">匹配字符串在原始字符串的开始位置</td>
+</tr>
+<tr>
+<td align="center">.end()</td>
+<td align="center">匹配字符串在原始字符串的结束位置</td>
+</tr>
+<tr>
+<td align="center">.span()</td>
+<td align="center">返回(.start(), .end())</td>
+</tr>
+</tbody>
+</table>
+<h3 id="贪婪匹配和最小匹配">贪婪匹配和最小匹配</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">match = re.search(r&#39;PY.*N&#39;, &#39;PYANBNCNDN&#39;)
+match.group(0)
+&#39;PYANBNCNDN&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>Re库默认输出匹配最长的子串，即，贪婪匹配。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">match = re.search(r&#39;PY.*?N&#39;, &#39;PYANBNCNDN&#39;)
+match.group(0)
+&#39;PYAN&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>只要输出的长度可能不同，都可以通过在操作符后增加 <strong>?</strong> 变成最小匹配。</p>
+<ul>
+<li>*?</li>
+<li>+?</li>
+<li>??</li>
+<li>{m,n}?</li>
+</ul>
+<p>###实例：京东商品定向比价</p>
+<p><strong>目标：获取京东搜索页面的信息，提取商品的名称和价格</strong></p>
+<p><strong>问题：</strong></p>
+<ul>
+<li>如何定义京东搜索接口</li>
+<li>翻页处理</li>
+</ul>
+<p><strong>技术实现：requests库+re库</strong></p>
+<h4 id="步骤解析">步骤解析</h4>
+<p>打开京东网页输入书包，查看网址构成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#首页网址信息
+https://search.jd.com/Search?keyword=书包&amp;qrst=1&amp;wq=书包&amp;stock=1&amp;page=1&amp;s=1&amp;click=0
+#第二页网址信息
+https://search.jd.com/Search?keyword=书包&amp;qrst=1&amp;wq=书包&amp;stock=1&amp;page=3&amp;s=54&amp;click=0
+#第三页网址信息
+https://search.jd.com/Search?keyword=书包&amp;qrst=1&amp;wq=书包&amp;stock=1&amp;page=5&amp;s=100&amp;click=0
+</code></pre></td></tr></table>
+</div>
+</div><p>在嵩老师的教学视频里是采用的淘宝网页，可是淘宝网页需要登陆信息才可以爬取。所以我选择使用京东网页，来完成。</p>
+<ol>
+<li>
+<p>从网址信息可以推断京东的网址的接口为：https://search.jd.com/Search?keyword=书包。由page信息可以推断，翻页操作是由 <strong>2*第几页-1=page值</strong> 。</p>
+</li>
+<li>
+<p>如果使用requests库设定的&quot;user-agent&quot;默认信息是不能正常访问京东页面，所以使用 <strong>headers={&lsquo;user-agent&rsquo;: &lsquo;Chome/10&rsquo;}</strong> 来设置用Chome浏览器访问。这样就可以正常爬取京东页面商品信息。</p>
+</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/re/">re</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python切片操作</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python%E4%B8%AD%E8%AE%A1%E6%97%B6%E5%99%A8/">
+            <span class="next-text nav-default">Python中计时器</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/re%E5%BA%93%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="RE库学习">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

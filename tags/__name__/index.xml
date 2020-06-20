@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>__name__ on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/__name__/</link>
+    <description>Recent content in __name__ on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:54:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/__name__/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python中__name__==__main__作用</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/</link>
+      <pubDate>Sun, 21 Jun 2020 01:54:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD__name____main__%E4%BD%9C%E7%94%A8/</guid>
+      <description>###前言 在平常阅读python代码时，在代码末尾，我们经常会看见如下代码： 1 2 if __name__ == &amp;#39;__main__&amp;#39;: print(&amp;#34;This is test code!&amp;#34;) 这行代码到底是什么意思呢？或者有什么样的作用</description>
+    </item>
+    
+  </channel>
+</rss>

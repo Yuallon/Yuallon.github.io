@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/categories/css/</link>
+    <description>Recent content in CSS on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:50:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS学习1</title>
+      <link>https://yuallon.github.io/post/css%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sun, 21 Jun 2020 01:50:03 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/css%E5%AD%A6%E4%B9%A01/</guid>
+      <description>CSS 简介 语法规范： CSS 规则由两个主要的部分构成：选择器 和 一条或多条声明。 Figure1: 选择器&amp;ndash;表示给h1标签修改样式；声明&amp;ndash;怎样去修</description>
+    </item>
+    
+  </channel>
+</rss>

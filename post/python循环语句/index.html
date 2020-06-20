@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python循环语句 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="while循环语句 while循环基本语法 1 2 while 判断语句(condition): 执行语句(statements) 跟判断语句 if 对比来看，wile" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python循环语句" />
+<meta property="og:description" content="while循环语句 while循环基本语法 1 2 while 判断语句(condition): 执行语句(statements) 跟判断语句 if 对比来看，wile" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" />
+<meta property="article:published_time" content="2020-06-21T01:39:05+08:00" />
+<meta property="article:modified_time" content="2020-06-21T01:39:05+08:00" />
+<meta itemprop="name" content="Python循环语句">
+<meta itemprop="description" content="while循环语句 while循环基本语法 1 2 while 判断语句(condition): 执行语句(statements) 跟判断语句 if 对比来看，wile">
+<meta itemprop="datePublished" content="2020-06-21T01:39:05&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-21T01:39:05&#43;08:00" />
+<meta itemprop="wordCount" content="1412">
+
+
+
+<meta itemprop="keywords" content="python循环语句," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python循环语句"/>
+<meta name="twitter:description" content="while循环语句 while循环基本语法 1 2 while 判断语句(condition): 执行语句(statements) 跟判断语句 if 对比来看，wile"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python循环语句</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#while循环语句">while循环语句</a></li>
+        <li><a href="#循环嵌套">循环嵌套</a></li>
+        <li><a href="#for循环语句">for循环语句</a></li>
+        <li><a href="#break语句">break语句</a></li>
+        <li><a href="#pass语句">pass语句</a></li>
+        <li><a href="#实例6给出100以内的质数">实例6:给出100以内的质数</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="while循环语句">while循环语句</h3>
+<p><strong>while循环基本语法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">while 判断语句(condition):
+  	执行语句(statements)
+</code></pre></td></tr></table>
+</div>
+</div><p>跟判断语句 <strong>if</strong> 对比来看，<strong>wile</strong> 也是首先执行紧跟其后面的判断语句，如果判断语句返回的 <strong>bool值</strong> 为<strong>True</strong> 则会运行里面的执行语句，然后回到 <strong>while语句</strong> 再次重新判断后面的bool返回值是否为True，如果仍为True会再次运行里面的执行语句，直到 <strong>while语句</strong>后面的判断语句返回值为 <strong>False</strong> 时，终止while循环语句。</p>
+<p><strong>注意⚠️：while循环里面一定要有控制循环的次数变量，如果没有：要么不执行循环，要么一直执行wile循环。</strong></p>
+<p><strong>实例1:打印出10以内的自然数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">i = 1 #控制循环次数的变量
+while i &lt;= 10:
+  	print(i,end=&#39;&#39;)
+  	i += 1
+#output
+12345678910
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="循环嵌套">循环嵌套</h3>
+<p>python语言是允许语句之间的嵌套。比如：if 语句可以包含另一个 if 语句。同样，while 语句也可以包含另一个 while 语句。此外，if 语句、for语句、while语句也可以互相嵌套。</p>
+<p><strong>实例2:打印出9*9算法表</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">num = 1
+while num &lt;= 9:
+  	i = 1
+  	while i &lt;= num:
+   		 	value = i * num
+    		print(&#34;%d*%d=%d&#34; %(i, num, value), end=&#39;\t&#39;)
+        i += 1
+    print()
+    num += 1
+#output
+1*1=1	
+1*2=2	2*2=4	
+1*3=3	2*3=6	3*3=9	
+1*4=4	2*4=8	3*4=12	4*4=16	
+1*5=5	2*5=10	3*5=15	4*5=20	5*5=25	
+1*6=6	2*6=12	3*6=18	4*6=24	5*6=30	6*6=36	
+1*7=7	2*7=14	3*7=21	4*7=28	5*7=35	6*7=42	7*7=49	
+1*8=8	2*8=16	3*8=24	4*8=32	5*8=40	6*8=48	7*8=56	8*8=64	
+1*9=9	2*9=18	3*9=27	4*9=36	5*9=45	6*9=54	7*9=63	8*9=72	9*9=81	
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="for循环语句">for循环语句</h3>
+<p>python中的for循环语句，用来 <strong>遍历</strong> 任何序列中的元素，比如一个列表or一个字符串等。</p>
+<p><strong>for基本语法：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for item in sequence:
+  	执行语句（statements）
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>for-else语句</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">a = &#39;12345678&#39;
+for i in a:
+    if i == &#39;4&#39;:
+        print(&#34;找到了不吉利数字：%s&#34; %i)
+else:
+    print(&#34;没有找到目标&#34;)
+
+#output
+找到了不吉利数字：4
+没有找到目标
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>else语句</strong> 的作用当遍历完整个序列的时候，没有 <strong>被终止</strong> 的时候会执行else语句。</p>
+<p>一般会使用：<strong>if-break-else结构</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">a = &#39;12345678&#39;
+for i in a:
+    if i == &#39;4&#39;:
+        print(&#34;找到了不吉利数字：%s&#34; %i)
+        break
+else:
+    print(&#34;没有找到目标&#34;)
+    
+#output
+找到了不吉利数字：4
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="break语句">break语句</h3>
+<p>python中的break语句是用来 <strong>终止循环语句</strong>，即使循环过程没有全部结束，或者序列没有完全递归完，只要break前的判断语句返回True值，就立刻终止循环过程。一般都是和 <strong>if语句</strong> 一起使用。</p>
+<p>用在 while循环 和 if循环 中。</p>
+<p><strong>实例3:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for letter in &#39;python&#39;:
+  	if letter == &#39;t&#39;:
+   		 	break
+		print(&#34;当前字母是：%s&#34; % letter)
+#output,当遇到字母t的时候，if语句返回的值是True，break终止整个循环。
+当前字母是：p
+当前字母是：y
+</code></pre></td></tr></table>
+</div>
+</div><p>###continue语句</p>
+<p>python中的continue语句，与前面的break语句不同，<strong>continue语句是跳出本次循环，而break是跳出整个循环</strong>。</p>
+<p><strong>实例4:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for letter in &#39;python&#39;:
+  	if letter == &#39;t&#39;:
+   		 	continue
+		print(letter)
+
+#output,当遇到字母t的时候，if语句返回的值是True，continue跳过本次循环，而继续。
+p	y	h	o	n
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="pass语句">pass语句</h3>
+<p>python中的pass语句是一个空语句，是为了 <strong>保持程序结构的完整性</strong>。pass语句不做任何事情，一般用于占位。</p>
+<p><strong>实例5:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">for letter in &#39;python&#39;:
+  	if letter == &#39;t&#39;:
+   		 	pass
+      	print(&#34;pass占位&#34;)
+		print(letter)
+
+#output
+p
+y
+pass占位
+t
+h
+o
+n
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="实例6给出100以内的质数">实例6:给出100以内的质数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">i = 2
+while(i &lt; 100):
+    j = 2
+    while(j &lt;= (i/j)):
+        if not(i%j): break
+        j = j + 1
+    if (j &gt; i/j) : print(&#34;%d是质数&#34; %i)
+    i = i + 1
+print(&#34;end&#34;)
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/">python循环语句</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python%E5%8F%98%E9%87%8F/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python变量</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python%E8%BF%90%E7%AE%97%E7%AC%A6/">
+            <span class="next-text nav-default">Python运算符</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" class="leancloud_visitors" data-flag-title="Python循环语句">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

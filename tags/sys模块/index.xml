@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SYS模块 on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/sys%E6%A8%A1%E5%9D%97/</link>
+    <description>Recent content in SYS模块 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:59:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/sys%E6%A8%A1%E5%9D%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python SYS模块</title>
+      <link>https://yuallon.github.io/post/python-sys%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Sun, 21 Jun 2020 01:59:18 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python-sys%E6%A8%A1%E5%9D%97/</guid>
+      <description>前言 sys模块 提供了对解释器及相关功能的操作。主要用于操控python运行时的环境。 常用函数 sys.argv()：用于从命令行获取传入pyt</description>
+    </item>
+    
+  </channel>
+</rss>

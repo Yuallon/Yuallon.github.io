@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>于家 on Even - A super concise theme for Hugo</title>
+    <link>https://yuallon.github.io/tags/%E4%BA%8E%E5%AE%B6/</link>
+    <description>Recent content in 于家 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Jun 2020 01:04:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E4%BA%8E%E5%AE%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>脚程</title>
+      <link>https://yuallon.github.io/post/%E8%84%9A%E7%A8%8B/</link>
+      <pubDate>Sun, 21 Jun 2020 01:04:41 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E8%84%9A%E7%A8%8B/</guid>
+      <description>今天妈妈带着妹妹和她的两个孩子出去游玩，我一个人坐在大门口时突然想到了奶奶。奶奶已经八十有三，平时奶奶的活动范围也就是在村庄里面走来走去，如</description>
+    </item>
+    
+    <item>
+      <title>取快递</title>
+      <link>https://yuallon.github.io/post/%E5%8F%96%E5%BF%AB%E9%80%92/</link>
+      <pubDate>Sun, 21 Jun 2020 00:57:00 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%8F%96%E5%BF%AB%E9%80%92/</guid>
+      <description>昨天中午吃过午饭后休息时，想起因为前两天下雨而未取回的快递，便匆匆地骑着车子去取。当我看着紧闭的快递站点时，便意识到自己来的有些早了(下午1</description>
+    </item>
+    
+  </channel>
+</rss>
