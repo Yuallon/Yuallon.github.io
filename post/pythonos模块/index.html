@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>PythonOS模块 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/pythonos%E6%A8%A1%E5%9D%97/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="PythonOS模块" />
+<meta property="og:description" content="前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/pythonos%E6%A8%A1%E5%9D%97/" />
+<meta property="article:published_time" content="2020-06-20T21:23:49+08:00" />
+<meta property="article:modified_time" content="2020-06-20T21:23:49+08:00" />
+<meta itemprop="name" content="PythonOS模块">
+<meta itemprop="description" content="前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实">
+<meta itemprop="datePublished" content="2020-06-20T21:23:49&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-20T21:23:49&#43;08:00" />
+<meta itemprop="wordCount" content="3378">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PythonOS模块"/>
+<meta name="twitter:description" content="前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">PythonOS模块</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-20 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言：</a></li>
+        <li><a href="#open函数">open()函数</a></li>
+        <li><a href="#ospath模块">os.path模块</a></li>
+        <li><a href="#常用os函数">常用OS函数</a></li>
+        <li><a href="#reference-1">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="前言">前言：</h3>
+<p><strong>OS模块</strong> 提供了一个便捷的方法来使用操作系统所以依赖的函数。</p>
+<ul>
+<li>open() 函数，可以实现文件的读写功能</li>
+<li>os.path() 函数，可以实现对文件路径的操作</li>
+<li>fileinput 模块，可以实现文件在命令行上的读取</li>
+<li>tempfile 模块，可以实现创建临时的文件或文件夹</li>
+<li>对文件或文件夹更高层次的操作，可以使用shutil 模块</li>
+</ul>
+<p><strong>Note：在OS模块中，错误类型为 OSError。</strong></p>
+<h3 id="open函数">open()函数</h3>
+<p><strong>完整语法格式：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">open(file, mode=&#39;r&#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>参数说明：</strong></p>
+<ul>
+<li><strong>file，必须参数。文件路径（相对路径 or 绝对路径）</strong></li>
+<li><strong>mode，可选参数，接受string类型。文件的打开方式</strong>
+<ul>
+<li>&ldquo;r&rdquo;：默认，只读模式。指针放在文件开头</li>
+<li>&ldquo;w&rdquo;：打开一个文件只用于写入。如果文件存在，则删除原有内容从头开始编辑。如果文件不存在，则创建新文件。</li>
+<li>&ldquo;x&rdquo;：写入模式，新建一个文件。如果该文件存在，则报错。</li>
+<li>&ldquo;a&rdquo;：append，打开一个文件用于追加内容。如果该文件存在，文件指针将会移到文件结尾，新添加的内容从已有的内容末尾开始添加。如果文件不存在，新建文件。</li>
+<li>&ldquo;b&rdquo;：以二进制模式读取文件内容。</li>
+<li>&ldquo;t&rdquo;：文本模式，默认。</li>
+<li>&ldquo;+&rdquo;：打开一个文件进行更新（可读可写）。</li>
+<li>&ldquo;r+&rdquo;：打开一个文件用于读写。</li>
+<li>&ldquo;rb&rdquo;：以二进制格式打开一个文件用于只读。指针放在文件开头。一般用于非文本文件，如图片等。</li>
+<li>&ldquo;rb+&rdquo;：以二进制格式打开一个文件用于只读写。指针放在文件开头。一般用于非文本文件，如图片等。</li>
+<li>&ldquo;w+&rdquo;：打开一个文件用于读写。如果该文件已存在，则打开文件，并从头开始编辑，即原有内容会被删除。如果文件不存在，则创建一个新文件。</li>
+<li>&ldquo;wb&rdquo;：以二进制格式打开一个文件用于写入。如果该文件已存在，则打开文件，并从头开始编辑，即原有内容会被删除。如果文件不存在，则创建一个新文件。一般用于非文本文件，如图片。</li>
+<li>&ldquo;wb+&rdquo;：以二进制格式打开一个文件用于读写。如果该文件已存在，则打开文件，并从头开始编辑，即原有内容会被删除。如果文件不存在，则创建一个新文件。一般用于非文本文件，如图片。</li>
+<li>&ldquo;a+&rdquo;：append，打开一个文件用于读写。如果该文件存在，文件指针将会移到文件结尾，新添加的内容从已有的内容末尾开始添加。如果文件不存在，新建文件。</li>
+<li>&ldquo;ab&rdquo;：append，以二进制格式打开一个文件用于追加内容。如果该文件存在，文件指针将会移到文件结尾，新添加的内容从已有的内容末尾开始添加。如果文件不存在，新建文件。</li>
+<li>&ldquo;ab+&rdquo;：append，以二进制格式打开一个文件用于追加内容。如果该文件存在，文件指针将会移到文件结尾，新添加的内容从已有的内容末尾开始添加。如果文件不存在，新建文件。</li>
+</ul>
+</li>
+<li>buffering：设置缓冲</li>
+<li><strong>encoding，设置编码格式，一般用utf8</strong></li>
+<li>error：报错级别</li>
+<li>newline：区分换行符</li>
+<li>closefd：传入的file参数类型</li>
+<li>opener</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">with open(&#34;test.txt&#34;,&#39;r&#39;,encoding=&#39;utf8&#39;) as f:
+	print(f.read())
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="file对象">file对象</h4>
+<p>通过open函数，可以打开或创建文件，并返回一个file对象。下面列出file对象的常用函数。</p>
+<ul>
+<li><strong>file.close()</strong>：关闭文件。文件打开提取文件内容后，一定要关闭文件。</li>
+<li><strong>file.read(size)</strong>：size是指定读取的字节数，如果没有给定size值，读取文件的全部内容。</li>
+<li><strong>file.readline(size)</strong>：读取整行，包括换行符\n。</li>
+<li><strong>file.write(str)</strong>：将str数据写入文件。</li>
+<li><strong>file.tell()</strong>：返回文件指针所在位置。</li>
+</ul>
+<p>注：加黑的三个参数是最常用的，其他参数的详细解释参考<a href="https://docs.python.org/3/library/functions.html#open">open_function</a>。文件打开，一定要在最后关闭文件。</p>
+<h3 id="ospath模块">os.path模块</h3>
+<p>该模块用于操作文件路径。路径参数可以是string或bytes，返回的对象类型与传入的类型保持一致。不过建议使用string。</p>
+<ul>
+<li>
+<p><strong>os.path.abspath(path)</strong>：返回绝对路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pwd
+&#39;/Users/huangyulong/Desktop&#39;
+os.path.abspath(&#39;aaaa.txt&#39;)
+&#39;/Users/huangyulong/Desktop/aaaa.txt&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.path.basename(path)</strong>：返回文件名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">os.path.basename(&#39;/Users/huangyulong/Desktop/aaaa.txt&#39;)
+&#39;aaaa.txt&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.path.dirname(path)</strong>：返回所在文件夹路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">os.path.dirname(&#39;/Users/huangyulong/Desktop/aaaa.txt&#39;)
+&#39;/Users/huangyulong/Desktop&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.path.split(path)</strong>：把路径分隔为 dirname 和 basename，返回一个元组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">os.path.split(&#39;/Users/huangyulong/Desktop/aaaa.txt&#39;)
+(&#39;/Users/huangyulong/Desktop&#39;, &#39;aaaa.txt&#39;)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.path.splitext(path)</strong>：分隔路径，返回路径名和文件扩展名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">os.path.splitext(&#39;/Users/huangyulong/Desktop/aaaa.txt&#39;)
+(&#39;/Users/huangyulong/Desktop/aaaa&#39;, &#39;.txt&#39;)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.path.exists(path)</strong>：检查路径是否存在，存在返回True，不存在返回False。</p>
+</li>
+<li>
+<p><strong>os.path.getatime(path)</strong>：返回最近访问时间（浮点型数秒）</p>
+</li>
+<li>
+<p><strong>os.path.getmtime(path)</strong>：返回文件最近修改的时间</p>
+</li>
+<li>
+<p><strong>os.path.getctime(path)</strong>：返回文件路径创建时间</p>
+</li>
+<li>
+<p><strong>os.path.getsize(path)</strong>：返回文件大小，如果路径不存在则报错</p>
+</li>
+<li>
+<p><strong>os.path.isfile(path)</strong>：判断路径是否为文件</p>
+</li>
+<li>
+<p><strong>os.path.isdir(path)</strong>：判断路径是否为目录</p>
+</li>
+<li>
+<p><strong>os.path.islink(path)</strong>：判断路径是否为链接</p>
+</li>
+<li>
+<p><strong>os.path.join(path1, *paths)</strong>：把一个或多个path参数拼接，返回一个路径名</p>
+<ul>
+<li>除了最后一个path参数，其他要求非空</li>
+<li>如果最后一个path是空，则返回的路径把其转换成\</li>
+<li>如果有一个path参数是绝对路径，则在它之前的所有path参数都会被舍弃。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">os.path.join(&#39;/Users&#39;,&#39;huangyulong&#39;,&#39;Desktop/test.py&#39;,&#39;&#39;)
+&#39;/Users/huangyulong/Desktop/test.py/&#39;
+  
+os.path.join(&#39;/Users&#39;,&#39;/Desktop/test.py&#39;,&#39;huangyulong&#39;)
+&#39;/Desktop/test.py/huangyulong&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.path.samefile(path1, path2)</strong>：判断目录或文件是否相同</p>
+</li>
+<li>
+<p><strong>os.path.sameopenfile(fp1, fp2)</strong>：判断fp1 和 fp2 是否指向同一文件</p>
+</li>
+</ul>
+<h4 id="reference">Reference:</h4>
+<ol>
+<li><a href="https://docs.python.org/3/library/os.path.html#module-os.path">os.path</a></li>
+<li><a href="https://www.runoob.com/python/python-os-path.html">Python os.path() 模块</a></li>
+</ol>
+<h3 id="常用os函数">常用OS函数</h3>
+<ul>
+<li>
+<p><strong>os.name</strong>：返回操作系统类型，Windows是&rsquo;nt&rsquo;，Linux/Mac（Unix）是&rsquo;posix&rsquo;。</p>
+</li>
+<li>
+<p><strong>os.getcwd()</strong>：返回python当前工作路径，string类型</p>
+</li>
+<li>
+<p><strong>os.listdir(path=&rsquo;.')</strong>：返回当前路径下所有文件的名字，返回列表类型。</p>
+</li>
+<li>
+<p><strong>os.access(path, mode)</strong>：检查文件的权限。</p>
+<ul>
+<li>os.F_OK 作为mode参数，测试path是否存在</li>
+<li>os.R_OK 作为mode参数，测试path是否可读</li>
+<li>os.W_OK 作为mode参数，测试path是否可写</li>
+<li>os.X_OK 作为mode参数，测试path是否可执行</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">import os, sys
+  
+result = os.access(&#34;/tmp/foo.txt&#34;, os.F_OK)
+print(&#34;F_OK - 返回值%s&#34; % result)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>os.chmod(path, mode)</strong>：用于更改文件或目录的权限</p>
+<ul>
+<li>path &ndash; 文件或目录路径</li>
+<li>flags &ndash; 可用以下选项按位或操作生成， 目录的读权限表示可以获取目录里文件名列表， ，执行权限表示可以把工作目录切换到此目录 ，删除添加目录里的文件必须同时有写和执行权限 ，文件权限以用户id-&gt;组id-&gt;其它顺序检验,最先匹配的允许或禁止权限被应用。
+<ul>
+<li><strong>stat.S_IXOTH:</strong> 其他用户有执行权0o001</li>
+<li><strong>stat.S_IWOTH:</strong> 其他用户有写权限0o002</li>
+<li><strong>stat.S_IROTH:</strong> 其他用户有读权限0o004</li>
+<li><strong>stat.S_IRWXO:</strong> 其他用户有全部权限(权限掩码)0o007</li>
+<li><strong>stat.S_IXGRP:</strong> 组用户有执行权限0o010</li>
+<li><strong>stat.S_IWGRP:</strong> 组用户有写权限0o020</li>
+<li><strong>stat.S_IRGRP:</strong> 组用户有读权限0o040</li>
+<li><strong>stat.S_IRWXG:</strong> 组用户有全部权限(权限掩码)0o070</li>
+<li><strong>stat.S_IXUSR:</strong> 拥有者具有执行权限0o100</li>
+<li><strong>stat.S_IWUSR:</strong> 拥有者具有写权限0o200</li>
+<li><strong>stat.S_IRUSR:</strong> 拥有者具有读权限0o400</li>
+<li><strong>stat.S_IRWXU:</strong> 拥有者有全部权限(权限掩码)0o700</li>
+<li><strong>stat.S_ISVTX:</strong> 目录里文件目录只有拥有者才可删除更改0o1000</li>
+<li><strong>stat.S_ISGID:</strong> 执行此文件其进程有效组为文件所在组0o2000</li>
+<li><strong>stat.S_ISUID:</strong> 执行此文件其进程有效用户为文件所有者0o4000</li>
+<li><strong>stat.S_IREAD:</strong> windows下设为只读</li>
+<li><strong>stat.S_IWRITE:</strong> windows下取消只读</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>os.mkdir(path)</strong>：创建文件夹（目录），如果目录已存在，FileExistsError。</p>
+</li>
+<li>
+<p><strong>os.remove(path)</strong>：移除文件，如果指定的路径是个目录，OSError</p>
+</li>
+<li>
+<p><strong>os.rmdir(path)</strong>：移除文件夹（目录）</p>
+</li>
+<li>
+<p><strong>os.rename(old, new)</strong>：重命名</p>
+</li>
+<li>
+<p><strong>os.renames(old, new)</strong>：重命名，与rename类型，不过这个用于递归操作</p>
+</li>
+<li>
+<p><strong>os.chdir(path)</strong>：改变python工作目录到path</p>
+</li>
+<li>
+<p><strong>os.link(src, dst)</strong>：用于创建硬连接，src&ndash;用于创建硬连接的源地址；dst&ndash;用于创建硬连接的目标地址。<em>该方法对用于创建一个已存在文件的拷贝非常有用。</em></p>
+</li>
+<li>
+<p><strong>os.unlink(path)</strong>：用于删除文件，如果文件是一个目录，则报错。</p>
+</li>
+</ul>
+<h3 id="reference-1">Reference</h3>
+<ol>
+<li><a href="https://docs.python.org/3/library/os.html#os-file-dir">OS模块</a></li>
+<li><a href="https://www.runoob.com/python3/python3-os-file-methods.html">Python3 OS 文件/目录方法</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/my_first_blog/">
+            <span class="next-text nav-default">My_first_blog</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/pythonos%E6%A8%A1%E5%9D%97/" class="leancloud_visitors" data-flag-title="PythonOS模块">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
