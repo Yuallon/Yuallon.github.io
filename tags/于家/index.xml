@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>于家 on Even - A super concise theme for Hugo</title>
+    <title>于家 on 愿我如星君如月，夜夜流光相皎洁！</title>
     <link>https://yuallon.github.io/tags/%E4%BA%8E%E5%AE%B6/</link>
-    <description>Recent content in 于家 on Even - A super concise theme for Hugo</description>
+    <description>Recent content in 于家 on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jun 2020 01:04:41 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 15:22:26 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/tags/%E4%BA%8E%E5%AE%B6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>英语补习</title>
+      <link>https://yuallon.github.io/post/%E8%8B%B1%E8%AF%AD%E8%A1%A5%E4%B9%A0/</link>
+      <pubDate>Sun, 21 Jun 2020 15:22:26 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E8%8B%B1%E8%AF%AD%E8%A1%A5%E4%B9%A0/</guid>
+      <description>今天中午的时候，大伯家的二姐带着她儿子来找我补习英语，小孩子已经读到了五年级。说是英语相对其他功课而言很是不好，希望我教他读一下学过的英文单</description>
+    </item>
     
     <item>
       <title>脚程</title>
