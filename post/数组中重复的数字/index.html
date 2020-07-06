@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>数组中重复的数字 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="题目描述 找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="数组中重复的数字" />
+<meta property="og:description" content="题目描述 找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/" />
+<meta property="article:published_time" content="2020-07-01T23:10:06+08:00" />
+<meta property="article:modified_time" content="2020-07-01T23:10:06+08:00" />
+<meta itemprop="name" content="数组中重复的数字">
+<meta itemprop="description" content="题目描述 找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也">
+<meta itemprop="datePublished" content="2020-07-01T23:10:06&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-01T23:10:06&#43;08:00" />
+<meta itemprop="wordCount" content="1536">
+
+
+
+<meta itemprop="keywords" content="算法," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="数组中重复的数字"/>
+<meta name="twitter:description" content="题目描述 找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">数组中重复的数字</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-01 </span>
+        <div class="post-category">
+            <a href="/categories/leetcode/"> LeetCode </a>
+            </div>
+          <span class="more-meta"> 1536 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="题目描述">题目描述</h3>
+<p>找出数组中重复的数字。</p>
+<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<p><strong>示例 1：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">输入：
+[2, 3, 1, 0, 2, 5, 3]
+输出：2 或 3 
+</code></pre></td></tr></table>
+</div>
+</div><p>限制：</p>
+<p>2 &lt;= n &lt;= 100000</p>
+<p>来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof</p>
+<h3 id="解题思路">解题思路</h3>
+<p>一开始，我的思路很简单暴力：对于每个元素通过count方法给出重复的次数，如果返回值大于1，则直接break，并返回该元素。</p>
+<p>可是这种方式对于很长的数据，需要花费很长时间。时间复杂度为O(n**n)。这也是自己最后提交时超过了时间限制。</p>
+<p>####我的代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">class Solution:
+    def findRepeatNumber(self, nums: List[int]) -&gt; int:
+        for i in nums:
+            if nums.count(i)&gt;1:
+                return i 
+                break
+</code></pre></td></tr></table>
+</div>
+</div><p>那么，我们是否可以利用已经遍历过的元素信息呢？</p>
+<p>####排序法</p>
+<p>首先将数组nums排序，如果相邻的两个元素相等，则返回第一个满足该条件的数字。不过这个方法，会修改原数组。</p>
+<ul>
+<li>思路是将数组排好序,在查找重复数字,这个思路很简单</li>
+<li>时间复杂度<code>O(nlogn)</code>,空间复杂度<code>O(1)</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">class Solution(object):
+    def findRepeatNumber(self, nums):
+        nums.sort()
+        pre = nums[0]
+        for index in range(1, len(nums)):
+            if pre == nums[index]:
+                return pre
+            pre = nums[index]
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="哈希表">哈希表</h4>
+<ul>
+<li>遍历整个数组,当这个数字没有出现过哈希表的时候将其加入进去,如果在哈希表中则直接返回即可</li>
+<li>时间复杂度<code>O(n)</code>,空间复杂度<code>O(n)</code></li>
+</ul>
+<p>作者：xiao-xue-66
+链接：https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/pythonti-jie-san-chong-fang-fa-by-xiao-xue-66/</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">class Solution(object):
+    def findRepeatNumber(self, nums):
+        dic = {}
+        for i in nums:
+            if i not in dic:
+                dic[i] = 0
+            else:
+                return i
+
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="下标定位法">下标定位法</h4>
+<p><strong>解题思路：</strong>
+寻找数组中的重复数字，直接想到的方法是遍历数组，并使用 HashMap 统计每个数字的数量，遇到数量大于 11 的数字则返回。此方法时间复杂度和空间复杂度均为 O(N)O(N) 。</p>
+<p>题目指出 在一个长度为 n 的数组 nums 里的所有数字都在 0 ~ n-1 的范围内 。 因此，可遍历数组并通过交换操作使元素的 索引 与 值 一一对应（即 nums[i] = i ）。因而，就能通过索引找到对应的值。</p>
+<p>遍历中，当第二次遇到数字 x 时，一定有 nums[x] = x （因为第一次遇到 x 时已经将其交换至 nums[x] 处了）。利用以上方法，即可得到一组重复数字。</p>
+<p><strong>算法流程</strong></p>
+<ul>
+<li>遍历数组 <code>nums</code> ，设索引初始值为 <code>i = 0</code>:
+<ol>
+<li><strong>若 <code>nums[i] == i</code> ：</strong> 说明此数字已在对应索引位置，无需交换，因此执行 <code>i += 1</code> 与 <code>continue</code> ；</li>
+<li><strong>若 <code>nums[nums[i]] == nums[i]</code> ：</strong> 说明索引 <code>nums[i]</code> 处的元素值也为 <code>nums[i]</code>，即找到一组相同值，返回此值 <code>nums[i]</code>；</li>
+<li><strong>否则：</strong> 当前数字是第一次遇到，因此交换索引为 <code>i</code> 和 <code>nums[i]</code> 的元素值，将此数字交换至对应索引位置。</li>
+</ol>
+</li>
+<li>若遍历完毕尚未返回，则返回 −1 ，代表数组中无相同值。</li>
+</ul>
+<p><strong>复杂度分析：</strong></p>
+<ul>
+<li>时间复杂度 O(N)O(N) ： 遍历数组使用 O(N)O(N) ，每轮遍历的判断和交换操作使用 O(1)O(1) 。</li>
+<li>空间复杂度 O(1)O(1) ： 使用常数复杂度的额外空间。</li>
+</ul>
+<p>作者：jyd
+链接：https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/mian-shi-ti-03-shu-zu-zhong-zhong-fu-de-shu-zi-yua/
+来源：力扣（LeetCode）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">class Solution:
+    def findRepeatNumber(self, nums: [int]) -&gt; int:
+        i = 0
+        while i &lt; len(nums):
+        		#保证i前面的index和值一一对应起来
+            if nums[i] == i:
+                i += 1
+                continue
+            #判断是否出现重复    
+            if nums[nums[i]] == nums[i]: return nums[i]
+            #保证index为nums[i]的值也为nums[i]，即实现与前面互换，互换后用第一个if语句判断是否index与对应的值是否相等，不相等继续执行互换语句直至相等
+            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+        return -1
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>图解：</strong></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%971.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%972.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%973.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%974.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%975.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%976.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%977.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%978.jpg" alt="数组中重复的数字1"></p>
+<p><img src="/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%979.jpg" alt="数组中重复的数字1"></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-07-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/how-to-cancle-plans-in-english/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to Cancle Plans in English</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/smartphone-generation-should-wait-for-the-elderly-to-catch-up/">
+            <span class="next-text nav-default">Smartphone generation Should Wait for the Elderly to Catch Up</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/" class="leancloud_visitors" data-flag-title="数组中重复的数字">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
