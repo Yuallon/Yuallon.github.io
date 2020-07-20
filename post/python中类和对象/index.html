@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python中类和对象 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="编程分类 不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：面向过程" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E4%B8%AD%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python中类和对象" />
+<meta property="og:description" content="编程分类 不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：面向过程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E4%B8%AD%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" />
+<meta property="article:published_time" content="2020-07-07T23:18:48+08:00" />
+<meta property="article:modified_time" content="2020-07-07T23:18:48+08:00" />
+<meta itemprop="name" content="Python中类和对象">
+<meta itemprop="description" content="编程分类 不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：面向过程">
+<meta itemprop="datePublished" content="2020-07-07T23:18:48&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-07T23:18:48&#43;08:00" />
+<meta itemprop="wordCount" content="2569">
+
+
+
+<meta itemprop="keywords" content="类," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python中类和对象"/>
+<meta name="twitter:description" content="编程分类 不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：面向过程"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python中类和对象</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-07 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+          <span class="more-meta"> 2569 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#编程分类">编程分类</a></li>
+        <li><a href="#五子棋游戏实现">五子棋游戏实现</a></li>
+        <li><a href="#总结">总结</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="编程分类">编程分类</h3>
+<p>不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：<strong>面向过程</strong> 和 <strong>面向对象</strong>。这两种方式的最大区别：看待问题问题的视角不同。</p>
+<p>一开始读到 <strong>面向过程</strong> 和 <strong>面向对象</strong> 有点拗口。下面我就用两个简单的例子从 <strong>思维角度</strong> 来简单阐述两者的区别。</p>
+<p>####面线过程思维</p>
+<p>看过赵本山小品的应该对这个脑筋急转弯有印象吧。</p>
+<p>Q：把大象放到冰箱里需要几步？</p>
+<p>A：三步，1打开冰箱；2放入大象；3关上冰箱。</p>
+<p>上面的脑筋急转弯其实就是典型的<strong>面向过程思维</strong>。面向过程思维：就是把一个问题逐步拆解，然后解决问题的方式。</p>
+<p>####面向对象思维</p>
+<p>在中学我们学习生物课的时候，我们接触过 <strong>生物分类</strong> 这个概念。根据生物之间的 <strong>亲缘关系</strong> 和 <strong>进化关系</strong> 可以用 <strong>界（Kingdom）</strong>、<strong>门（Phylum）</strong>、<strong>纲（Class）</strong>、<strong>目（Order）</strong>、<strong>科（Family）</strong>、<strong>属（Genus）</strong>、**种（Species）**7个层次对生物进行划分。</p>
+<p><img src="/%E7%94%9F%E7%89%A9%E5%88%86%E7%B1%BB.gif" alt="生物分类"></p>
+<p>这种以某种 <strong>共同属性特征</strong> 而将一群 <strong>object（物体、客体、对象）</strong> 归为一类的方式就是<strong>面向对象思维</strong>。区分于面向过程，更注重的是一群object之间共有的属性。</p>
+<p>下面就根据五子棋游戏的实现过程来详细讲解面向过程和面向对象的实现方式。</p>
+<h3 id="五子棋游戏实现">五子棋游戏实现</h3>
+<p><img src="/%E4%BA%94%E5%AD%90%E6%A3%8B.jpg" alt="五子棋"></p>
+<h4 id="面向过程实现">面向过程实现</h4>
+<p>根据前面介绍，面向过程注重的是：每一步做什么，及过程中的实现。所以对于五子棋游戏，可以把整个游戏的实现分为下面的过程：</p>
+<ol>
+<li><strong>开始游戏</strong></li>
+<li><strong>黑子先走</strong></li>
+<li><strong>绘制棋局画面</strong></li>
+<li><strong>判断输赢</strong></li>
+<li><em>轮到白子走</em></li>
+<li><em>绘制棋局画面</em></li>
+<li><em>判断输赢</em></li>
+<li><strong>返回步骤2</strong></li>
+<li><strong>输出结果</strong></li>
+</ol>
+<p>在上述的代码结构中，面向过程关注的是：一步一步地过程变化来判断棋局的输赢。</p>
+<h4 id="面向对象实现">面向对象实现</h4>
+<p>在前面提到，面向对象思维是寻找不同object的共同点，对于五子棋游戏的实现又改如何着手呢？</p>
+<p>如果细心的你，会发现我一直在打<strong>object</strong>这个单词。在现实生活中，我们可以用<strong>object</strong>来指代任一东西，如一本书、一棵树、一轮残月等等。这些在我们眼中就是真切存在的object，或者说客体、对象。</p>
+<p><strong>在计算机中，也有object概念</strong>。不管是指代一本书也好，或是一棵树也罢。object就是代表一个对象，一个可操作or可描述的对象。在计算机中我们可描述可操作的是什么呢？显然是<strong>一段代码、一个程序块</strong>。</p>
+<p>所以这里我们讲到的 <strong>面向对象思维</strong>，就是把<strong>一类功能相近的代码块（object）放在一起，并采用生物学中 类（Class）统称这些代码。</strong></p>
+<p>其实 <strong>类（Class）就是一个更大的对象。</strong></p>
+<p>现在，我们看看通过面线过程实现五子棋功能的代码块。</p>
+<ul>
+<li><strong>步骤2黑棋走、步骤5白起走</strong> 是不是功能相近的代码块呢？所以可以用一个<strong>走棋系统</strong> 来实现。</li>
+<li>同样，<strong>步骤3、步骤6</strong> 可以用一个 <strong>棋盘系统（负责绘制画面）</strong> 来实现。</li>
+<li><strong>步骤4、步骤7</strong> 可以用 <strong>规则系统（判断输赢）</strong> 来实现。</li>
+<li><strong>步骤1</strong> 可以称之为 <strong>启动系统</strong>。</li>
+<li><strong>步骤8</strong> 可以称之为 <strong>循环系统</strong>。</li>
+<li><strong>步骤9</strong> 可以称之为 <strong>结束系统</strong>。</li>
+</ul>
+<p>当然，这只是我自己对代码功能做出的<strong>不同类型（Class）<strong>的区分。你也可以将</strong>步骤1和步骤9</strong> 归类为 <strong>起止系统</strong>。毕竟对代码块（object）进行功能上的区分本身就带着主观臆断。剩下的就是如何实现不同系统之间的协调配合了。</p>
+<p><strong>这里最重要的是理解：计算机中的代码块也可以采用生物学的分类概念来进行整合。</strong> 仔细理解计算机中<strong>object 和 Class</strong>的概念。</p>
+<h3 id="总结">总结</h3>
+<p>既然实现五子棋的方式不同，那每种方法必定有其自身的特点。在给出面相过程和面向对象的优缺点比较之前，我再问一个问题：<strong>如何添加悔棋功能呢？</strong></p>
+<p>有人说直接加一个<strong>悔棋系统</strong>就好了，这是 <strong>面向对象</strong> 实现的方式。那<strong>面向过程如何实现呢？</strong></p>
+<p>下面看一个很形象的比喻，来感受一下二者之间的区别。</p>
+<p>如果把<strong>面向过程</strong>比喻成<strong>蛋炒饭</strong>，那么<strong>面向对象</strong>就可以比喻为<strong>盖浇饭</strong>。</p>
+<p><strong>蛋炒饭</strong>：需要把鸡蛋、米饭、其他辅料（萝卜丁、肉丝等）一起下锅。所以入味均匀、吃起来香。如果你不爱吃蛋炒饭，或者不爱吃里面的一些辅料，唯一的办法就是重新换一份了！用计算机语言来讲就是：<strong>耦合度很高、不易修改</strong>。</p>
+<p><strong>盖浇饭</strong>：煮熟的米饭 + 做好的菜品。两者是分开做的，喜欢什么菜就在米饭上浇上一份自己喜欢的菜肴即可。如果不喜欢某一个菜式，直接换一份菜而不需把米饭也倒掉。但是入味就没有蛋炒饭香了，不过可选性高。用计算机语言来讲就是：<strong>耦合度很低、易修改</strong>。</p>
+<p>好了，下面就给出二者优缺点的总结！</p>
+<h4 id="面向过程编程">面向过程编程</h4>
+<p>单片机、嵌入式开发、 Linux/Unix等一般采用面向过程开发，性能是最重要的因素。</p>
+<ol>
+<li>优点：
+<ul>
+<li>流程化使得编程任务明确、便于节点分析。</li>
+<li>代码执行效率高。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>需要深入思考，耗费精力。</li>
+<li>代码复用率低、扩展能力差。</li>
+<li>不易于后期维护</li>
+</ul>
+</li>
+</ol>
+<h4 id="面向对象编程">面向对象编程</h4>
+<ol>
+<li>优点：
+<ul>
+<li>易维护、易复用、易扩展。</li>
+<li>具有<strong>封装、继承、多态</strong>的特性。</li>
+<li>代码之间耦合度低，更灵活。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>性能比面向过程低。</li>
+<li>占用空间存储多。</li>
+</ul>
+</li>
+</ol>
+<h4 id="面向对象编程的特性">面向对象编程的特性</h4>
+<p>面向对象编程有三大特性：封装、继承、多态。</p>
+<h4 id="封装">封装</h4>
+<p>封装，就是把代码块封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。一个类就是一个封装了数据以及操作这些数据的代码的逻辑实体。在一个对象内部，某些代码或某些数据可以是私有的，不能被外界访问。通过这种方式，对象对内部数据提供了不同级别的保护，以防止程序中无关的部分意外的改变或错误的使用了对象的私有部分。</p>
+<h4 id="继承">继承</h4>
+<p>继承，指可以让某个类型的对象获得另一个类型的对象的属性的方法。它支持按级分类的概念。继承是指这样一种能力：它可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。 通过继承创建的新类称为“子类”或“派生类”，被继承的类称为“基类”、“父类”或“超类”。继承的过程，就是从一般到特殊的过程。要实现继承，可以通过 “继承”（Inheritance）和“组合”（Composition）来实现。继承概念的实现方式有二类：实现继承与接口继承。实现继承是指直接使用父类的属性和方法而无需额外编码的能力；接口继承是指仅使用属性和方法的名称、但是子类必须提供实现的能力。</p>
+<h4 id="多态">多态</h4>
+<p>多态，是指一个类实例的相同方法在不同情形有不同表现形式。多态机制使具有不同内部结构的对象可以共享相同的外部接口。这意味着，虽然针对不同对象的具体操作不同，但通过一个公共的类，它们（那些操作）可以通过相同的方式予以调用。</p>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E7%95%8C%E9%97%A8%E7%BA%B2%E7%9B%AE%E7%A7%91%E5%B1%9E%E7%A7%8D">百度百科 &ndash; 界门纲目科属种</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/28427324">面向过程 VS 面向对象</a></li>
+<li><a href="https://blog.csdn.net/jerry11112/article/details/79027834">面向对象与面向过程的本质的区别</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/75265007">2分钟让你明白什么是面向对象编程</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-07-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E7%B1%BB/">类</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/numpy/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Numpy</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E5%87%89%E5%B7%9E%E8%AF%8D%E7%8E%8B%E7%BF%B0/">
+            <span class="next-text nav-default">凉州词·王翰</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E4%B8%AD%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" class="leancloud_visitors" data-flag-title="Python中类和对象">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

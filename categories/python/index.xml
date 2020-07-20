@@ -6,10 +6,28 @@
     <description>Recent content in Python on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jun 2020 01:59:18 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2020 23:18:48 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python中类和对象</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Tue, 07 Jul 2020 23:18:48 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</guid>
+      <description>编程分类 不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：面向过程</description>
+    </item>
+    
+    <item>
+      <title>Python中的哈希表</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD%E7%9A%84%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
+      <pubDate>Mon, 06 Jul 2020 22:31:13 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD%E7%9A%84%E5%93%88%E5%B8%8C%E8%A1%A8/</guid>
+      <description>在前面 数组中重复的数字 的一道算法题中，我发现有人提到了Hash算法。自己第一次接触这个概念，所以在此简单的总结一下python中Hash的应</description>
+    </item>
     
     <item>
       <title>Python SYS模块</title>
