@@ -6,10 +6,19 @@
     <description>Recent content in Python on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Jul 2020 23:18:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2020 23:45:05 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Numpy</title>
+      <link>https://yuallon.github.io/post/numpy/</link>
+      <pubDate>Tue, 07 Jul 2020 23:45:05 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/numpy/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Python中类和对象</title>
@@ -18,6 +27,15 @@
       
       <guid>https://yuallon.github.io/post/python%E4%B8%AD%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</guid>
       <description>编程分类 不同的编程语言，归根到底是一些逻辑代码结构构成的一个整体。当我们用这些逻辑代码去解决问题时，根据解决问题的方式不同可以分为：面向过程</description>
+    </item>
+    
+    <item>
+      <title>Python多线程</title>
+      <link>https://yuallon.github.io/post/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Mon, 06 Jul 2020 22:36:00 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description></description>
     </item>
     
     <item>
