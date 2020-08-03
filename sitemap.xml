@@ -3,48 +3,55 @@
   
   <url>
     <loc>https://yuallon.github.io/categories/</loc>
-    <lastmod>2020-08-02T23:12:11+08:00</lastmod>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yuallon.github.io/post/</loc>
-    <lastmod>2020-08-02T23:12:11+08:00</lastmod>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yuallon.github.io/tags/</loc>
-    <lastmod>2020-08-02T23:12:11+08:00</lastmod>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yuallon.github.io/</loc>
-    <lastmod>2020-08-02T23:12:11+08:00</lastmod>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yuallon.github.io/tags/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD/</loc>
-    <lastmod>2020-08-02T23:12:11+08:00</lastmod>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://yuallon.github.io/post/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A020200802/</loc>
-    <lastmod>2020-08-02T23:12:11+08:00</lastmod>
+    <loc>https://yuallon.github.io/post/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A020200803/</loc>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yuallon.github.io/categories/%E8%8B%B1%E6%96%87/</loc>
+    <lastmod>2020-08-03T21:34:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://yuallon.github.io/post/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A020200802/</loc>
     <lastmod>2020-08-02T23:12:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
