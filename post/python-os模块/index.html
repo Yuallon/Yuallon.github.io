@@ -49,7 +49,7 @@
 <meta itemprop="description" content="前言： OS模块 提供了一个便捷的方法来使用操作系统所以依赖的函数。 open() 函数，可以实现文件的读写功能 os.path() 函数，可以实现对文件路径的操作 fileinput 模块，可以实">
 <meta itemprop="datePublished" content="2020-06-21T01:56:36&#43;08:00" />
 <meta itemprop="dateModified" content="2020-06-21T01:56:36&#43;08:00" />
-<meta itemprop="wordCount" content="3378">
+<meta itemprop="wordCount" content="3411">
 
 
 
@@ -125,7 +125,7 @@
         <div class="post-category">
             <a href="/categories/python/"> Python </a>
             </div>
-          <span class="more-meta"> 3378 words </span>
+          <span class="more-meta"> 3411 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -214,10 +214,11 @@
 <p>通过open函数，可以打开或创建文件，并返回一个file对象。下面列出file对象的常用函数。</p>
 <ul>
 <li><strong>file.close()</strong>：关闭文件。文件打开提取文件内容后，一定要关闭文件。</li>
-<li><strong>file.read(size)</strong>：size是指定读取的字节数，如果没有给定size值，读取文件的全部内容。</li>
-<li><strong>file.readline(size)</strong>：读取整行，包括换行符\n。</li>
+<li>file.read(size)：size是指定读取的字节数，如果没有给定size值，读取文件的全部内容。</li>
+<li>file.readline(size)：读取整行，包括换行符\n。</li>
+<li><strong>file.readlines()</strong>：<strong>读取全部内容，并以列表形式返回。</strong></li>
 <li><strong>file.write(str)</strong>：将str数据写入文件。</li>
-<li><strong>file.tell()</strong>：返回文件指针所在位置。</li>
+<li>file.tell()：返回文件指针所在位置。</li>
 </ul>
 <p>注：加黑的三个参数是最常用的，其他参数的详细解释参考<a href="https://docs.python.org/3/library/functions.html#open">open_function</a>。文件打开，一定要在最后关闭文件。</p>
 <h3 id="ospath模块">os.path模块</h3>
