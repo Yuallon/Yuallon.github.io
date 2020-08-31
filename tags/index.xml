@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Aug 2020 15:46:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2020 22:27:49 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>每日英语</title>
       <link>https://yuallon.github.io/tags/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD/</link>
-      <pubDate>Tue, 11 Aug 2020 15:46:53 +0800</pubDate>
+      <pubDate>Fri, 21 Aug 2020 22:27:49 +0800</pubDate>
       
       <guid>https://yuallon.github.io/tags/%E6%AF%8F%E6%97%A5%E8%8B%B1%E8%AF%AD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effective Python</title>
+      <link>https://yuallon.github.io/tags/effective-python/</link>
+      <pubDate>Wed, 19 Aug 2020 16:04:01 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/tags/effective-python/</guid>
       <description></description>
     </item>
     

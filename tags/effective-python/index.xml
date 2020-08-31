@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Effective Python on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/effective-python/</link>
+    <description>Recent content in Effective Python on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Aug 2020 16:04:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/effective-python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>高效率Python编程的90个建议Day1</title>
+      <link>https://yuallon.github.io/post/%E9%AB%98%E6%95%88%E7%8E%87python%E7%BC%96%E7%A8%8B%E7%9A%8490%E4%B8%AA%E5%BB%BA%E8%AE%AEday1/</link>
+      <pubDate>Wed, 19 Aug 2020 16:04:01 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E9%AB%98%E6%95%88%E7%8E%87python%E7%BC%96%E7%A8%8B%E7%9A%8490%E4%B8%AA%E5%BB%BA%E8%AE%AEday1/</guid>
+      <description>Preface Here, I will write down my own notes of the book &amp;ldquo;Effective Python: 90 Specific Ways to Write Better Python, 2nd Edition&amp;quot;. If you like, you can buy it or search its pdf on internet. I will try my best to refine the ideas in my article. Hope you will like my words. Now, let&amp;rsquo;s start! Item 1: Know Which Version of Python You&amp;rsquo;re Using You can figure out</description>
+    </item>
+    
+  </channel>
+</rss>
