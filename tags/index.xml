@@ -6,10 +6,19 @@
     <description>Recent content in Tags on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Aug 2020 22:27:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 21:56:01 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql</title>
+      <link>https://yuallon.github.io/tags/mysql/</link>
+      <pubDate>Mon, 07 Sep 2020 21:56:01 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>每日英语</title>

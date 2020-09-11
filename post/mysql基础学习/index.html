@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mysql基础学习 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="###终端命令操作数据库 ####如何在终端打开Mysql？ 1 mysql -uroot -p123456 其中，&amp;ldquo;root&amp;quot;是打开哪一个数据库，&amp;ldquo;" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/mysql%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mysql基础学习" />
+<meta property="og:description" content="###终端命令操作数据库 ####如何在终端打开Mysql？ 1 mysql -uroot -p123456 其中，&ldquo;root&quot;是打开哪一个数据库，&ldquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/mysql%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-09-03T13:42:58+08:00" />
+<meta property="article:modified_time" content="2020-09-03T13:42:58+08:00" />
+<meta itemprop="name" content="Mysql基础学习">
+<meta itemprop="description" content="###终端命令操作数据库 ####如何在终端打开Mysql？ 1 mysql -uroot -p123456 其中，&ldquo;root&quot;是打开哪一个数据库，&ldquo;">
+<meta itemprop="datePublished" content="2020-09-03T13:42:58&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-03T13:42:58&#43;08:00" />
+<meta itemprop="wordCount" content="3008">
+
+
+
+<meta itemprop="keywords" content="Mysql," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mysql基础学习"/>
+<meta name="twitter:description" content="###终端命令操作数据库 ####如何在终端打开Mysql？ 1 mysql -uroot -p123456 其中，&ldquo;root&quot;是打开哪一个数据库，&ldquo;"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mysql基础学习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-09-03 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"> 数据库 </a>
+            </div>
+          <span class="more-meta"> 3008 words </span>
+          <span class="more-meta"> 7 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#mysql建表约束类型及其含义">Mysql建表约束类型及其含义</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>###终端命令操作数据库</p>
+<p>####如何在终端打开Mysql？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql -uroot -p123456
+</code></pre></td></tr></table>
+</div>
+</div><p>其中，&ldquo;root&quot;是打开哪一个数据库，&ldquo;123456&quot;是密码</p>
+<h4 id="如何查询数据库服务器中所有的数据库">如何查询数据库服务器中所有的数据库？</h4>
+<p>启动Mysql程序后，输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.03 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注意：一定要以英文分号（;）结尾。</p>
+<h4 id="如何在数据库服务器中创建数据库">如何在数据库服务器中，创建数据库？</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; create database test;
+Query OK, 1 row affected (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>如何选中某一个数据库进行操作？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; use test
+Database changed
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如何查看某个数据库中所有的数据表？(先选中)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; show tables;
+Empty set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如何创建一个数据表？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; CREATE TABLE table_name (column_name column_type);
+</code></pre></td></tr></table>
+</div>
+</div><p>注：创建一个新的数据表，要给定一个名字，而且数据表中的列名，要指定相应的数据类型。如，一个student数据表中，age的数据类型为：整数型。</p>
+<p>有关Mysql的数据介绍可以查看：<a href="https://www.runoob.com/mysql/mysql-data-types.html">MySQL 数据类型</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; CREATE TABLE student (
+    -&gt; name VARCHAR(20),
+    -&gt; sex CHAR(1),
+    -&gt; birth DATE);
+Query OK, 0 rows affected (0.10 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如何查看一个数据表结构？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; describe student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(20) | YES  |     | NULL    |       |
+| sex   | char(1)     | YES  |     | NULL    |       |
+| birth | date        | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如何查看一个数据表中的数据记录呢？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from student;
+Empty set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：因为刚刚创建，所以为Empty。</p>
+</li>
+<li>
+<p>如何往数据表中添加数据记录？</p>
+<p>MySQL 表中使用 <strong>INSERT INTO</strong> SQL语句来插入数据。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">INSERT INTO table_name ( field1, field2,...fieldN )
+                       VALUES
+                       ( value1, value2,...valueN );
+</code></pre></td></tr></table>
+</div>
+</div><p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; INSERT INTO student
+    -&gt; VALUES (&#34;Allon&#34;,&#34;F&#34;,&#34;1995-03-13&#34;);
+Query OK, 1 row affected (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>再次读取：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from student;
++-------+------+------------+
+| name  | sex  | birth      |
++-------+------+------------+
+| Allon | f    | 1995-03-13 |
++-------+------+------------+
+1 row in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注意：插入的数据一定要满足前面设置的数据类型极其长度。</p>
+</li>
+<li>
+<p>如何删除数据表中的数据？</p>
+<p>语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">delete from table_name where name=&#39;field_name&#39;;
+</code></pre></td></tr></table>
+</div>
+</div><p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from student;
++-------+------+------------+
+| name  | sex  | birth      |
++-------+------+------------+
+| Allon | f    | 1995-03-13 |
+| yuhan | m    | 1995-08-13 |
+| mohan | m    | 1995-05-31 |
++-------+------+------------+
+3 rows in set (0.00 sec)
+  
+#删除操作
+mysql&gt; delete from student where name=&#39;mohan&#39;;
+Query OK, 1 row affected (0.02 sec)
+  
+##
+mysql&gt; select * from student
+    -&gt; ;
++-------+------+------------+
+| name  | sex  | birth      |
++-------+------+------------+
+| Allon | f    | 1995-03-13 |
+| yuhan | m    | 1995-08-13 |
++-------+------+------------+
+2 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>如何修改数据？</p>
+<p>语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">update table_name set name=&#39;field_name&#39; where name=&#39;field_name&#39;;
+</code></pre></td></tr></table>
+</div>
+</div><p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###原始数据
+mysql&gt; select * from student
+    -&gt; ;
++-------+------+------------+
+| name  | sex  | birth      |
++-------+------+------------+
+| Allon | f    | 1995-03-13 |
+| yuhan | m    | 1995-08-13 |
++-------+------+------------+
+2 rows in set (0.00 sec)
+  
+#修改数据
+mysql&gt; update student set name=&#39;Yuallon&#39; where name=&#39;Allon&#39;;
+  
+##修改结果
+mysql&gt; select * from student;
++---------+------+------------+
+| name    | sex  | birth      |
++---------+------+------------+
+| Yuallon | f    | 1995-03-13 |
+| yuhan   | m    | 1995-08-13 |
++---------+------+------------+
+2 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>总结</p>
+<ul>
+<li>增：INSERT</li>
+<li>删：DELETE</li>
+<li>改：UPDATE</li>
+<li>查：SELECT</li>
+</ul>
+</li>
+</ul>
+<h3 id="mysql建表约束类型及其含义">Mysql建表约束类型及其含义</h3>
+<p>通过前面的学习，我们已经可以对Mysql数据进行 <strong>增删改查</strong> 的操作。但是，在数据的记录中，如何保证某一条记录的唯一性呢，即：如何区分A班的张三与D班的张三 or A班的李四与A班的张三呢？</p>
+<h4 id="主键约束">主键约束</h4>
+<p>通过添加主键约束（primary key），它能够唯一确定一张表中的一条记录，可以使得该字段<strong>不重复且不为空（NULL）</strong>。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###创建一个primary key约束的数据表
+mysql&gt; create table user ( id int primary key, name varchar(20));
+Query OK, 0 rows affected (0.05 sec)
+
+###查看，在数据表ID的KEY下有PRI
+mysql&gt; describe user;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | NO   | PRI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+###添加数据
+mysql&gt; insert into user values (1,&#39;Zhang3&#39;);
+Query OK, 1 row affected (0.01 sec)
+
+####重复添加则报错
+mysql&gt; insert into user values (1,&#39;Zhang3&#39;);
+ERROR 1062 (23000): Duplicate entry &#39;1&#39; for key &#39;PRIMARY&#39;
+
+####不给定id值也报错
+mysql&gt; insert into user values (NULL,&#39;Li4&#39;);
+ERROR 1048 (23000): Column &#39;id&#39; cannot be null
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>联合主键约束</strong>：只要是多个主键约束的参数，不完全一样，就不冲突。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##创建联合主键约束
+mysql&gt; create table user2 ( id int, name varchar(20), sex varchar(20), primary key (id,name));
+Query OK, 0 rows affected (0.05 sec)
+
+##添加
+mysql&gt; insert into user2 values(1,&#39;Zhang3&#39;,&#39;femal&#39;);
+Query OK, 1 row affected (0.01 sec)
+
+mysql&gt; insert into user2 values(2,&#39;Zhang3&#39;,&#39;femal&#39;);
+Query OK, 1 row affected (0.01 sec)
+
+mysql&gt; insert into user2 values(1,&#39;Li3&#39;,&#39;femal&#39;);                            
+Query OK, 1 row affected (0.00 sec)
+
+##查询
+mysql&gt; select * from user2;
++----+--------+-------+
+| id | name   | sex   |
++----+--------+-------+
+|  1 | Li3    | femal |
+|  1 | Zhang3 | femal |
+|  2 | Zhang3 | femal |
++----+--------+-------+
+3 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：联合主键任何一个参数都不能为空（NULL）。</p>
+<p><strong>自增约束</strong>：auto_increment，自动增加某个参数的数值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###创建自增约束数据表
+mysql&gt; create table user3(
+    -&gt; id int primary key auto_increment,
+    -&gt; name varchar(20)
+    -&gt; );
+Query OK, 0 rows affected (0.03 sec)
+
+###添加数据,没有对ID进行操作
+mysql&gt; insert into user3 (name) values (&#39;Zhang3&#39;);
+Query OK, 1 row affected (0.01 sec)
+
+##查看数据，ID会自动添加数值
+mysql&gt; select * from user3
+    -&gt; ;
++----+--------+
+| id | name   |
++----+--------+
+|  1 | Zhang3 |
++----+--------+
+1 row in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>如果创建数据表的时候，忘记添加主键约束了，怎么办？</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">alter table table_name add primary key(field_name)
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>如何删除主键约束呢？</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">alter table table_name drop primary key
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>如何修改？</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">alter table table_name modify field_name field_type primary key
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="唯一约束">唯一约束</h4>
+<p>约束修饰字段的值，不能重复。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###创建数据表
+mysql&gt; create table user5 (
+    -&gt; id int,
+    -&gt; name varchar(20)
+    -&gt; );
+Query OK, 0 rows affected (0.05 sec)
+
+###数据表
+mysql&gt; describe user5
+    -&gt; ;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+###创建唯一约束
+mysql&gt; alter table user5 add unique(name);
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+####再次查看
+mysql&gt; desc user5
+    -&gt; ;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：唯一约束，即，name后面的（UNI）表示，name属性不可以重复。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##添加数据
+mysql&gt; insert into user5 values(1,&#34;Zhang3&#34;);
+Query OK, 1 row affected (0.00 sec)
+
+##重复添加报错
+mysql&gt; insert into user5 values(1,&#34;Zhang3&#34;);
+ERROR 1062 (23000): Duplicate entry &#39;Zhang3&#39; for key &#39;name&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>也可以创建数据列表的时候添加约束，跟前面的主键约束一样。</p>
+<p><strong>如何删除唯一约束？</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">alter table table_name drop index field_name;
+
+##Example
+alter table user5 drop index name;
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>modify方式添加唯一约束</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">alter table user5 modify name varchar(20) unique;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="非空约束">非空约束</h4>
+<p>修饰的字段不能为空（NULL）</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###创建非空约束数据表
+mysql&gt; create table user6 (
+    -&gt; id int,
+    -&gt; name varchar(20) not null
+    -&gt; );
+Query OK, 0 rows affected (0.05 sec)
+
+###查看
+mysql&gt; desc user6;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| name  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：name属性的NULL一栏中，null=NO，表示name的数据不能为空。</p>
+<h4 id="默认约束">默认约束</h4>
+<p>当我们插入字段值的时候，如果没有传值，使用默认约束。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###创建默认约束数据表
+mysql&gt;  create table user7 (
+    -&gt; id int,
+    -&gt; name varchar(20),
+    -&gt; age int default 10);
+Query OK, 0 rows affected (0.04 sec)
+
+###查看表格特征
+mysql&gt; desc user7
+    -&gt; ;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| age   | int(11)     | YES  |     | 10      |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+###添加数据
+mysql&gt; insert into user7 (id,name) values (1,&#34;zhang3&#34;);
+Query OK, 1 row affected (0.00 sec)
+
+###提取表格数据
+mysql&gt; select * from user7;
++------+--------+------+
+| id   | name   | age  |
++------+--------+------+
+|    1 | zhang3 |   10 |
++------+--------+------+
+1 row in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：上面添加数据的时候没有给age传值，则默认为10。</p>
+<h4 id="外键约束">外键约束</h4>
+<p>涉及到两个表格：父表，子表。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##创建一个班级表
+mysql&gt; create table classes(
+    -&gt; id int primary key,
+    -&gt; name varchar(20)
+    -&gt; );
+Query OK, 0 rows affected (0.04 sec)
+
+##查看classes表格属性
+mysql&gt; desc classes;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(11)     | NO   | PRI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+##创建一个学生表
+mysql&gt; create table students(
+    -&gt; id int primary key,
+    -&gt; name varchar(20),
+    -&gt; class_id int,
+    -&gt; foreign key(class_id) references classes(id)
+    -&gt; );
+Query OK, 0 rows affected (0.04 sec)
+
+##查看students表格属性,Key值有MUL
+mysql&gt; desc students;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(11)     | NO   | PRI | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| class_id | int(11)     | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+</code></pre></td></tr></table>
+</div>
+</div><p>注：这就像是文件夹跟文件的关系一样，在班级的文件夹中，有各个班级的文件，每个班级里面又有相应该班级的学生信息。数据的增删改查跟前面一样，只是连个表格有了class_id联系起来了。</p>
+<ul>
+<li>主表 classes 中没有的数据值，在副表里面不能被引用。</li>
+<li>主表里面的信息被副表引用，则不可以被直接删除。</li>
+<li></li>
+</ul>
+<p>###如何退出数据库服务器？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; exit;
+Bye
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="参考">参考</h3>
+<p><a href="https://www.bilibili.com/video/BV1Vt411z7wy?p=1">一天学会 MySQL 数据库</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-09-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mysql/">Mysql</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/mysql%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Mysql数据表三大范式</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/mysql%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81/">
+            <span class="next-text nav-default">Mysql重置密码</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/mysql%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Mysql基础学习">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

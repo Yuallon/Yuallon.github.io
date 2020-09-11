@@ -1,0 +1,2969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SQL经典练习题 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="SQL经典练习题 使用方法：我用的数据库是MsSQL Server 2008，练习时应当自己建数据，自己先思考，切勿急躁翻答案！否则效果减半，做完这些题，恭" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/sql%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="SQL经典练习题" />
+<meta property="og:description" content="SQL经典练习题 使用方法：我用的数据库是MsSQL Server 2008，练习时应当自己建数据，自己先思考，切勿急躁翻答案！否则效果减半，做完这些题，恭" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/sql%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98/" />
+<meta property="article:published_time" content="2020-09-05T18:29:37+08:00" />
+<meta property="article:modified_time" content="2020-09-05T18:29:37+08:00" />
+<meta itemprop="name" content="SQL经典练习题">
+<meta itemprop="description" content="SQL经典练习题 使用方法：我用的数据库是MsSQL Server 2008，练习时应当自己建数据，自己先思考，切勿急躁翻答案！否则效果减半，做完这些题，恭">
+<meta itemprop="datePublished" content="2020-09-05T18:29:37&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-05T18:29:37&#43;08:00" />
+<meta itemprop="wordCount" content="10929">
+
+
+
+<meta itemprop="keywords" content="Mysql," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SQL经典练习题"/>
+<meta name="twitter:description" content="SQL经典练习题 使用方法：我用的数据库是MsSQL Server 2008，练习时应当自己建数据，自己先思考，切勿急躁翻答案！否则效果减半，做完这些题，恭"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">SQL经典练习题</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-09-05 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"> 数据库 </a>
+            </div>
+          <span class="more-meta"> 10929 words </span>
+          <span class="more-meta"> 22 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sql经典练习题">SQL经典练习题</a></li>
+        <li><a href="#测试表格概述">测试表格概述</a></li>
+        <li><a href="#创建上述表格并输入数据">创建上述表格并输入数据</a></li>
+        <li><a href="#练习题目">练习题目</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="sql经典练习题">SQL经典练习题</h3>
+<p><strong>使用方法：我用的数据库是MsSQL Server 2008，练习时应当自己建数据，自己先思考，切勿急躁翻答案！否则效果减半，做完这些题，恭喜你，你的SQL就算过关了。</strong></p>
+<h3 id="测试表格概述">测试表格概述</h3>
+<ol>
+<li>学生表：学生编号SId、学生姓名Sname、出生年月Sage、学生性别Ssex</li>
+<li>课程表：课程编号CId、课程名称Cname、教师编号TId</li>
+<li>教师表：教师编号TId、教师姓名Tname</li>
+<li>成绩表：学生编号SId、课程编号CId、分数score</li>
+</ol>
+<h3 id="创建上述表格并输入数据">创建上述表格并输入数据</h3>
+<ol>
+<li>
+<p>学生表Student</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">create table Student(SId varchar(10),Sname varchar(10),Sage datetime,Ssex varchar(10));
+insert into Student values(&#39;01&#39; , &#39;赵雷&#39; , &#39;1990-01-01&#39; , &#39;男&#39;);
+insert into Student values(&#39;02&#39; , &#39;钱电&#39; , &#39;1990-12-21&#39; , &#39;男&#39;);
+insert into Student values(&#39;03&#39; , &#39;孙风&#39; , &#39;1990-05-20&#39; , &#39;男&#39;);
+insert into Student values(&#39;04&#39; , &#39;李云&#39; , &#39;1990-08-06&#39; , &#39;男&#39;);
+insert into Student values(&#39;05&#39; , &#39;周梅&#39; , &#39;1991-12-01&#39; , &#39;女&#39;);
+insert into Student values(&#39;06&#39; , &#39;吴兰&#39; , &#39;1992-03-01&#39; , &#39;女&#39;);
+insert into Student values(&#39;07&#39; , &#39;郑竹&#39; , &#39;1989-07-01&#39; , &#39;女&#39;);
+insert into Student values(&#39;09&#39; , &#39;张三&#39; , &#39;2017-12-20&#39; , &#39;女&#39;);
+insert into Student values(&#39;10&#39; , &#39;李四&#39; , &#39;2017-12-25&#39; , &#39;女&#39;);
+insert into Student values(&#39;11&#39; , &#39;李四&#39; , &#39;2017-12-30&#39; , &#39;女&#39;);
+insert into Student values(&#39;12&#39; , &#39;赵六&#39; , &#39;2017-01-01&#39; , &#39;女&#39;);
+insert into Student values(&#39;13&#39; , &#39;孙七&#39; , &#39;2018-01-01&#39; , &#39;女&#39;);
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>课程表Course</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">create table Course(CId varchar(10),Cname nvarchar(10),TId varchar(10));
+insert into Course values(&#39;01&#39; , &#39;语文&#39; , &#39;02&#39;);
+insert into Course values(&#39;02&#39; , &#39;数学&#39; , &#39;01&#39;);
+insert into Course values(&#39;03&#39; , &#39;英语&#39; , &#39;03&#39;);
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>教师表Teacher</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">create table Teacher(TId varchar(10),Tname varchar(10));
+insert into Teacher values(&#39;01&#39; , &#39;张三&#39;);
+insert into Teacher values(&#39;02&#39; , &#39;李四&#39;);
+insert into Teacher values(&#39;03&#39; , &#39;王五&#39;);
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>成绩表SC</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">create table SC(SId varchar(10),CId varchar(10),score decimal(18,1));
+insert into SC values(&#39;01&#39; , &#39;01&#39; , 80);
+insert into SC values(&#39;01&#39; , &#39;02&#39; , 90);
+insert into SC values(&#39;01&#39; , &#39;03&#39; , 99);
+insert into SC values(&#39;02&#39; , &#39;01&#39; , 70);
+insert into SC values(&#39;02&#39; , &#39;02&#39; , 60);
+insert into SC values(&#39;02&#39; , &#39;03&#39; , 80);
+insert into SC values(&#39;03&#39; , &#39;01&#39; , 80);
+insert into SC values(&#39;03&#39; , &#39;02&#39; , 80);
+insert into SC values(&#39;03&#39; , &#39;03&#39; , 80);
+insert into SC values(&#39;04&#39; , &#39;01&#39; , 50);
+insert into SC values(&#39;04&#39; , &#39;02&#39; , 30);
+insert into SC values(&#39;04&#39; , &#39;03&#39; , 20);
+insert into SC values(&#39;05&#39; , &#39;01&#39; , 76);
+insert into SC values(&#39;05&#39; , &#39;02&#39; , 87);
+insert into SC values(&#39;06&#39; , &#39;01&#39; , 31);
+insert into SC values(&#39;06&#39; , &#39;03&#39; , 34);
+insert into SC values(&#39;07&#39; , &#39;02&#39; , 89);
+insert into SC values(&#39;07&#39; , &#39;03&#39; , 98);
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="练习题目">练习题目</h3>
+<ol>
+<li>
+<p><strong>查询 &ldquo;01&rdquo; 课程比 &ldquo;02&rdquo; 课程成绩高的学生的信息及课程分数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##01课程学生成绩
+mysql&gt; select * from SC where SC.CId=&#39;01&#39;;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 01   |  80.0 |
+| 02   | 01   |  70.0 |
+| 03   | 01   |  80.0 |
+| 04   | 01   |  50.0 |
+| 05   | 01   |  76.0 |
+| 06   | 01   |  31.0 |
++------+------+-------+
+6 rows in set (0.02 sec)
+   
+##02课程学生成绩
+mysql&gt; select * from SC where SC.CId=&#39;02&#39;;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 02   |  90.0 |
+| 02   | 02   |  60.0 |
+| 03   | 02   |  80.0 |
+| 04   | 02   |  30.0 |
+| 05   | 02   |  87.0 |
+| 07   | 02   |  89.0 |
++------+------+-------+
+6 rows in set (0.01 sec)
+   
+##学生信息
+mysql&gt; select * from Student;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |
+| 09   | 张三   | 2017-12-20 00:00:00 | 女   |
+| 10   | 李四   | 2017-12-25 00:00:00 | 女   |
+| 11   | 李四   | 2017-12-30 00:00:00 | 女   |
+| 12   | 赵六   | 2017-01-01 00:00:00 | 女   |
+| 13   | 孙七   | 2018-01-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+12 rows in set (0.00 sec)
+   
+##01课程比02课程成绩高的学生信息和成绩，不完全的学生信息
+mysql&gt; SELECT A.SId,A.score as &#39;语文&#39;,B.score as &#39;数学&#39; 
+    -&gt; FROM (select * from SC where SC.CId=&#39;01&#39;) as A
+    -&gt; LEFT JOIN (select * from SC where SC.CId=&#39;02&#39;) as B
+    -&gt; ON A.SId=B.SId
+    -&gt; WHERE A.score&gt;B.score;
++------+--------+--------+
+| SId  | 语文   | 数学   |
++------+--------+--------+
+| 02   |   70.0 |   60.0 |
+| 04   |   50.0 |   30.0 |
++------+--------+--------+
+2 rows in set (0.00 sec)
+   
+##完全的学生信息
+mysql&gt; SELECT st.*,A.score as &#39;语文&#39;,B.score as &#39;数学&#39; 
+    -&gt; FROM (select * from SC where SC.CId=&#39;01&#39;) as A
+    -&gt; LEFT JOIN (select * from SC where SC.CId=&#39;02&#39;) as B ON A.SId=B.SId
+    -&gt; LEFT JOIN Student as st ON st.SID=A.SId
+    -&gt; WHERE A.score&gt;B.score;
++------+--------+---------------------+------+--------+--------+
+| SId  | Sname  | Sage                | Ssex | 语文   | 数学   |
++------+--------+---------------------+------+--------+--------+
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |   70.0 |   60.0 |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |   50.0 |   30.0 |
++------+--------+---------------------+------+--------+--------+
+2 rows in set (0.00 sec)
+   
+   
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>查询同时存在&quot;01&quot;课程和&quot;02&quot;课程的情况</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT S01.SId, S01.score, S02.score FROM
+    -&gt; (SELECT SId, score FROM SC WHERE CId=&#39;01&#39;) as S01 ,
+    -&gt; (SELECT SId, score FROM SC WHERE CId=&#39;02&#39;) as S02
+    -&gt; WHERE S01.SId=S02.SId;
++------+-------+-------+
+| SId  | score | score |
++------+-------+-------+
+| 01   |  80.0 |  90.0 |
+| 02   |  70.0 |  60.0 |
+| 03   |  80.0 |  80.0 |
+| 04   |  50.0 |  30.0 |
+| 05   |  76.0 |  87.0 |
++------+-------+-------+
+5 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询存在&quot;01&quot;课程但可能不存在&quot;02&quot;课程的情况(不存在时显示为null)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT S01.SId, S01.score as &#39;01&#39;, S02.score as &#39;02&#39; FROM
+    -&gt; (SELECT * FROM SC WHERE CId = &#39;02&#39;) as S02
+    -&gt; RIGHT JOIN
+    -&gt; (SELECT * FROM SC WHERE CId = &#39;01&#39;) as S01
+    -&gt; ON S01.SId = S02.SId;
++------+------+------+
+| SId  | 01   | 02   |
++------+------+------+
+| 01   | 80.0 | 90.0 |
+| 02   | 70.0 | 60.0 |
+| 03   | 80.0 | 80.0 |
+| 04   | 50.0 | 30.0 |
+| 05   | 76.0 | 87.0 |
+| 06   | 31.0 | NULL |
++------+------+------+
+6 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询不存在&quot;01&quot;课程但存在&quot;02&quot;课程的情况</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT S01.SId, S01.CId, S01.score FROM
+    -&gt; (SELECT * FROM SC WHERE CId != &#39;01&#39;) as S01
+    -&gt; INNER JOIN
+    -&gt; (SELECT * FROM SC WHERE CId = &#39;02&#39;) as S02
+    -&gt; ON S01.SId = S02.SId;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 02   |  90.0 |
+| 01   | 03   |  99.0 |
+| 02   | 02   |  60.0 |
+| 02   | 03   |  80.0 |
+| 03   | 02   |  80.0 |
+| 03   | 03   |  80.0 |
+| 04   | 02   |  30.0 |
+| 04   | 03   |  20.0 |
+| 05   | 02   |  87.0 |
+| 07   | 02   |  89.0 |
+| 07   | 03   |  98.0 |
++------+------+-------+
+11 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>查询平均成绩大于等于60分的同学的学生编号和学生姓名和平均成绩</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##Method one
+mysql&gt; SELECT avg_score.SId, st.Sname, avg_score.a
+    -&gt; FROM Student as st, (SELECT SId, AVG(score) as a FROM SC
+    -&gt; GROUP BY SId) as avg_score
+    -&gt; WHERE avg_score.a&gt;60 
+    -&gt; AND avg_score.SId=st.SId;
++------+--------+----------+
+| SId  | Sname  | a        |
++------+--------+----------+
+| 01   | 赵雷   | 89.66667 |
+| 02   | 钱电   | 70.00000 |
+| 03   | 孙风   | 80.00000 |
+| 05   | 周梅   | 81.50000 |
+| 07   | 郑竹   | 93.50000 |
++------+--------+----------+
+5 rows in set (0.01 sec)
+   
+##Method two
+mysql&gt; SELECT avg_score.SId, st.Sname, avg_score.a
+    -&gt; FROM (SELECT SId, AVG(score) as a FROM SC GROUP BY SId) as avg_score
+    -&gt; LEFT JOIN Student as st
+    -&gt; ON avg_score.SId=st.SId
+    -&gt; WHERE avg_score.a&gt;60;
++------+--------+----------+
+| SId  | Sname  | a        |
++------+--------+----------+
+| 01   | 赵雷   | 89.66667 |
+| 02   | 钱电   | 70.00000 |
+| 03   | 孙风   | 80.00000 |
+| 05   | 周梅   | 81.50000 |
+| 07   | 郑竹   | 93.50000 |
++------+--------+----------+
+5 rows in set (0.01 sec)
+   
+</code></pre></td></tr></table>
+</div>
+</div><p>注：多个条件查询 ===&gt; 将一些条件转化成中间表格，然后再取数据。</p>
+</li>
+<li>
+<p><strong>查询在SC表存在成绩的学生信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.* FROM Student, (SELECT DISTINCT SId FROM SC) as A
+    -&gt; WHERE Student.SId=A.SId;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+7 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询所有同学的学生编号、学生姓名、选课总数、所有课程的总成绩（没成绩的显示null）</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT st.SId, st.Sname, A.id, A.score FROM
+    -&gt; (SELECT SC.SId, COUNT(SC.CId) as id, SUM(SC.score) as score FROM SC
+    -&gt; GROUP BY SC.SId) as A
+    -&gt; RIGHT JOIN Student as st
+    -&gt; ON st.SId=A.SId;
++------+--------+------+-------+
+| SId  | Sname  | id   | score |
++------+--------+------+-------+
+| 01   | 赵雷   |    3 | 269.0 |
+| 02   | 钱电   |    3 | 210.0 |
+| 03   | 孙风   |    3 | 240.0 |
+| 04   | 李云   |    3 | 100.0 |
+| 05   | 周梅   |    2 | 163.0 |
+| 06   | 吴兰   |    2 |  65.0 |
+| 07   | 郑竹   |    2 | 187.0 |
+| 09   | 张三   | NULL |  NULL |
+| 10   | 李四   | NULL |  NULL |
+| 11   | 李四   | NULL |  NULL |
+| 12   | 赵六   | NULL |  NULL |
+| 13   | 孙七   | NULL |  NULL |
++------+--------+------+-------+
+12 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>查有成绩的学生信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT st.*, A.id as &#39;选课总数&#39;, A.score as &#39;总成绩&#39; FROM
+    -&gt; (SELECT SC.SId, COUNT(SC.CId) as id, SUM(SC.score) as score FROM SC GROUP BY SC.SId) as A
+    -&gt; LEFT JOIN Student as st
+    -&gt; ON st.SId=A.SId;
++------+--------+---------------------+------+--------------+-----------+
+| SId  | Sname  | Sage                | Ssex | 选课总数     | 总成绩    |
++------+--------+---------------------+------+--------------+-----------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |            3 |     269.0 |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |            3 |     210.0 |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |            3 |     240.0 |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |            3 |     100.0 |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |            2 |     163.0 |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |            2 |      65.0 |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |            2 |     187.0 |
++------+--------+---------------------+------+--------------+-----------+
+7 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>查询「李」姓老师的数量</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##MY answer
+mysql&gt; SELECT COUNT(A.TId) FROM
+    -&gt; (SELECT * FROM Teacher WHERE Tname LIKE &#39;李%&#39;) as A;
++--------------+
+| COUNT(A.TId) |
++--------------+
+|            1 |
++--------------+
+1 row in set (0.01 sec)
+   
+##REFERENCE
+mysql&gt; SELECT COUNT(*)李姓老师数量 FROM Teacher WHERE Tname LIKE &#39;李%&#39;;
++--------------------+
+| 李姓老师数量       |
++--------------------+
+|                  1 |
++--------------------+
+1 row in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询学过「张三」老师授课的同学信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT st.* FROM 
+    -&gt; Student as st, (select * from SC where CId=&#39;01&#39;) as A
+    -&gt; WHERE st.SId=A.SId;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+6 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询没有学全所有课程的同学的信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##MY answer
+mysql&gt; SELECT st.* FROM 
+    -&gt; (SELECT * FROM
+    -&gt; (SELECT SC.SId, count(SC.CId) as &#39;课程数&#39; FROM SC
+    -&gt; GROUP BY SC.SId) AS A
+    -&gt; WHERE A.课程数 &lt; (SELECT COUNT(*) FROM Course)
+    -&gt; ) AS B
+    -&gt; LEFT JOIN Student AS st
+    -&gt; ON B.SId=St.SId;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+3 rows in set (0.01 sec)
+   
+##REFERENCE
+mysql&gt; SELECT * FROM Student 
+    -&gt; WHERE SId IN (SELECT SId FROM SC GROUP BY SId HAVING COUNT(CId)&lt;3);
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+3 rows in set (0.02 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询至少有一门课程与学号为&quot;01&quot;的同学所学相同的同学信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###MY ANSWER
+mysql&gt; SELECT Student.* FROM Student,
+    -&gt; (SELECT SC.SId FROM SC, (SELECT * FROM SC WHERE SC.SId=&#39;01&#39;) AS A
+    -&gt; WHERE SC.CId IN (A.CId)
+    -&gt; GROUP BY SC.SId) AS B
+    -&gt; WHERE Student.SId=B.SId; 
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+7 rows in set (0.01 sec)
+   
+###REFERENCE
+mysql&gt; SELECT * FROM Student
+    -&gt; WHERE SId IN
+    -&gt; (SELECT DISTINCT SId FROM SC WHERE CId IN (SELECT CId FROM SC WHERE SID=&#39;01&#39;));
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |
++------+--------+---------------------+------+
+7 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询和&quot;01&quot;号的同学学习的课程完全相同的其他同学的信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###REFERENCE
+mysql&gt; SELECT * FROM Student
+    -&gt; WHERE SId IN
+    -&gt; (SELECT DISTINCT SId FROM SC WHERE CId IN (SELECT CId FROM SC WHERE SID=&#39;01&#39;) AND SId&lt;&gt;&#39;01&#39;
+ -&gt; GROUP BY SID
+    -&gt; HAVING 
+    -&gt; COUNT(CId) &gt;= 3
+    -&gt; );
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
++------+--------+---------------------+------+
+3 rows in set (0.01 sec)
+   
+   
+###MY ANSWER
+   
+</code></pre></td></tr></table>
+</div>
+</div><p>参考答案这里给出的，只是说和&quot;01&quot;学生选修的课程数目相同（在本数据库中=学习课程一样），但是并没有给出学习课程一样的判断。</p>
+</li>
+<li>
+<p><strong>查询没学过「张三」老师讲授的任一门课程的学生姓名</strong></p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##REFERENC
+mysql&gt; SELECT Sname FROM Student
+    -&gt; WHERE SId NOT IN (SELECT SId FROM SC
+    -&gt; WHERE CId IN (SELECT CId FROM Course WHERE TId = (SELECT TId FROM Teacher WHERE Tname=&#39;张三&#39;))
+    -&gt; );
++--------+
+| Sname  |
++--------+
+| 吴兰   |
+| 张三   |
+| 李四   |
+| 李四   |
+| 赵六   |
+| 孙七   |
++--------+
+6 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>这里：先选出学习「张三」老师的学生ID，然后用NOT IN在学生表里面排除掉。</p>
+<ol start="11">
+<li>
+<p>**查询两门及其以上不及格课程的同学的学号，姓名及其平均成绩 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###MY ANSWER
+mysql&gt; SELECT A.SId, st.Sname, A.平均成绩 FROM Student as st,
+    -&gt; (SELECT SId,COUNT(CId) AS &#39;不及格课程数&#39;, AVG(score) AS &#34;平均成绩&#34; FROM SC
+    -&gt; WHERE score &lt; 60 GROUP BY SId) AS A
+    -&gt; WHERE A.SId=st.SId AND A.不及格课程数&gt;=2
+    -&gt; ;
++------+--------+--------------+
+| SId  | Sname  | 平均成绩     |
++------+--------+--------------+
+| 04   | 李云   |     33.33333 |
+| 06   | 吴兰   |     32.50000 |
++------+--------+--------------+
+2 rows in set (0.00 sec)
+    
+###REFERENCE
+mysql&gt; SELECT A.SId, A.Sname, B.平均成绩 FROM  Student AS A 
+       RIGHT JOIN 
+       (SELECT SId, AVG(score)平均成绩 FROM SC WHERE score&lt;60 GROUP BY SId HAVING COUNT(score)&gt;=2)B 
+       ON A.SId=B.SId;
++------+--------+--------------+
+| SId  | Sname  | 平均成绩     |
++------+--------+--------------+
+| 04   | 李云   |     33.33333 |
+| 06   | 吴兰   |     32.50000 |
++------+--------+--------------+
+2 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>检索&rdquo; 01 &ldquo;课程分数小于 60，按分数降序排列的学生信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT SId, score FROM SC
+    -&gt; WHERE CId=&#39;01&#39; AND score&lt;60
+    -&gt; ORDER BY score DESC;
++------+-------+
+| SId  | score |
++------+-------+
+| 04   |  50.0 |
+| 06   |  31.0 |
++------+-------+
+2 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注意：order by 放在最后。可以理解为：先按照条件选出数据，然后再排序。</p>
+</li>
+<li>
+<p><strong>按平均成绩从高到低显示所有学生的所有课程的成绩以及平均成绩，CASE方法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT SId, SUM(score)总成绩, AVG(score)平均成绩 FROM SC
+    -&gt; GROUP BY SId
+    -&gt; ORDER BY 平均成绩 DESC;
++------+-----------+--------------+
+| SId  | 总成绩    | 平均成绩     |
++------+-----------+--------------+
+| 07   |     187.0 |     93.50000 |
+| 01   |     269.0 |     89.66667 |
+| 05   |     163.0 |     81.50000 |
+| 03   |     240.0 |     80.00000 |
+| 02   |     210.0 |     70.00000 |
+| 04   |     100.0 |     33.33333 |
+| 06   |      65.0 |     32.50000 |
++------+-----------+--------------+
+7 rows in set (0.00 sec)
+    
+###REFERENCE
+mysql&gt; select SId, 
+    -&gt; max(case CId when &#39;01&#39; then score else 0 end)&#39;01&#39;,
+    -&gt; max(case CId when &#39;02&#39; then score else 0 end)&#39;02&#39;,
+    -&gt; max(case CId when &#39;03&#39; then score else 0 end)&#39;03&#39;,
+    -&gt; AVG(score)平均分 from SC
+    -&gt; group by SId order by 平均分 desc;
++------+------+------+------+-----------+
+| SId  | 01   | 02   | 03   | 平均分    |
++------+------+------+------+-----------+
+| 07   |  0.0 | 89.0 | 98.0 |  93.50000 |
+| 01   | 80.0 | 90.0 | 99.0 |  89.66667 |
+| 05   | 76.0 | 87.0 |  0.0 |  81.50000 |
+| 03   | 80.0 | 80.0 | 80.0 |  80.00000 |
+| 02   | 70.0 | 60.0 | 80.0 |  70.00000 |
+| 04   | 50.0 | 30.0 | 20.0 |  33.33333 |
+| 06   | 31.0 |  0.0 | 34.0 |  32.50000 |
++------+------+------+------+-----------+
+7 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询各科成绩最高分、最低分和平均分：</strong></p>
+<p>以如下形式显示：课程 ID，课程 name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率及格为&gt;=60，中等为：70-80，优良为：80-90，优秀为：&gt;=90要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">SELECT A.01 as 语文, A.02 as 数学, A.03 as 英语 FROM
+(SELECT SId AS 学号,
+MAX(CASE CID WHEN &#39;01&#39; THEN score ELSE 0 END) AS &#39;01&#39;,
+MAX(CASE CID WHEN &#39;02&#39; THEN score ELSE 0 END) AS &#39;02&#39;,
+MAX(CASE CID WHEN &#39;03&#39; THEN score ELSE 0 END) AS &#39;03&#39;
+FROM SC GROUP BY SId;) AS A
+    
+##某一门课程；最高分，最低分，平均分
+SELECT CId, COUNT(0)选修人数, MAX(score)最高分, MIN(score)最低分, AVG(score)平均分 FROM SC WHERE CId=&#39;01&#39;;
+    
+SELECT SC.CId, A.选修人数, A.最高分, A.最低分, A.平均分 FROM SC
+LEFT JOIN (SELECT CId, COUNT(0)选修人数, MAX(score)最高分, MIN(score)最低分, AVG(score)平均分 FROM SC WHERE CId=SC.CId) AS A
+ON A.CId=SC.CId
+GROUP BY SC.CId
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>按各科成绩进行排序，并显示排名， Score 重复时保留名次空缺</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##
+mysql&gt; SELECT A.score, A.ranking From
+    -&gt; (SELECT
+    -&gt; @rank_counter := @rank_counter + 1 AS rank,
+    -&gt; IF(@pre_score = SC.score, @cur_rank, @cur_rank := @rank_counter) AS ranking,
+    -&gt; (@pre_score := Sc.score) AS score
+    -&gt; FROM SC, (SELECT @cur_rank := 0, @pre_score := NULL, @rank_counter := 0) AS R
+    -&gt; ORDER BY SC.score DESC) AS A;
++-------+---------+
+| score | ranking |
++-------+---------+
+|  99.0 |       1 |
+|  98.0 |       2 |
+|  90.0 |       3 |
+|  89.0 |       4 |
+|  87.0 |       5 |
+|  80.0 |       6 |
+|  80.0 |       6 |
+|  80.0 |       6 |
+|  80.0 |       6 |
+|  80.0 |       6 |
+|  76.0 |      11 |
+|  70.0 |      12 |
+|  60.0 |      13 |
+|  50.0 |      14 |
+|  34.0 |      15 |
+|  31.0 |      16 |
+|  30.0 |      17 |
+|  20.0 |      18 |
++-------+---------+
+18 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>按各科成绩进行排序，并显示排名， Score 重复时合并名次</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT 
+    -&gt; IF(@pre_score = SC.score, @cur_rank, @cur_rank := @cur_rank + 1) AS ranking,
+    -&gt; (@pre_score := Sc.score) AS core
+    -&gt; FROM SC, (SELECT @cur_rank := 0, @pre_score := NULL) AS R
+    -&gt; ORDER BY SC.score DESC;
++---------+------+
+| ranking | core |
++---------+------+
+|       1 | 99.0 |
+|       2 | 98.0 |
+|       3 | 90.0 |
+|       4 | 89.0 |
+|       5 | 87.0 |
+|       6 | 80.0 |
+|       6 | 80.0 |
+|       6 | 80.0 |
+|       6 | 80.0 |
+|       6 | 80.0 |
+|       7 | 76.0 |
+|       8 | 70.0 |
+|       9 | 60.0 |
+|      10 | 50.0 |
+|      11 | 34.0 |
+|      12 | 31.0 |
+|      13 | 30.0 |
+|      14 | 20.0 |
++---------+------+
+18 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>查询学生的总成绩，并进行排名，总分重复时保留名次空缺</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###学生总成绩按降序排列
+mysql&gt; SELECT SId, SUM(score) AS score FROM SC GROUP BY SId ORDER BY score DESC ;
++------+-------+
+| SId  | score |
++------+-------+
+| 01   | 269.0 |
+| 03   | 240.0 |
+| 02   | 210.0 |
+| 07   | 187.0 |
+| 05   | 163.0 |
+| 04   | 100.0 |
+| 06   |  65.0 |
++------+-------+
+7 rows in set (0.00 sec)
+    
+##参考15题第一题，把SC表换成上面的表（A）
+mysql&gt; SELECT B.SId, B.score, B.ranking From
+    -&gt; (SELECT
+    -&gt; A.SId,
+    -&gt; @rank_counter := @rank_counter + 1 AS rank,
+    -&gt; IF(@pre_score = A.score, @cur_rank, @cur_rank := @rank_counter) AS ranking,
+    -&gt; (@pre_score := A.score) AS score
+    -&gt; FROM (SELECT SId, SUM(score) AS score FROM SC GROUP BY SId ORDER BY score DESC) AS A, (SELECT @cur_rank := 0, @pre_score := NULL, @rank_counter := 0) AS R
+    -&gt; ORDER BY A.score DESC) AS B;
++------+-------+---------+
+| SId  | score | ranking |
++------+-------+---------+
+| 01   | 269.0 |       1 |
+| 03   | 240.0 |       2 |
+| 02   | 210.0 |       3 |
+| 07   | 187.0 |       4 |
+| 05   | 163.0 |       5 |
+| 04   | 100.0 |       6 |
+| 06   |  65.0 |       7 |
++------+-------+---------+
+7 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>查询学生的总成绩，并进行排名，总分重复时不保留名次空缺</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###参考16题第一题，15题第二题
+mysql&gt; SELECT 
+    -&gt; A.SId,
+    -&gt; IF(@pre_score = A.score, @cur_rank, @cur_rank := @cur_rank + 1) AS ranking,
+    -&gt; (@pre_score := A.score) AS core
+    -&gt; FROM (SELECT SId, SUM(score) AS score FROM SC GROUP BY SId ORDER BY score DESC) AS A, (SELECT @cur_rank := 0, @pre_score := NULL) AS R
+    -&gt; ORDER BY A.score DESC;
++------+---------+-------+
+| SId  | ranking | core  |
++------+---------+-------+
+| 01   |       1 | 269.0 |
+| 03   |       2 | 240.0 |
+| 02   |       3 | 210.0 |
+| 07   |       4 | 187.0 |
+| 05   |       5 | 163.0 |
+| 04   |       6 | 100.0 |
+| 06   |       7 |  65.0 |
++------+---------+-------+
+7 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><strong>统计各科成绩各分数段人数：课程编号，课程名称，[100-85]，[85-70]，[70-60]，[60-0] 及所占百分比</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">SELECT CId, SUM(CId) FROM SC GROUP BY CId;
+    
+(CASE WHEN 85&lt;score&lt;=100 THEN )
+    
+###
+mysql&gt; select * from SC where CId=&#39;01&#39;
+    -&gt; ;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 01   |  80.0 |
+| 02   | 01   |  70.0 |
+| 03   | 01   |  80.0 |
+| 04   | 01   |  50.0 |
+| 05   | 01   |  76.0 |
+| 06   | 01   |  31.0 |
++------+------+-------+
+6 rows in set (0.00 sec)
+    
+##
+SELECT 
+A.SId
+FROM (select * from SC where CId=&#39;01&#39;) AS A
+WHERE A.score&gt;=85 AND A.score&lt;=100;
+    
+###
+SELECT 
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询各科成绩前三名的记录</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###指定某门课程的前三名
+mysql&gt; SELECT * FROM SC WHERE CId=&#39;01&#39; ORDER BY score DESC LIMIT 3;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 01   |  80.0 |
+| 03   | 01   |  80.0 |
+| 05   | 01   |  76.0 |
++------+------+-------+
+3 rows in set (0.00 sec)
+    
+###如何全部课程一起查询前三名呢,使用UNION ALL
+mysql&gt; (SELECT * FROM SC WHERE CId=&#39;01&#39; ORDER BY score DESC LIMIT 3)
+    -&gt; UNION ALL
+    -&gt; (SELECT * FROM SC WHERE CId=&#39;02&#39; ORDER BY score DESC LIMIT 3)
+    -&gt; UNION ALL
+    -&gt; (SELECT * FROM SC WHERE CId=&#39;03&#39; ORDER BY score DESC LIMIT 3);
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 01   |  80.0 |
+| 03   | 01   |  80.0 |
+| 05   | 01   |  76.0 |
+| 01   | 02   |  90.0 |
+| 07   | 02   |  89.0 |
+| 05   | 02   |  87.0 |
+| 01   | 03   |  99.0 |
+| 07   | 03   |  98.0 |
+| 02   | 03   |  80.0 |
++------+------+-------+
+9 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**查询每门课程被选修的学生数 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT CId, COUNT(SId) AS 人数 FROM SC
+    -&gt; GROUP BY CId;
++------+--------+
+| CId  | 人数   |
++------+--------+
+| 01   |      6 |
+| 02   |      6 |
+| 03   |      6 |
++------+--------+
+3 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**查询出只选修两门课程的学生学号和姓名 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.SId, Student.Sname FROM Student
+    -&gt; WHERE SId IN
+    -&gt; (SELECT SId FROM SC GROUP BY SId HAVING COUNT(CId)=2);
++------+--------+
+| SId  | Sname  |
++------+--------+
+| 05   | 周梅   |
+| 06   | 吴兰   |
+| 07   | 郑竹   |
++------+--------+
+3 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询男生、女生人数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT
+    -&gt; (SELECT COUNT(*) FROM Student WHERE Ssex=&#39;男&#39;)男生人数,
+    -&gt; (SELECT COUNT(*) FROM Student WHERE Ssex=&#39;女&#39;)女生人数;
++--------------+--------------+
+| 男生人数     | 女生人数     |
++--------------+--------------+
+|            4 |            8 |
++--------------+--------------+
+1 row in set (0.00 sec)
+    
+###REFERENCE
+mysql&gt; SELECT Student.Ssex, COUNT(*) AS 人数
+    -&gt; FROM Student
+    -&gt; GROUP BY Student.Ssex;
++------+--------+
+| Ssex | 人数   |
++------+--------+
+| 女   |      8 |
+| 男   |      4 |
++------+--------+
+2 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询名字中含有「风」字的学生信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT * FROM Student
+    -&gt; WHERE Sname LIKE &#39;%风%&#39;;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
++------+--------+---------------------+------+
+1 row in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询同名同性学生名单，并统计同名人数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Sname, COUNT(Sname) AS 同名人数 FROM Student
+    -&gt; GROUP BY Sname
+    -&gt; HAVING COUNT(Sname)&gt;=2;
++--------+--------------+
+| Sname  | 同名人数     |
++--------+--------------+
+| 李四   |            2 |
++--------+--------------+
+1 row in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询 1990 年出生的学生名单</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT * FROM Student
+    -&gt; WHERE YEAR(Sage)=&#39;1990&#39;;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
++------+--------+---------------------+------+
+4 rows in set (0.00 sec)
+    
+###REFERENCE
+mysql&gt; SELECT * FROM Student
+    -&gt; WHERE Sage LIKE &#39;1990%&#39;;
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
++------+--------+---------------------+------+
+4 rows in set, 1 warning (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询每门课程的平均成绩，结果按平均成绩降序排列，平均成绩相同时，按课程编号升序排列</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT CId, AVG(score) AS 平均成绩 FROM SC
+    -&gt; GROUP BY CID
+    -&gt; ORDER BY 平均成绩 DESC, CId ASC;
++------+--------------+
+| CId  | 平均成绩     |
++------+--------------+
+| 02   |     72.66667 |
+| 03   |     68.50000 |
+| 01   |     64.50000 |
++------+--------------+
+3 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**查询平均成绩大于等于 85 的所有学生的学号、姓名和平均成绩 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT A.SId, Student.Sname, A.平均成绩 FROM
+    -&gt; (SELECT SId, AVG(score) AS 平均成绩 FROM SC GROUP BY SID HAVING 平均成绩&gt;=85) AS A
+    -&gt; LEFT JOIN Student ON Student.SId=A.SId;
++------+--------+--------------+
+| SId  | Sname  | 平均成绩     |
++------+--------+--------------+
+| 01   | 赵雷   |     89.66667 |
+| 07   | 郑竹   |     93.50000 |
++------+--------+--------------+
+2 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**查询课程名称为「数学」，且分数低于 60 的学生姓名和分数 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.Sname, A.score AS 数学成绩 FROM
+    -&gt; (SELECT SId,score FROM SC
+    -&gt; WHERE CId=(SELECT CId FROM Course WHERE Cname=&#39;数学&#39;) AND score&lt;60) AS A
+    -&gt; LEFT JOIN Student
+    -&gt; ON Student.SId=A.SId
+    -&gt; ;
++--------+--------------+
+| Sname  | 数学成绩     |
++--------+--------------+
+| 李云   |         30.0 |
++--------+--------------+
+1 row in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询所有学生的课程及分数情况（存在学生没成绩，没选课的情况）</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.Sname, Student.SId, SC.CId, score FROM
+    -&gt; Student
+    -&gt; LEFT JOIN
+    -&gt; SC
+    -&gt; ON Student.SId=SC.SId;
++--------+------+------+-------+
+| Sname  | SId  | CId  | score |
++--------+------+------+-------+
+| 赵雷   | 01   | 01   |  80.0 |
+| 赵雷   | 01   | 02   |  90.0 |
+| 赵雷   | 01   | 03   |  99.0 |
+| 钱电   | 02   | 01   |  70.0 |
+| 钱电   | 02   | 02   |  60.0 |
+| 钱电   | 02   | 03   |  80.0 |
+| 孙风   | 03   | 01   |  80.0 |
+| 孙风   | 03   | 02   |  80.0 |
+| 孙风   | 03   | 03   |  80.0 |
+| 李云   | 04   | 01   |  50.0 |
+| 李云   | 04   | 02   |  30.0 |
+| 李云   | 04   | 03   |  20.0 |
+| 周梅   | 05   | 01   |  76.0 |
+| 周梅   | 05   | 02   |  87.0 |
+| 吴兰   | 06   | 01   |  31.0 |
+| 吴兰   | 06   | 03   |  34.0 |
+| 郑竹   | 07   | 02   |  89.0 |
+| 郑竹   | 07   | 03   |  98.0 |
+| 张三   | 09   | NULL |  NULL |
+| 李四   | 10   | NULL |  NULL |
+| 李四   | 11   | NULL |  NULL |
+| 赵六   | 12   | NULL |  NULL |
+| 孙七   | 13   | NULL |  NULL |
++--------+------+------+-------+
+23 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询任何一门课程成绩在 70 分以上的姓名、课程名称和分数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###MY ANSWER，改动课程ID就可以查询该课程高于70分的同学信息
+mysql&gt; SELECT Student.Sname, A.CId, score FROM
+    -&gt; Student,
+    -&gt; (SELECT * FROM SC WHERE CId=&#39;01&#39; HAVING score&gt;70) AS A
+    -&gt; WHERE Student.SId=A.SId
+    -&gt; ;
++--------+------+-------+
+| Sname  | CId  | score |
++--------+------+-------+
+| 赵雷   | 01   |  80.0 |
+| 孙风   | 01   |  80.0 |
+| 周梅   | 01   |  76.0 |
++--------+------+-------+
+3 rows in set (0.01 sec)
+    
+##是我理解有问题吗？其他答案是：在所有课程里面选出70分以上的信息？？？
+    
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询不及格的课程</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from SC
+    -&gt; where score&lt;60;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 04   | 01   |  50.0 |
+| 04   | 02   |  30.0 |
+| 04   | 03   |  20.0 |
+| 06   | 01   |  31.0 |
+| 06   | 03   |  34.0 |
++------+------+-------+
+5 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询课程编号为 01 且课程成绩在 80 分及以上的学生的学号和姓名</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.SID, Student.Sname, A.score FROM
+    -&gt; Student,
+    -&gt; (SELECT * FROM SC 
+    -&gt; WHERE CId=&#39;01&#39; AND score&gt;=80) AS A
+    -&gt; WHERE Student.SId=A.SId;
++------+--------+-------+
+| SID  | Sname  | score |
++------+--------+-------+
+| 01   | 赵雷   |  80.0 |
+| 03   | 孙风   |  80.0 |
++------+--------+-------+
+2 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**求每门课程的学生人数 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT CId, COUNT(SId) AS 人数 FROM SC
+    -&gt; GROUP BY CId;
++------+--------+
+| CId  | 人数   |
++------+--------+
+| 01   |      6 |
+| 02   |      6 |
+| 03   |      6 |
++------+--------+
+3 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>成绩不重复，查询选修「张三」老师所授课程的学生中，成绩最高的学生信息及其成绩</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##成绩不重复：首先找出「张三」老师所授课程的成绩表A，然后以降序排列，取第一个就是成绩最高的。
+mysql&gt; SELECT A.SId, A.score FROM
+    -&gt; (SELECT * FROM SC
+    -&gt; WHERE CId=(SELECT CID FROM Course WHERE TId=(SELECT TId FROM Teacher WHERE Tname=&#39;张三&#39;))) AS A
+    -&gt; ORDER BY A.score DESC LIMIT 1;
++------+-------+
+| SId  | score |
++------+-------+
+| 01   |  90.0 |
++------+-------+
+1 row in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>成绩有重复的情况下，查询选修「张三」老师所授课程的学生中，成绩最高的学生信息及其成绩</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###成绩重复：首先找出「张三」老师所授课程的成绩表A,选取成绩=最高分B.MAXscore的学生记录
+mysql&gt; SELECT A.SId, A.score FROM 
+    -&gt; (SELECT * FROM SC
+    -&gt; WHERE CId=(SELECT CID FROM Course WHERE TId=(SELECT TId FROM Teacher WHERE
+    -&gt; Tname=&#39;张三&#39;))) AS A,
+    -&gt; (SELECT MAX(score) AS MAXscore FROM SC
+    -&gt; WHERE CId=(SELECT CID FROM Course WHERE TId=(SELECT TId FROM Teacher WHERE
+    -&gt; Tname=&#39;张三&#39;))) AS B
+    -&gt; WHERE A.score=B.MAXscore;
++------+-------+
+| SId  | score |
++------+-------+
+| 01   |  90.0 |
++------+-------+
+1 row in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询不同课程成绩相同的学生的学生编号、课程编号、学生成绩</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###REFERENCE
+mysql&gt; SELECT C.SId, MAX(C.CId) AS CId, MAX(C.score) AS score FROM SC AS C          
+        -&gt; LEFT JOIN (SELECT SId, AVG(score) AS score FROM SC GROUP BY SId) AS B
+    -&gt; ON C.SId=B.SId
+    -&gt; WHERE C.score=B.score
+    -&gt; GROUP BY C.SId
+    -&gt; HAVING COUNT(0)=(SELECT COUNT(0) FROM SC WHERE SId=C.SId);
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 03   | 03   |  80.0 |
++------+------+-------+
+1 row in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>参考答案的解题思路：一个学生的各科成绩一样 &lt;=&gt; 最高成绩C表与平均成绩B表一样。</p>
+<p>如何理解having后面的条件呢？</p>
+<ul>
+<li>首先我有总的成绩表C，和一个平均成绩表B。</li>
+<li>根据B中的SId，和 平均成绩成绩去匹配C中的信息（这个时候，单科成绩=平均成绩的信息也会被选择出来，如学号为&rsquo;02'的同学成绩：70，60，80；平均成绩：70），这个时候（02+70这条记录也会被选出来）</li>
+<li>最后要求某一个SId选出来的成绩记录条数=总成绩表SC中该SId的成绩记录条数（having后面的条件）</li>
+</ul>
+<p><strong>认真品读，WHERE、ON、GROUP BY、HAVING的位置。</strong></p>
+</li>
+<li>
+<p><strong>查询每门课程中成绩最好的前两名</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; (SELECT * FROM SC WHERE CId=&#39;01&#39; ORDER BY score DESC LIMIT 2)
+    -&gt; UNION ALL
+    -&gt; (SELECT * FROM SC WHERE CId=&#39;02&#39; ORDER BY score DESC LIMIT 2)
+    -&gt; UNION ALL
+    -&gt; (SELECT * FROM SC WHERE CId=&#39;03&#39; ORDER BY score DESC LIMIT 2)
+    -&gt; ;
++------+------+-------+
+| SId  | CId  | score |
++------+------+-------+
+| 01   | 01   |  80.0 |
+| 03   | 01   |  80.0 |
+| 01   | 02   |  90.0 |
+| 07   | 02   |  89.0 |
+| 01   | 03   |  99.0 |
+| 07   | 03   |  98.0 |
++------+------+-------+
+6 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>统计每门课程的学生选修人数（超过 5 人的课程才统计）。</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT CId, COUNT(CId) AS 人数 FROM SC
+    -&gt; GROUP BY CId
+    -&gt; HAVING 人数&gt;5;
++------+--------+
+| CId  | 人数   |
++------+--------+
+| 01   |      6 |
+| 02   |      6 |
+| 03   |      6 |
++------+--------+
+3 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**检索至少选修两门课程的学生学号 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT SId FROM SC
+    -&gt; GROUP BY SId
+    -&gt; HAVING COUNT(CID)&gt;=2;
++------+
+| SId  |
++------+
+| 01   |
+| 02   |
+| 03   |
+| 04   |
+| 05   |
+| 06   |
+| 07   |
++------+
+7 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询选修了全部课程的学生信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT * FROM Student
+    -&gt; WHERE SId IN
+    -&gt; (SELECT SC.SId FROM SC
+    -&gt; GROUP BY SC.SId
+    -&gt; HAVING COUNT(CId)=(SELECT COUNT(*) FROM Course));
++------+--------+---------------------+------+
+| SId  | Sname  | Sage                | Ssex |
++------+--------+---------------------+------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |
++------+--------+---------------------+------+
+4 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>**查询各学生的年龄，只按年份来算 **</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.*, (YEAR(NOW())-YEAR(Student.Sage)) AS 年龄
+    -&gt; FROM Student;
++------+--------+---------------------+------+--------+
+| SId  | Sname  | Sage                | Ssex | 年龄   |
++------+--------+---------------------+------+--------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |     30 |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |     30 |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |     30 |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |     30 |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |     29 |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |     28 |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |     31 |
+| 09   | 张三   | 2017-12-20 00:00:00 | 女   |      3 |
+| 10   | 李四   | 2017-12-25 00:00:00 | 女   |      3 |
+| 11   | 李四   | 2017-12-30 00:00:00 | 女   |      3 |
+| 12   | 赵六   | 2017-01-01 00:00:00 | 女   |      3 |
+| 13   | 孙七   | 2018-01-01 00:00:00 | 女   |      2 |
++------+--------+---------------------+------+--------+
+12 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>按照出生日期来算，当前月日 &lt; 出生年月的月日则，年龄减一。TIMESTAMPDIFF方法</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT Student.*, TIMESTAMPDIFF(YEAR, Sage, NOW()) as 年龄
+    -&gt; FROM Student;
++------+--------+---------------------+------+--------+
+| SId  | Sname  | Sage                | Ssex | 年龄   |
++------+--------+---------------------+------+--------+
+| 01   | 赵雷   | 1990-01-01 00:00:00 | 男   |     30 |
+| 02   | 钱电   | 1990-12-21 00:00:00 | 男   |     29 |
+| 03   | 孙风   | 1990-05-20 00:00:00 | 男   |     30 |
+| 04   | 李云   | 1990-08-06 00:00:00 | 男   |     30 |
+| 05   | 周梅   | 1991-12-01 00:00:00 | 女   |     28 |
+| 06   | 吴兰   | 1992-03-01 00:00:00 | 女   |     28 |
+| 07   | 郑竹   | 1989-07-01 00:00:00 | 女   |     31 |
+| 09   | 张三   | 2017-12-20 00:00:00 | 女   |      2 |
+| 10   | 李四   | 2017-12-25 00:00:00 | 女   |      2 |
+| 11   | 李四   | 2017-12-30 00:00:00 | 女   |      2 |
+| 12   | 赵六   | 2017-01-01 00:00:00 | 女   |      3 |
+| 13   | 孙七   | 2018-01-01 00:00:00 | 女   |      2 |
++------+--------+---------------------+------+--------+
+12 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询本周过生日的学生</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###第一步选出学生的生日：月份+号数
+mysql&gt; SELECT SId, Sname, MONTH(Sage) as month, DAY(Sage) as day FROM Student;
++------+--------+-------+------+
+| SId  | Sname  | month | day  |
++------+--------+-------+------+
+| 01   | 赵雷   |     1 |    1 |
+| 02   | 钱电   |    12 |   21 |
+| 03   | 孙风   |     5 |   20 |
+| 04   | 李云   |     8 |    6 |
+| 05   | 周梅   |    12 |    1 |
+| 06   | 吴兰   |     3 |    1 |
+| 07   | 郑竹   |     7 |    1 |
+| 09   | 张三   |    12 |   20 |
+| 10   | 李四   |    12 |   25 |
+| 11   | 李四   |    12 |   30 |
+| 12   | 赵六   |     1 |    1 |
+| 13   | 孙七   |     1 |    1 |
++------+--------+-------+------+
+12 rows in set (0.00 sec)
+    
+###当前月份
+mysql&gt; SELECT MONTH(NOW()) AS 当前月份;
++--------------+
+| 当前月份     |
++--------------+
+|            9 |
++--------------+
+1 row in set (0.00 sec)
+    
+###本周周一和周末号数
+mysql&gt; SELECT DAY(DATE_SUB(NOW(), INTERVAL WEEKDAY(NOW()) DAY)) AS 本周周一;
++--------------+
+| 本周周一     |
++--------------+
+|            7 |
++--------------+
+1 row in set (0.00 sec)
+    
+mysql&gt; SELECT DAY(DATE_ADD(NOW(), INTERVAL (6-WEEKDAY(NOW())) DAY)) AS 本周周日; 
++--------------+
+| 本周周日     |
++--------------+
+|           13 |
++--------------+
+1 row in set (0.00 sec)
+    
+###本周过生日的学生：月份=本月 AND 本周一号数&lt;=学生生日号数&lt;=下周日号数
+mysql&gt; SELECT A.* FROM
+    -&gt; (SELECT SId, Sname, MONTH(Sage) as month, DAY(Sage) as day FROM Student) AS A
+    -&gt; WHERE A.month = (SELECT MONTH(NOW()))
+    -&gt; AND (DAY(DATE_SUB(NOW(), INTERVAL WEEKDAY(NOW()) DAY))) &lt;= A.day &lt;=
+    -&gt; (DAY(DATE_ADD(NOW(), INTERVAL (6-WEEKDAY(NOW())) DAY)))
+    -&gt; ;
+Empty set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询下周过生日的学生</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##下周一号数
+mysql&gt; SELECT DAY(DATE_ADD(DATE_SUB(NOW(), INTERVAL WEEKDAY(NOW()) DAY), INTERVAL 1 WEEK)) AS A;
++------+
+| A    |
++------+
+|   14 |
++------+
+1 row in set (0.00 sec)
+    
+##下周日号数
+mysql&gt; SELECT DAY(DATE_ADD(DATE_ADD(NOW(), INTERVAL (6-WEEKDAY(NOW())) DAY), INTERVAL 1 WEEK)) AS B;
++------+
+| B    |
++------+
+|   20 |
++------+
+1 row in set (0.00 sec)
+    
+###下周过生日的学生：月份=本月 AND 下周一号数&lt;=学生生日号数&lt;=下周日号数
+mysql&gt; SELECT A.* FROM
+    -&gt; (SELECT SId, Sname, MONTH(Sage) as month, DAY(Sage) as day FROM Student) AS A
+    -&gt; WHERE A.month = (SELECT MONTH(NOW()))
+    -&gt; AND (DAY(DATE_ADD(DATE_SUB(NOW(), INTERVAL WEEKDAY(NOW()) DAY), INTERVAL 1 WEEK))) &lt;= A.day &lt;=
+    -&gt; (DAY(DATE_ADD(DATE_ADD(NOW(), INTERVAL (6-WEEKDAY(NOW())) DAY), INTERVAL 1 WEEK)))
+    -&gt; ;
+Empty set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询本月过生日的学生</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##本月，月份查询
+SELECT MONTH(NOW());
+    
+##本月过生日学生：月份=本月
+mysql&gt; SELECT A.* FROM
+    -&gt; (SELECT SId, Sname, MONTH(Sage) as month, DAY(Sage) as day FROM Student) AS A
+    -&gt; WHERE A.month = MONTH(NOW());
+Empty set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>查询下月过生日的学生</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##下个月，月份查询
+SELECT MONTH(NOW())+1;
+    
+##下个月过生日学生：月份=下个月
+mysql&gt; SELECT A.* FROM
+    -&gt; (SELECT SId, Sname, MONTH(Sage) as month, DAY(Sage) as day FROM Student) AS A
+    -&gt; WHERE A.month = (MONTH(NOW()) + 1);
+Empty set (0.00 sec)
+    
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="https://blog.csdn.net/flycat296/article/details/63681089?spm=a2c4e.10696291.0.0.630e19a4acZJf7">超经典SQL练习题，做完这些你的ＳＱＬ就过关了</a></li>
+<li><a href="https://www.jianshu.com/p/2d1276d056b8">Mysql练习题-50</a></li>
+<li><a href="https://blog.csdn.net/qq_41936662/article/details/80393172">MySQL经典练习题及答案，常用SQL语句练习50题</a></li>
+<li>15题，16题参考：<a href="https://blog.csdn.net/u011726005/article/details/94592866">MYSQL实现排名函数RANK，DENSE_RANK和ROW_NUMBER</a></li>
+<li></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-09-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mysql/">Mysql</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/mysql%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A0%81/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">MySQL查看数据库编码</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/mysql%E6%9F%A5%E8%AF%A2%E7%BB%83%E4%B9%A0/">
+            <span class="next-text nav-default">Mysql查询练习</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/sql%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98/" class="leancloud_visitors" data-flag-title="SQL经典练习题">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

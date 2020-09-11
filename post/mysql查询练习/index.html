@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mysql查询练习 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="创建查询练习数据库及表格 1 2 3 #创建一个学校数据库 mysql&amp;gt; create database School; Query OK, 1 row affected (0.00 sec) ####学生表 学号 姓名 性别 所在班级 出生日期 1 2 mysql&amp;gt; create table student( number varchar(20) primary key, name varchar(20) not" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/mysql%E6%9F%A5%E8%AF%A2%E7%BB%83%E4%B9%A0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mysql查询练习" />
+<meta property="og:description" content="创建查询练习数据库及表格 1 2 3 #创建一个学校数据库 mysql&gt; create database School; Query OK, 1 row affected (0.00 sec) ####学生表 学号 姓名 性别 所在班级 出生日期 1 2 mysql&gt; create table student( number varchar(20) primary key, name varchar(20) not" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/mysql%E6%9F%A5%E8%AF%A2%E7%BB%83%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-09-04T13:26:56+08:00" />
+<meta property="article:modified_time" content="2020-09-04T13:26:56+08:00" />
+<meta itemprop="name" content="Mysql查询练习">
+<meta itemprop="description" content="创建查询练习数据库及表格 1 2 3 #创建一个学校数据库 mysql&gt; create database School; Query OK, 1 row affected (0.00 sec) ####学生表 学号 姓名 性别 所在班级 出生日期 1 2 mysql&gt; create table student( number varchar(20) primary key, name varchar(20) not">
+<meta itemprop="datePublished" content="2020-09-04T13:26:56&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-04T13:26:56&#43;08:00" />
+<meta itemprop="wordCount" content="5098">
+
+
+
+<meta itemprop="keywords" content="Mysql," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mysql查询练习"/>
+<meta name="twitter:description" content="创建查询练习数据库及表格 1 2 3 #创建一个学校数据库 mysql&gt; create database School; Query OK, 1 row affected (0.00 sec) ####学生表 学号 姓名 性别 所在班级 出生日期 1 2 mysql&gt; create table student( number varchar(20) primary key, name varchar(20) not"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mysql查询练习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-09-04 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"> 数据库 </a>
+            </div>
+          <span class="more-meta"> 5098 words </span>
+          <span class="more-meta"> 11 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#创建查询练习数据库及表格">创建查询练习数据库及表格</a></li>
+        <li><a href="#添加数据">添加数据</a></li>
+        <li><a href="#查询练习">查询练习</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="创建查询练习数据库及表格">创建查询练习数据库及表格</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#创建一个学校数据库
+mysql&gt; create database School;
+Query OK, 1 row affected (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>####学生表</p>
+<ul>
+<li>学号</li>
+<li>姓名</li>
+<li>性别</li>
+<li>所在班级</li>
+<li>出生日期</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; create table student( number varchar(20) primary key, name varchar(20) not null, sex varchar(20) not null, birthday datetime, class varchar(20) );
+Query OK, 0 rows affected (0.08 sec)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="教师表">教师表</h4>
+<ul>
+<li>教师编号</li>
+<li>教师姓名</li>
+<li>教师性别</li>
+<li>职称</li>
+<li>出生日期</li>
+<li>所在部门</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; create table teacher(
+    -&gt; number varchar(20) primary key,
+    -&gt; name varchar(20) not null,
+    -&gt; sex varchar(20) not null,
+    -&gt; birthday datetime,
+    -&gt; prof varchar(20) not null,
+    -&gt; depart varchar(20) not null
+    -&gt; );
+Query OK, 0 rows affected (0.04 sec)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="课程表">课程表</h4>
+<ul>
+<li>课程号</li>
+<li>课程名称</li>
+<li>教师编号</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; create table course(
+    -&gt; number varchar(20),
+    -&gt; name varchar(20) not null,
+    -&gt; teacher_id varchar(20) not null,
+    -&gt; primary key(number),
+    -&gt; foreign key (teacher_id) references teacher (number)
+    -&gt; );
+Query OK, 0 rows affected (0.03 sec)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="成绩表">成绩表</h4>
+<ul>
+<li>学号</li>
+<li>课程号</li>
+<li>成绩</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; create table score(
+    -&gt; student_number varchar(20) not null,
+    -&gt; course_number varchar(20) not null,
+    -&gt; degree decimal,
+    -&gt; foreign key (student_number) references student (number),
+    -&gt; foreign key (course_number) references course (number),
+    -&gt; primary key(student_number, course_number)
+    -&gt; );
+Query OK, 0 rows affected (0.03 sec)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="添加数据">添加数据</h3>
+<h4 id="添加学生数据">添加学生数据</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">insert into student values(&#39;108&#39;,&#39;Allon&#39;,&#39;male&#39;,&#39;1995-03-13&#39;,&#39;143&#39;);
+insert into student values(&#39;101&#39;,&#39;mohan&#39;,&#39;female&#39;,&#39;1998-05-31&#39;,&#39;133&#39;);
+insert into student values(&#39;104&#39;,&#39;yuhan&#39;,&#39;female&#39;,&#39;1995-08-11&#39;,&#39;123&#39;);
+insert into student values(&#39;106&#39;,&#39;goudan&#39;,&#39;male&#39;,&#39;1992-06-18&#39;,&#39;144&#39;);
+insert into student values(&#39;102&#39;,&#39;xiaocui&#39;,&#39;female&#39;,&#39;1990-01-14&#39;,&#39;146&#39;);
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="添加教师数据">添加教师数据</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">insert into teacher values(&#39;001&#39;,&#39;TeacherA&#39;,&#39;male&#39;,&#39;1989-08-13&#39;,&#39;P&#39;,&#39;math&#39;);
+insert into teacher values(&#39;004&#39;,&#39;TeacherB&#39;,&#39;female&#39;,&#39;1978-05-21&#39;,&#39;P&#39;,&#39;chinese&#39;);
+insert into teacher values(&#39;006&#39;,&#39;TeacherC&#39;,&#39;male&#39;,&#39;1977-06-18&#39;,&#39;P&#39;,&#39;math&#39;);
+insert into teacher values(&#39;007&#39;,&#39;TeacherD&#39;,&#39;female&#39;,&#39;1965-03-13&#39;,&#39;P&#39;,&#39;music&#39;);
+insert into teacher values(&#39;008&#39;,&#39;TeacherE&#39;,&#39;male&#39;,&#39;1989-03-17&#39;,&#39;P&#39;,&#39;physics&#39;);
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="添加课程表">添加课程表</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">insert into course values(&#39;3-105&#39;,&#39;computer&#39;,&#39;001&#39;);
+insert into course values(&#39;4-165&#39;,&#39;math&#39;,&#39;006&#39;);
+insert into course values(&#39;6-005&#39;,&#39;physics&#39;,&#39;008&#39;);
+insert into course values(&#39;7-007&#39;,&#39;music&#39;,&#39;007&#39;);
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="添加成绩表">添加成绩表</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">insert into score values(&#39;108&#39;,&#39;3-105&#39;,&#39;99&#39;);
+insert into score values(&#39;108&#39;,&#39;4-165&#39;,&#39;90&#39;);
+insert into score values(&#39;108&#39;,&#39;6-005&#39;,&#39;68&#39;);
+insert into score values(&#39;108&#39;,&#39;7-007&#39;,&#39;98&#39;);
+insert into score values(&#39;101&#39;,&#39;3-105&#39;,&#39;79&#39;);
+insert into score values(&#39;101&#39;,&#39;4-165&#39;,&#39;80&#39;);
+insert into score values(&#39;101&#39;,&#39;6-005&#39;,&#39;88&#39;);
+insert into score values(&#39;101&#39;,&#39;7-007&#39;,&#39;78&#39;);
+insert into score values(&#39;104&#39;,&#39;3-105&#39;,&#39;89&#39;);
+insert into score values(&#39;104&#39;,&#39;4-165&#39;,&#39;80&#39;);
+insert into score values(&#39;104&#39;,&#39;6-005&#39;,&#39;88&#39;);
+insert into score values(&#39;104&#39;,&#39;7-007&#39;,&#39;78&#39;);
+insert into score values(&#39;106&#39;,&#39;3-105&#39;,&#39;79&#39;);
+insert into score values(&#39;106&#39;,&#39;4-165&#39;,&#39;70&#39;);
+insert into score values(&#39;106&#39;,&#39;6-005&#39;,&#39;78&#39;);
+insert into score values(&#39;106&#39;,&#39;7-007&#39;,&#39;78&#39;);
+insert into score values(&#39;102&#39;,&#39;3-105&#39;,&#39;99&#39;);
+insert into score values(&#39;102&#39;,&#39;4-165&#39;,&#39;80&#39;);
+insert into score values(&#39;102&#39;,&#39;6-005&#39;,&#39;78&#39;);
+insert into score values(&#39;102&#39;,&#39;7-007&#39;,&#39;68&#39;);
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="查询练习">查询练习</h3>
+<ul>
+<li>
+<p>查询student表所有记录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from student;
++--------+---------+--------+---------------------+-------+
+| number | name    | sex    | birthday            | class |
++--------+---------+--------+---------------------+-------+
+| 101    | mohan   | female | 1998-05-31 00:00:00 | 133   |
+| 102    | xiaocui | female | 1990-01-14 00:00:00 | 146   |
+| 104    | yuhan   | female | 1995-08-11 00:00:00 | 123   |
+| 106    | goudan  | male   | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon   | male   | 1995-03-13 00:00:00 | 143   |
++--------+---------+--------+---------------------+-------+
+5 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询student表中的所有记录的 name、sex 和 calss列信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select name, sex, class from student;
++---------+--------+-------+
+| name    | sex    | class |
++---------+--------+-------+
+| mohan   | female | 133   |
+| xiaocui | female | 146   |
+| yuhan   | female | 123   |
+| goudan  | male   | 144   |
+| Allon   | male   | 143   |
++---------+--------+-------+
+5 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询教师数据表里面不重复的depart列，<strong>distinct去重查询</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###所有信息
+mysql&gt; select * from teacher;
++--------+----------+--------+---------------------+------+---------+
+| number | name     | sex    | birthday            | prof | depart  |
++--------+----------+--------+---------------------+------+---------+
+| 001    | TeacherA | male   | 1989-08-13 00:00:00 | P    | math    |
+| 004    | TeacherB | female | 1978-05-21 00:00:00 | P    | chinese |
+| 006    | TeacherC | male   | 1977-06-18 00:00:00 | P    | math    |
+| 007    | TeacherD | female | 1965-03-13 00:00:00 | P    | music   |
+| 008    | TeacherE | male   | 1989-03-17 00:00:00 | P    | physics |
++--------+----------+--------+---------------------+------+---------+
+5 rows in set (0.03 sec)
+  
+###查询depart列不重复信息
+mysql&gt; select distinct depart from teacher;
++---------+
+| depart  |
++---------+
+| math    |
+| chinese |
+| music   |
+| physics |
++---------+
+4 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询score表中成绩在60-80 之间的所有记录。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##所有数据
+mysql&gt; select * from score;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 101            | 4-165         |     80 |
+| 101            | 6-005         |     88 |
+| 101            | 7-007         |     78 |
+| 102            | 3-105         |     99 |
+| 102            | 4-165         |     80 |
+| 102            | 6-005         |     78 |
+| 102            | 7-007         |     68 |
+| 104            | 3-105         |     89 |
+| 104            | 4-165         |     80 |
+| 104            | 6-005         |     88 |
+| 104            | 7-007         |     78 |
+| 106            | 3-105         |     79 |
+| 106            | 4-165         |     70 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
+| 108            | 3-105         |     99 |
+| 108            | 4-165         |     90 |
+| 108            | 6-005         |     68 |
+| 108            | 7-007         |     98 |
++----------------+---------------+--------+
+20 rows in set (0.01 sec)
+  
+###60-80区间数据
+mysql&gt; select * from score where degree between 60 and 80;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 101            | 4-165         |     80 |
+| 101            | 7-007         |     78 |
+| 102            | 4-165         |     80 |
+| 102            | 6-005         |     78 |
+| 102            | 7-007         |     68 |
+| 104            | 4-165         |     80 |
+| 104            | 7-007         |     78 |
+| 106            | 3-105         |     79 |
+| 106            | 4-165         |     70 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
+| 108            | 6-005         |     68 |
++----------------+---------------+--------+
+13 rows in set (0.00 sec)
+  
+###方法二，运算符比较
+mysql&gt; select * from score where degree &gt;= 60 and degree &lt;= 80;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 101            | 4-165         |     80 |
+| 101            | 7-007         |     78 |
+| 102            | 4-165         |     80 |
+| 102            | 6-005         |     78 |
+| 102            | 7-007         |     68 |
+| 104            | 4-165         |     80 |
+| 104            | 7-007         |     78 |
+| 106            | 3-105         |     79 |
+| 106            | 4-165         |     70 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
+| 108            | 6-005         |     68 |
++----------------+---------------+--------+
+13 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：在 MySQL 中，BETWEEN AND 能匹配指定范围内的所有值，<strong>包括起始值和终止值</strong>。</p>
+</li>
+<li>
+<p>查询score表中，成绩为78，88的成绩，<strong>表示或者关系查询 in，同一字段的or关系</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from score where degree in (78,88);
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 6-005         |     88 |
+| 101            | 7-007         |     78 |
+| 102            | 6-005         |     78 |
+| 104            | 6-005         |     88 |
+| 104            | 7-007         |     78 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
++----------------+---------------+--------+
+7 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询student表中，班级143，或者性别为male的记录，<strong>不同字段的or关系</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###所有数据
+mysql&gt; select * from student;
++--------+---------+--------+---------------------+-------+
+| number | name    | sex    | birthday            | class |
++--------+---------+--------+---------------------+-------+
+| 101    | mohan   | female | 1998-05-31 00:00:00 | 133   |
+| 102    | xiaocui | female | 1990-01-14 00:00:00 | 146   |
+| 104    | yuhan   | female | 1995-08-11 00:00:00 | 123   |
+| 106    | goudan  | male   | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon   | male   | 1995-03-13 00:00:00 | 143   |
++--------+---------+--------+---------------------+-------+
+5 rows in set (0.00 sec)
+  
+  
+##不同字段or查询
+mysql&gt; select * from student where class=&#39;143&#39; or sex=&#39;male&#39;;
++--------+--------+------+---------------------+-------+
+| number | name   | sex  | birthday            | class |
++--------+--------+------+---------------------+-------+
+| 106    | goudan | male | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon  | male | 1995-03-13 00:00:00 | 143   |
++--------+--------+------+---------------------+-------+
+2 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>以class降序查询student表中所有记录 <strong>order by，升序asc，降序desc，默认升序</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from student order by class desc;
++--------+---------+--------+---------------------+-------+
+| number | name    | sex    | birthday            | class |
++--------+---------+--------+---------------------+-------+
+| 102    | xiaocui | female | 1990-01-14 00:00:00 | 146   |
+| 106    | goudan  | male   | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon   | male   | 1995-03-13 00:00:00 | 143   |
+| 101    | mohan   | female | 1998-05-31 00:00:00 | 133   |
+| 104    | yuhan   | female | 1995-08-11 00:00:00 | 123   |
++--------+---------+--------+---------------------+-------+
+5 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>以course_number升序，degree降序查询score表所有记录。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###所有数据
+mysql&gt; select * from score;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 101            | 4-165         |     80 |
+| 101            | 6-005         |     88 |
+| 101            | 7-007         |     78 |
+| 102            | 3-105         |     99 |
+| 102            | 4-165         |     80 |
+| 102            | 6-005         |     78 |
+| 102            | 7-007         |     68 |
+| 104            | 3-105         |     89 |
+| 104            | 4-165         |     80 |
+| 104            | 6-005         |     88 |
+| 104            | 7-007         |     78 |
+| 106            | 3-105         |     79 |
+| 106            | 4-165         |     70 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
+| 108            | 3-105         |     99 |
+| 108            | 4-165         |     90 |
+| 108            | 6-005         |     68 |
+| 108            | 7-007         |     98 |
++----------------+---------------+--------+
+20 rows in set (0.01 sec)
+  
+###course_number升序，degree降序查询
+mysql&gt; select * from score order by course_number asc, degree desc;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 102            | 3-105         |     99 |
+| 108            | 3-105         |     99 |
+| 104            | 3-105         |     89 |
+| 101            | 3-105         |     79 |
+| 106            | 3-105         |     79 |
+| 108            | 4-165         |     90 |
+| 101            | 4-165         |     80 |
+| 102            | 4-165         |     80 |
+| 104            | 4-165         |     80 |
+| 106            | 4-165         |     70 |
+| 101            | 6-005         |     88 |
+| 104            | 6-005         |     88 |
+| 102            | 6-005         |     78 |
+| 106            | 6-005         |     78 |
+| 108            | 6-005         |     68 |
+| 108            | 7-007         |     98 |
+| 101            | 7-007         |     78 |
+| 104            | 7-007         |     78 |
+| 106            | 7-007         |     78 |
+| 102            | 7-007         |     68 |
++----------------+---------------+--------+
+20 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：<strong>条件越靠前，优先级越高。</strong></p>
+</li>
+<li>
+<p>查询student表143班学生人数，<strong>统计count</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###所有信息
+mysql&gt; select * from student;
++--------+---------+--------+---------------------+-------+
+| number | name    | sex    | birthday            | class |
++--------+---------+--------+---------------------+-------+
+| 101    | mohan   | female | 1998-05-31 00:00:00 | 133   |
+| 102    | xiaocui | female | 1990-01-14 00:00:00 | 146   |
+| 104    | yuhan   | female | 1995-08-11 00:00:00 | 123   |
+| 106    | goudan  | male   | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon   | male   | 1995-03-13 00:00:00 | 143   |
++--------+---------+--------+---------------------+-------+
+5 rows in set (0.00 sec)
+  
+###统计查询，count
+mysql&gt; select count(*) from student where class=&#39;143&#39;;
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询score表中的最高分学生学号和课程号。<strong>子查询or排序</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">####所有数据
+mysql&gt; select * from score;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 101            | 4-165         |     80 |
+| 101            | 6-005         |     88 |
+| 101            | 7-007         |     78 |
+| 102            | 3-105         |     99 |
+| 102            | 4-165         |     80 |
+| 102            | 6-005         |     78 |
+| 102            | 7-007         |     68 |
+| 104            | 3-105         |     89 |
+| 104            | 4-165         |     80 |
+| 104            | 6-005         |     88 |
+| 104            | 7-007         |     78 |
+| 106            | 3-105         |     79 |
+| 106            | 4-165         |     70 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
+| 108            | 3-105         |     99 |
+| 108            | 4-165         |     90 |
+| 108            | 6-005         |     68 |
+| 108            | 7-007         |     98 |
++----------------+---------------+--------+
+20 rows in set (0.00 sec)
+  
+####子查询或者排序
+mysql&gt; select student_number, course_number from score where degree=(select max(degree) from score);
++----------------+---------------+
+| student_number | course_number |
++----------------+---------------+
+| 102            | 3-105         |
+| 108            | 3-105         |
++----------------+---------------+
+2 rows in set (0.03 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>实际的步骤解析：</p>
+<ol>
+<li>
+<p>首先找到最高成绩</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">select max(degree) from score;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>然后找到最高成绩对应的学号，课程号</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">select student_number, course_number from score where degree=(查询到的最高分);
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+<li>
+<p>查询每门课的平均成绩，<strong>avg()，group by</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">###课程数据表
+mysql&gt; select * from course;
++--------+----------+------------+
+| number | name     | teacher_id |
++--------+----------+------------+
+| 3-105  | computer | 001        |
+| 4-165  | math     | 006        |
+| 6-005  | physics  | 008        |
+| 7-007  | music    | 007        |
++--------+----------+------------+
+4 rows in set (0.08 sec)
+  
+###3-105课程成绩
+mysql&gt; select degree from score where course_number=&#39;3-105&#39;;
++--------+
+| degree |
++--------+
+|     79 |
+|     99 |
+|     89 |
+|     79 |
+|     99 |
++--------+
+5 rows in set (0.00 sec)
+  
+###3-105课程平均成绩
+mysql&gt; select avg(degree) from score where course_number=&#39;3-105&#39;;
++-------------+
+| avg(degree) |
++-------------+
+|     89.0000 |
++-------------+
+1 row in set (0.01 sec)
+  
+###计算每一门课的平均成绩，group by 分组。
+mysql&gt; select course_number, avg(degree) from score group by course_number;
++---------------+-------------+
+| course_number | avg(degree) |
++---------------+-------------+
+| 3-105         |     89.0000 |
+| 4-165         |     80.0000 |
+| 6-005         |     80.0000 |
+| 7-007         |     80.0000 |
++---------------+-------------+
+4 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询score表中，以3开头的课程平均成绩，且该课程最少有两名学生选修，<strong>having count，like</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select course_number, avg(degree) from score group by course_number having count(course_number) &gt;= 2 and course_number like &#39;3%&#39;;
++---------------+-------------+
+| course_number | avg(degree) |
++---------------+-------------+
+| 3-105         |     89.0000 |
++---------------+-------------+
+1 row in set (0.02 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：like是模糊查询，可以理解为正则表达式，having count()是限制语句。</p>
+</li>
+<li>
+<p>查询所有学生的name、course_number 和 degree列，<strong>来自于不同的数据表</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">##
+mysql&gt; select * from student;
++--------+---------+--------+---------------------+-------+
+| number | name    | sex    | birthday            | class |
++--------+---------+--------+---------------------+-------+
+| 101    | mohan   | female | 1998-05-31 00:00:00 | 133   |
+| 102    | xiaocui | female | 1990-01-14 00:00:00 | 146   |
+| 104    | yuhan   | female | 1995-08-11 00:00:00 | 123   |
+| 106    | goudan  | male   | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon   | male   | 1995-03-13 00:00:00 | 143   |
++--------+---------+--------+---------------------+-------+
+5 rows in set (0.01 sec)
+  
+##
+mysql&gt; select * from score;
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 101            | 4-165         |     80 |
+| 101            | 6-005         |     88 |
+| 101            | 7-007         |     78 |
+| 102            | 3-105         |     99 |
+| 102            | 4-165         |     80 |
+| 102            | 6-005         |     78 |
+| 102            | 7-007         |     68 |
+| 104            | 3-105         |     89 |
+| 104            | 4-165         |     80 |
+| 104            | 6-005         |     88 |
+| 104            | 7-007         |     78 |
+| 106            | 3-105         |     79 |
+| 106            | 4-165         |     70 |
+| 106            | 6-005         |     78 |
+| 106            | 7-007         |     78 |
+| 108            | 3-105         |     99 |
+| 108            | 4-165         |     90 |
+| 108            | 6-005         |     68 |
+| 108            | 7-007         |     98 |
++----------------+---------------+--------+
+20 rows in set (0.00 sec)
+  
+###
+mysql&gt; select name,course_number,degree from student,score where student.number=score.student_number;
++---------+---------------+--------+
+| name    | course_number | degree |
++---------+---------------+--------+
+| mohan   | 3-105         |     79 |
+| mohan   | 4-165         |     80 |
+| mohan   | 6-005         |     88 |
+| mohan   | 7-007         |     78 |
+| xiaocui | 3-105         |     99 |
+| xiaocui | 4-165         |     80 |
+| xiaocui | 6-005         |     78 |
+| xiaocui | 7-007         |     68 |
+| yuhan   | 3-105         |     89 |
+| yuhan   | 4-165         |     80 |
+| yuhan   | 6-005         |     88 |
+| yuhan   | 7-007         |     78 |
+| goudan  | 3-105         |     79 |
+| goudan  | 4-165         |     70 |
+| goudan  | 6-005         |     78 |
+| goudan  | 7-007         |     78 |
+| Allon   | 3-105         |     99 |
+| Allon   | 4-165         |     90 |
+| Allon   | 6-005         |     68 |
+| Allon   | 7-007         |     98 |
++---------+---------------+--------+
+20 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：**多表查询，其实就是通过一个对应的参数，将两个数据表唯一的联系起来。这时候就体现出范式的重要性了。**所以，进行多表联合查询前， 先查看两个数据表是否有那些属性是相关的，比如这里是学生的编号。</p>
+</li>
+<li>
+<p>查询所有学生的编号（number in student table），课程名字（name in course table） 分数（degree in score table）列。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select student.number, course.name, score.degree from student, course, score
+    -&gt; where student.number = score.student_number
+    -&gt; and course.number = score.course_number;
++--------+----------+--------+
+| number | name     | degree |
++--------+----------+--------+
+| 101    | computer |     79 |
+| 102    | computer |     99 |
+| 104    | computer |     89 |
+| 106    | computer |     79 |
+| 108    | computer |     99 |
+| 101    | math     |     80 |
+| 102    | math     |     80 |
+| 104    | math     |     80 |
+| 106    | math     |     70 |
+| 108    | math     |     90 |
+| 101    | physics  |     88 |
+| 102    | physics  |     78 |
+| 104    | physics  |     88 |
+| 106    | physics  |     78 |
+| 108    | physics  |     68 |
+| 101    | music    |     78 |
+| 102    | music    |     68 |
+| 104    | music    |     78 |
+| 106    | music    |     78 |
+| 108    | music    |     98 |
++--------+----------+--------+
+20 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：仍旧是注意表格间的相互关系。</p>
+</li>
+<li>
+<p>查询所有学生的名字，课程名字，成绩列。<strong>多表查询练习</strong>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select student.name, course.name, score.degree from student, course, score
+    -&gt; where student.number = score.student_number
+    -&gt; and course.number = score.course_number;
++---------+----------+--------+
+| name    | name     | degree |
++---------+----------+--------+
+| mohan   | computer |     79 |
+| xiaocui | computer |     99 |
+| yuhan   | computer |     89 |
+| goudan  | computer |     79 |
+| Allon   | computer |     99 |
+| mohan   | math     |     80 |
+| xiaocui | math     |     80 |
+| yuhan   | math     |     80 |
+| goudan  | math     |     70 |
+| Allon   | math     |     90 |
+| mohan   | physics  |     88 |
+| xiaocui | physics  |     78 |
+| yuhan   | physics  |     88 |
+| goudan  | physics  |     78 |
+| Allon   | physics  |     68 |
+| mohan   | music    |     78 |
+| xiaocui | music    |     68 |
+| yuhan   | music    |     78 |
+| goudan  | music    |     78 |
+| Allon   | music    |     98 |
++---------+----------+--------+
+20 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注：仍是多表查询练习。</p>
+<p>tip：可以用as方法，给选择出来的数据列重新命名。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">select student.number as student_number from student;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询某一个班级，每门课的平均分。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select score.course_number, avg(score.degree) from score
+    -&gt; where score.student_number in (select student.number from student where student.class=&#39;143&#39;) 
+    -&gt; group by score.course_number;
++---------------+-------------------+
+| course_number | avg(score.degree) |
++---------------+-------------------+
+| 3-105         |           99.0000 |
+| 4-165         |           90.0000 |
+| 6-005         |           68.0000 |
+| 7-007         |           98.0000 |
++---------------+-------------------+
+4 rows in set (0.01 sec)
+</code></pre></td></tr></table>
+</div>
+</div><p>注意：体会查询过程中，不同条件的制约关系，品读在代码写法过程中的体现。就是所有的逻辑关系弄明白。</p>
+</li>
+<li>
+<p>查询选修3-105课程的成绩高于109号同学3-105课程成绩，所有学生的成绩。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">select degree from score
+where degree &gt; (select degree from score where student_number=&#39;108&#39; and course_number=&#39;3-105&#39;) 
+and course_number=&#39;3-105&#39;;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>函数 <strong>year(), month(), day()</strong> 对时间的操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#数据表
+mysql&gt; select * from student;
++--------+---------+--------+---------------------+-------+
+| number | name    | sex    | birthday            | class |
++--------+---------+--------+---------------------+-------+
+| 101    | mohan   | female | 1998-05-31 00:00:00 | 133   |
+| 102    | xiaocui | female | 1990-01-14 00:00:00 | 146   |
+| 104    | yuhan   | female | 1995-08-11 00:00:00 | 123   |
+| 106    | goudan  | male   | 1992-06-18 00:00:00 | 144   |
+| 108    | Allon   | male   | 1995-03-13 00:00:00 | 143   |
++--------+---------+--------+---------------------+-------+
+5 rows in set (0.04 sec)
+  
+#year()
+mysql&gt; select year(birthday) from student;
++----------------+
+| year(birthday) |
++----------------+
+|           1998 |
+|           1990 |
+|           1995 |
+|           1992 |
+|           1995 |
++----------------+
+5 rows in set (0.00 sec)
+  
+#month()
+mysql&gt; select month(birthday) from student;
++-----------------+
+| month(birthday) |
++-----------------+
+|               5 |
+|               1 |
+|               8 |
+|               6 |
+|               3 |
++-----------------+
+5 rows in set (0.01 sec)
+  
+#day()
+mysql&gt; select day(birthday) from student;
++---------------+
+| day(birthday) |
++---------------+
+|            31 |
+|            14 |
+|            11 |
+|            18 |
+|            13 |
++---------------+
+5 rows in set (0.00 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>查询某一教师的课程的学生成绩，多层嵌套子查询。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mysql&gt; select * from score
+    -&gt; where score.course_number = (select number from course where teacher_id = (select number from teacher where teacher.name=&#39;TeacherA&#39;));
++----------------+---------------+--------+
+| student_number | course_number | degree |
++----------------+---------------+--------+
+| 101            | 3-105         |     79 |
+| 102            | 3-105         |     99 |
+| 104            | 3-105         |     89 |
+| 106            | 3-105         |     79 |
+| 108            | 3-105         |     99 |
++----------------+---------------+--------+
+5 rows in set (0.02 sec)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="参考">参考</h3>
+<p><a href="https://www.bilibili.com/video/BV1Vt411z7wy?p=19">一天学会MySQL</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-09-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mysql/">Mysql</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/sql%E7%BB%8F%E5%85%B8%E7%BB%83%E4%B9%A0%E9%A2%98/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">SQL经典练习题</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/mysql%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F/">
+            <span class="next-text nav-default">Mysql数据表三大范式</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/mysql%E6%9F%A5%E8%AF%A2%E7%BB%83%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Mysql查询练习">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
