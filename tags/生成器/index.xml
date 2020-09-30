@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生成器 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E7%94%9F%E6%88%90%E5%99%A8/</link>
+    <description>Recent content in 生成器 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Sep 2020 12:46:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E7%94%9F%E6%88%90%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python中的迭代器与生成器</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/</link>
+      <pubDate>Mon, 14 Sep 2020 12:46:43 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/</guid>
+      <description>###迭代器(iterator) 迭代器的一般介绍 迭代是Python最强大的功能之一，是访问集合元素的一种方式。 迭代器是一个可以记住遍历的位置</description>
+    </item>
+    
+  </channel>
+</rss>

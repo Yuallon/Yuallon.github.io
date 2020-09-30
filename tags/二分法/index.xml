@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>二分法 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</link>
+    <description>Recent content in 二分法 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Sep 2020 23:03:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>二分法算法</title>
+      <link>https://yuallon.github.io/post/%E4%BA%8C%E5%88%86%E6%B3%95%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 14 Sep 2020 23:03:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E4%BA%8C%E5%88%86%E6%B3%95%E7%AE%97%E6%B3%95/</guid>
+      <description>前言 二分法（Binary search）对于一个 已排序的对象 是一个很有效的算法。二分法可以理解为一个 动态的夹逼行为（夹逼定理） ，通过重复选择列</description>
+    </item>
+    
+  </channel>
+</rss>
