@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Cookie技术 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="Cookie技术产生的原因 我们知道，HTTP协议是客户端和服务器之间的通信协议。客户端向服务器端发送请求，服务器端向客户端产生响应回复来达成" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/cookie%E6%8A%80%E6%9C%AF/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Cookie技术" />
+<meta property="og:description" content="Cookie技术产生的原因 我们知道，HTTP协议是客户端和服务器之间的通信协议。客户端向服务器端发送请求，服务器端向客户端产生响应回复来达成" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/cookie%E6%8A%80%E6%9C%AF/" />
+<meta property="article:published_time" content="2020-10-01T20:36:24+08:00" />
+<meta property="article:modified_time" content="2020-10-01T20:36:24+08:00" />
+<meta itemprop="name" content="Cookie技术">
+<meta itemprop="description" content="Cookie技术产生的原因 我们知道，HTTP协议是客户端和服务器之间的通信协议。客户端向服务器端发送请求，服务器端向客户端产生响应回复来达成">
+<meta itemprop="datePublished" content="2020-10-01T20:36:24&#43;08:00" />
+<meta itemprop="dateModified" content="2020-10-01T20:36:24&#43;08:00" />
+<meta itemprop="wordCount" content="936">
+
+
+
+<meta itemprop="keywords" content="cookie," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cookie技术"/>
+<meta name="twitter:description" content="Cookie技术产生的原因 我们知道，HTTP协议是客户端和服务器之间的通信协议。客户端向服务器端发送请求，服务器端向客户端产生响应回复来达成"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Cookie技术</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-10-01 </span>
+        <div class="post-category">
+            <a href="/categories/http/"> HTTP </a>
+            </div>
+          <span class="more-meta"> 936 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cookie技术产生的原因">Cookie技术产生的原因</a></li>
+        <li><a href="#为cookie服务的首部字段">为Cookie服务的首部字段</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="cookie技术产生的原因">Cookie技术产生的原因</h3>
+<p>我们知道，HTTP协议是客户端和服务器之间的通信协议。客户端向服务器端发送请求，服务器端向客户端产生响应回复来达成通信。</p>
+<p>**HTTP是一种不保存状态，即无状态（stateless）协议。**也就是说，它不对之前发生过的请求和响应的状态进行管理。</p>
+<p>可是随着Web的不断发展，因HTTP无状态而导致某些情况下通信变得棘手很多。比如，我们登录到一家购物网站，当我们点开某一款商品跳到该网站的其它页面后，我们还希望自己的账号处于登陆状态，这时候又该怎么办呢？</p>
+<p>为了解决HTTP协议无状态的特征，于是引入了Cookie技术。通过在HTTP通信里面添加Cookie信息，就可以管理客户端状态了。</p>
+<p><strong>Cookie技术通过在请求和响应报文中写入Cookie信息来控制客户端的状态。</strong></p>
+<p><img src="/cookie1.jpg" alt="cookie3"></p>
+<p><img src="/cookie1.jpg" alt="cookie3"></p>
+<ul>
+<li>客户端第一次向服务器发送请求时，服务器端会自动生成cookie信息，用来记录是哪一个客户端发送过来的；然后把cookie信息添加到响应报文中；客户端保留cookie信息。</li>
+<li>第二次发送（带有cookie信息）的请求，服务器检查cookie，识别出是哪一台客户端的发来的。</li>
+</ul>
+<p><strong>HTTP请求报文和响应报文内容如下：</strong></p>
+<p><img src="/cookie3.jpg" alt="cookie3"></p>
+<h3 id="为cookie服务的首部字段">为Cookie服务的首部字段</h3>
+<p>本节对目前使用最为广泛普及的标准进行说明。</p>
+<table>
+<thead>
+<tr>
+<th align="center">首部字段名</th>
+<th>说明</th>
+<th>首部类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Set-Cookie</strong></td>
+<td>开始状态管理所使用的Cookie信息</td>
+<td>响应首部字段</td>
+</tr>
+<tr>
+<td align="center"><strong>Cookie</strong></td>
+<td>服务器接受到的Cookie信息</td>
+<td>请求首部字段</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-cookie">Set-Cookie</h4>
+<p><img src="/set-cookie.jpg" alt="set-cookie"></p>
+<p>当服务器准备开始管理客户端的状态时，会事先告知各种信息。</p>
+<p><strong>Set-Cookie字段的属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>NAME=VALUE</strong></td>
+<td>赋予Cookie的名称和其值（必须项）</td>
+</tr>
+<tr>
+<td align="center"><strong>expirse=DATE</strong></td>
+<td>Cookie的有效期（若不明确指定则默认为浏览器关闭前为止）</td>
+</tr>
+<tr>
+<td align="center"><strong>path=PATH</strong></td>
+<td>将服务器上的文件目录作为Cookie的适用对象（若不指定则默认为文档所在的文件目录）</td>
+</tr>
+<tr>
+<td align="center"><strong>domain=域名</strong></td>
+<td>作为Cookie适用的对象的域名（若不指定则默认为创建Cookie的服务器的域名）</td>
+</tr>
+<tr>
+<td align="center"><strong>Secure</strong></td>
+<td>仅在HTTPS安全通信时才会发送Cookie</td>
+</tr>
+<tr>
+<td align="center"><strong>HttpOnly</strong></td>
+<td>加以限制，使Cookie不能被JavaScript脚本访问</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cookie">Cookie</h4>
+<p><img src="/cookie4.jpg" alt="cookie4"></p>
+<p>首部字段Cookie会告知服务器，当客户端想获得HTTP状态管理支持时，就会在请求中包含从服务器接收到的Cookie。收到多个Cookie时，同样可以以多个Cookie形式发送。</p>
+<h3 id="参考">参考</h3>
+<p>图解HTTP-日-上野·宣著</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-10-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/cookie/">cookie</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E4%BB%80%E4%B9%88%E6%98%AFjson/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">什么是JSON</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E9%81%A5%E4%B9%A1%E5%AF%84%E6%80%9D/">
+            <span class="next-text nav-default">遥乡寄思</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/cookie%E6%8A%80%E6%9C%AF/" class="leancloud_visitors" data-flag-title="Cookie技术">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -6,10 +6,37 @@
     <description>Recent content in Python on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Sep 2020 12:49:55 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2020 13:07:03 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python判断一个点是否在四边形内部</title>
+      <link>https://yuallon.github.io/post/python%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E7%82%B9%E6%98%AF%E5%90%A6%E5%9C%A8%E5%9B%9B%E8%BE%B9%E5%BD%A2%E5%86%85%E9%83%A8/</link>
+      <pubDate>Sun, 11 Oct 2020 13:07:03 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E7%82%B9%E6%98%AF%E5%90%A6%E5%9C%A8%E5%9B%9B%E8%BE%B9%E5%BD%A2%E5%86%85%E9%83%A8/</guid>
+      <description>###前言 前两天面试一家游戏公司，其中面试的第一题描述如下： 题目：给定二维坐标ABCD四个点，和点E，判断点E与四边形ABCD的位置关系。 解</description>
+    </item>
+    
+    <item>
+      <title>Python字符串格式化</title>
+      <link>https://yuallon.github.io/post/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
+      <pubDate>Mon, 05 Oct 2020 02:30:56 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
+      <description>例子1： 1 2 age = 7 print(&amp;#34;我今年%d岁了!&amp;#34; %age) 例子2： 1 2 3 4 5 6 7 8 &amp;gt;&amp;gt;&amp;gt;&amp;#34;{} {}&amp;#34;.format(&amp;#34;hello&amp;#34;, &amp;#34;world&amp;#34;) # 不设置指定位置，按默认顺序 &amp;#39;hello world&amp;#39; &amp;gt;&amp;gt;&amp;gt; &amp;#34;{0} {1}&amp;#34;.format(&amp;#34;hello&amp;#34;, &amp;#34;world&amp;#34;) #</description>
+    </item>
+    
+    <item>
+      <title>Python异常处理</title>
+      <link>https://yuallon.github.io/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 05 Oct 2020 00:56:21 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
+      <description>前言 最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。 比如：我在爬取某个图片</description>
+    </item>
     
     <item>
       <title>Python中的类语法</title>

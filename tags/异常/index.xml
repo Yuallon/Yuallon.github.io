@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>异常 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E5%BC%82%E5%B8%B8/</link>
+    <description>Recent content in 异常 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Oct 2020 00:56:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E5%BC%82%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python异常处理</title>
+      <link>https://yuallon.github.io/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 05 Oct 2020 00:56:21 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
+      <description>前言 最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。 比如：我在爬取某个图片</description>
+    </item>
+    
+  </channel>
+</rss>

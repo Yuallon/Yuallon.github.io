@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Python异常处理 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="前言 最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。 比如：我在爬取某个图片" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Python异常处理" />
+<meta property="og:description" content="前言 最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。 比如：我在爬取某个图片" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" />
+<meta property="article:published_time" content="2020-10-05T00:56:21+08:00" />
+<meta property="article:modified_time" content="2020-10-05T00:56:21+08:00" />
+<meta itemprop="name" content="Python异常处理">
+<meta itemprop="description" content="前言 最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。 比如：我在爬取某个图片">
+<meta itemprop="datePublished" content="2020-10-05T00:56:21&#43;08:00" />
+<meta itemprop="dateModified" content="2020-10-05T00:56:21&#43;08:00" />
+<meta itemprop="wordCount" content="2042">
+
+
+
+<meta itemprop="keywords" content="异常," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python异常处理"/>
+<meta name="twitter:description" content="前言 最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。 比如：我在爬取某个图片"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Python异常处理</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-10-05 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+          <span class="more-meta"> 2042 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#什么是异常">什么是异常？</a></li>
+        <li><a href="#异常处理">异常处理</a></li>
+        <li><a href="#获取特定异常的有关信息">获取特定异常的有关信息</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="前言">前言</h3>
+<p>最近一致在学习爬虫，当提取网页信息进行处理时，可能会出现意想不到的报错，导致程序代码卡住，从而影响爬虫程序的执行。</p>
+<p>比如：我在爬取某个图片网上的数据时，我要存储照片的相关信息，这个时候就不能保证每一个照片的信息都是完整的，对于那些信息不完整的照片，如果按照完整的信息方式去提取，就会抛出 <strong>IndexError</strong> 之类的报错（索引值超出范围）。</p>
+<p>一般情况下数据不完整的信息是占少数的，当程序执行中抛出异常时，我们是希望程序可以继续执行而不被卡住。这便是这篇笔记写作的目的。</p>
+<h3 id="什么是异常">什么是异常？</h3>
+<p>当我们编写程序时，难免会遇到错误，有的是疏忽造成的语法错误，有的是程序内部的逻辑错误，或者是程序运行时与系统的规则冲突造成的错误。</p>
+<p>总的来讲，错误类型可以分为：<strong>语法错误</strong> 和 <strong>执行错误</strong>。</p>
+<p>无论是那种错误类型，当Python无法正常执行程序时，就会触发异常，如果我们对异常不做任何处理，程序就会终止运行。</p>
+<h3 id="异常处理">异常处理</h3>
+<p>我们知道，如果对程序出现的异常不做任何处理，则程序就会终止运行，为了避免程序的中断，我们就要捕获出现的异常并处理它。</p>
+<p>在Python中，使用 <strong>try/except</strong> 语句块捕获并处理异常。基本语法结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">try:
+    可能产生异常的代码块
+except [ (Error1, Error2, ... ) [as e] ]:
+    处理异常的代码块1
+except [ (Error3, Error4, ... ) [as e] ]:
+    处理异常的代码块2
+except  [Exception]:
+    处理其它异常
+else:
+    &lt;语句&gt; #如果没有发生异常，else可有可无
+</code></pre></td></tr></table>
+</div>
+</div><p>该格式中，[] 括起来的部分可以使用，也可以省略。其中各部分的含义如下：</p>
+<ul>
+<li>(Error1, Error2,&hellip;) 、(Error3, Error4,&hellip;)：其中，Error1、Error2、Error3 和 Error4 都是具体的异常类型。显然，一个 except 块可以同时处理多种异常。</li>
+<li>[as e]：作为可选参数，表示给异常类型起一个别名 e，这样做的好处是方便在 except 块中调用异常类型（后续会用到）。</li>
+<li>[Exception]：作为可选参数，可以代指程序可能发生的所有异常情况，其通常用在最后一个 except 块。</li>
+</ul>
+<p>从<code>try except</code>的基本语法格式可以看出，try 块有且仅有一个，但 except 代码块可以有多个，且每个 except 块都可以同时处理多种异常。</p>
+<p>注：当程序发生不同的意外情况时，会对应特定的异常类型，Python 解释器会根据该异常类型选择对应的 except 块来处理该异常。</p>
+<p><strong>try/except执行流程:</strong></p>
+<ol>
+<li>开始一个try语句后，python就在当前程序的上下文中作标记，这样当异常出现时就可以回到这里，try子句先执行，接下来会发生什么依赖于执行时是否出现异常。</li>
+<li>如果执行过程中出现异常，系统会自动生成一个异常类型，并将该异常提交给 Python 解释器，此过程称为 <strong>捕获异常</strong>。</li>
+<li>当 Python 解释器收到异常对象时，会寻找能处理该异常对象的 except 块，如果找到合适的 except 块，则把该异常对象交给该 except 块处理，这个过程被称为 <strong>处理异常</strong>。</li>
+<li>如果 Python 解释器找不到处理异常的 except 块，则程序运行终止，Python 解释器也将退出。</li>
+<li>如果在try子句执行时没有发生异常，python将执行else语句后的语句（如果有else的话），然后控制流通过整个try语句。</li>
+</ol>
+<p><strong>例子1：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">try:
+    a = int(input(&#34;输入被除数：&#34;))
+    b = int(input(&#34;输入除数：&#34;))
+    c = a / b
+    print(&#34;您输入的两个数相除的结果是：&#34;, c )
+except (ValueError, ArithmeticError):
+    print(&#34;程序发生了数字格式异常、算术异常之一&#34;)
+except :
+    print(&#34;未知异常&#34;)
+print(&#34;程序继续运行&#34;)
+
+###输出结果
+输入被除数：a
+程序发生了数字格式异常、算术异常之一
+程序继续运行
+</code></pre></td></tr></table>
+</div>
+</div><p>上面程序中，第 6 行代码使用了（ValueError, ArithmeticError）来指定所捕获的异常类型，这就表明该 except 块可以同时捕获这 2 种类型的异常；第 8 行代码只有 except 关键字，并未指定具体要捕获的异常类型，这种省略异常类的 except 语句也是合法的，它表示可捕获所有类型的异常，一般会作为异常捕获的最后一个 except 块。</p>
+<h3 id="获取特定异常的有关信息">获取特定异常的有关信息</h3>
+<p>除此之外，由于 try 块中引发了异常，并被 except 块成功捕获，因此程序才可以继续执行，才有了“程序继续运行”的输出结果。</p>
+<p>我们已经可以捕获程序中可能发生的异常，并对其进行处理。但是，由于一个 except 可以同时处理多个异常，那么我们如何知道当前处理的到底是哪种异常呢？</p>
+<p>其实，每种异常类型都提供了如下几个属性和方法，通过调用它们，就可以获取当前处理异常类型的相关信息：</p>
+<ul>
+<li>args：返回异常的错误编号和描述字符串；</li>
+<li>str(e)：返回异常信息，但不包括异常信息的类型；</li>
+<li>repr(e)：返回较全的异常信息，包括异常信息的类型。</li>
+</ul>
+<p><strong>例子2:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">try:
+    1/0
+except Exception as e:
+    # 访问异常的错误编号和详细信息
+    print(e.args)
+    print(str(e))
+    print(repr(e)) #repr() 函数将对象转化为供解释器读取的形式。
+    
+###输出结果
+(&#39;division by zero&#39;,)
+division by zero
+ZeroDivisionError(&#39;division by zero&#39;,)
+</code></pre></td></tr></table>
+</div>
+</div><p>从程序中可以看到，由于 except 可能接收多种异常，因此为了操作方便，可以直接给每一个进入到此 except 块的异常，起一个统一的别名 e。</p>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="http://c.biancheng.net/view/4599.html">Python try except异常处理详解（入门必读）</a></li>
+<li><a href="https://www.w3cschool.cn/python/python-exceptions.html">Python 异常处理</a></li>
+<li><a href="http://c.biancheng.net/view/4593.html">什么是异常处理，Python常见异常类型（入门必读）</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-10-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%BC%82%E5%B8%B8/">异常</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python字符串格式化</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python%E4%B8%AD%E6%89%A7%E8%A1%8Cjs%E4%BB%A3%E7%A0%81%E4%B9%8Bexecjs/">
+            <span class="next-text nav-default">Python中执行JS代码之ExecJS</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="leancloud_visitors" data-flag-title="Python异常处理">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

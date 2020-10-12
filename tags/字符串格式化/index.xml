@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字符串格式化 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
+    <description>Recent content in 字符串格式化 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Oct 2020 02:30:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python字符串格式化</title>
+      <link>https://yuallon.github.io/post/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
+      <pubDate>Mon, 05 Oct 2020 02:30:56 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
+      <description>例子1： 1 2 age = 7 print(&amp;#34;我今年%d岁了!&amp;#34; %age) 例子2： 1 2 3 4 5 6 7 8 &amp;gt;&amp;gt;&amp;gt;&amp;#34;{} {}&amp;#34;.format(&amp;#34;hello&amp;#34;, &amp;#34;world&amp;#34;) # 不设置指定位置，按默认顺序 &amp;#39;hello world&amp;#39; &amp;gt;&amp;gt;&amp;gt; &amp;#34;{0} {1}&amp;#34;.format(&amp;#34;hello&amp;#34;, &amp;#34;world&amp;#34;) #</description>
+    </item>
+    
+  </channel>
+</rss>

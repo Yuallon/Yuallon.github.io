@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ExecJS on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/execjs/</link>
+    <description>Recent content in ExecJS on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Oct 2020 23:18:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/execjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python中执行JS代码之ExecJS</title>
+      <link>https://yuallon.github.io/post/python%E4%B8%AD%E6%89%A7%E8%A1%8Cjs%E4%BB%A3%E7%A0%81%E4%B9%8Bexecjs/</link>
+      <pubDate>Sat, 03 Oct 2020 23:18:14 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/python%E4%B8%AD%E6%89%A7%E8%A1%8Cjs%E4%BB%A3%E7%A0%81%E4%B9%8Bexecjs/</guid>
+      <description>JS代码编写 js代码执行之前需要在运行时环境下编译才能执行 由于该js环境下没有window、document对象，也没有console面板，</description>
+    </item>
+    
+  </channel>
+</rss>

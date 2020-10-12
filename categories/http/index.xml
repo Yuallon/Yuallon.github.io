@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/categories/http/</link>
+    <description>Recent content in HTTP on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Oct 2020 20:36:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/categories/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cookie技术</title>
+      <link>https://yuallon.github.io/post/cookie%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Thu, 01 Oct 2020 20:36:24 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/cookie%E6%8A%80%E6%9C%AF/</guid>
+      <description>Cookie技术产生的原因 我们知道，HTTP协议是客户端和服务器之间的通信协议。客户端向服务器端发送请求，服务器端向客户端产生响应回复来达成</description>
+    </item>
+    
+  </channel>
+</rss>
