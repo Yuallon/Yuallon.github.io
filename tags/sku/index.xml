@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SKU on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/sku/</link>
+    <description>Recent content in SKU on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Oct 2020 15:43:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/sku/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>最小存货单位SKU</title>
+      <link>https://yuallon.github.io/post/%E6%9C%80%E5%B0%8F%E5%AD%98%E8%B4%A7%E5%8D%95%E4%BD%8Dsku/</link>
+      <pubDate>Thu, 22 Oct 2020 15:43:57 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%9C%80%E5%B0%8F%E5%AD%98%E8%B4%A7%E5%8D%95%E4%BD%8Dsku/</guid>
+      <description>什么是最小存货单位？ 最小存货单位又称最小库存管理单元，是一个会计学名词，定义为库存管理中的最小可用单元，例如：纺织品中一个SKU通常表示规格</description>
+    </item>
+    
+  </channel>
+</rss>

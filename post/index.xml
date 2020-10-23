@@ -6,10 +6,136 @@
     <description>Recent content in Posts on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 18 Oct 2020 20:36:46 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2020 17:16:47 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>小王子翻译  第一章</title>
+      <link>https://yuallon.github.io/post/%E5%B0%8F%E7%8E%8B%E5%AD%90%E7%BF%BB%E8%AF%91-%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
+      <pubDate>Fri, 23 Oct 2020 17:16:47 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%B0%8F%E7%8E%8B%E5%AD%90%E7%BF%BB%E8%AF%91-%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
+      <description>Chapter 1 Once, when I was six years old, I saw a marvellous picture in a book on rainforests called Real-Life Stories. It depicted a boa constrictor swallowing a wild animal. Here is a replica of the picture. In the book it said: &amp;ldquo;Boa constrictors swallow their prey whole, without chewing. Afterwards they can&amp;rsquo;t move, and sleep for six months digesting.&amp;rdquo; I thought a great deal about going-on in the</description>
+    </item>
+    
+    <item>
+      <title>Timeit测量小块代码用时</title>
+      <link>https://yuallon.github.io/post/timeit%E6%B5%8B%E9%87%8F%E5%B0%8F%E5%9D%97%E4%BB%A3%E7%A0%81%E7%94%A8%E6%97%B6/</link>
+      <pubDate>Fri, 23 Oct 2020 13:52:07 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/timeit%E6%B5%8B%E9%87%8F%E5%B0%8F%E5%9D%97%E4%BB%A3%E7%A0%81%E7%94%A8%E6%97%B6/</guid>
+      <description>timeit — Measure execution time of small code snippets Python timeit模块的使用实践</description>
+    </item>
+    
+    <item>
+      <title>As I Began to Love Myself</title>
+      <link>https://yuallon.github.io/post/as-i-began-to-love-myself/</link>
+      <pubDate>Thu, 22 Oct 2020 22:47:27 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/as-i-began-to-love-myself/</guid>
+      <description>By Charlie Chaplin As I began to love myself I found that anguish and emotional suffering are only warning signs that I was living against my own truth. Today, I know, this is &amp;ldquo;AUTHENTICITY&amp;quot;. As I began to love myself I understand how much it can offend somebody if I try to force my desires on this person, even though I knew the time was not right and the person</description>
+    </item>
+    
+    <item>
+      <title>数据仓库技术ETL</title>
+      <link>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%8A%80%E6%9C%AFetl/</link>
+      <pubDate>Thu, 22 Oct 2020 15:48:17 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%8A%80%E6%9C%AFetl/</guid>
+      <description>什么是数据预处理？ 数据预处理 是指在主要的处理以前对数据进行的一些处理。数据预处理的主要过程有 数据抽取(Extraction)、数据转换(Tr</description>
+    </item>
+    
+    <item>
+      <title>最小存货单位SKU</title>
+      <link>https://yuallon.github.io/post/%E6%9C%80%E5%B0%8F%E5%AD%98%E8%B4%A7%E5%8D%95%E4%BD%8Dsku/</link>
+      <pubDate>Thu, 22 Oct 2020 15:43:57 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%9C%80%E5%B0%8F%E5%AD%98%E8%B4%A7%E5%8D%95%E4%BD%8Dsku/</guid>
+      <description>什么是最小存货单位？ 最小存货单位又称最小库存管理单元，是一个会计学名词，定义为库存管理中的最小可用单元，例如：纺织品中一个SKU通常表示规格</description>
+    </item>
+    
+    <item>
+      <title>产品需求文档PRD</title>
+      <link>https://yuallon.github.io/post/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3prd/</link>
+      <pubDate>Thu, 22 Oct 2020 14:40:55 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3prd/</guid>
+      <description>什么是产品需求文档？ 产品需求文档（Product Requirement Document PRD） 是将 商业需求文档（Business Requirement Document BRD）和 市场需求文档（Market Requirement Document M</description>
+    </item>
+    
+    <item>
+      <title>SQL语句  CAST函数</title>
+      <link>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-cast%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 22 Oct 2020 00:23:13 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-cast%E5%87%BD%E6%95%B0/</guid>
+      <description>MySQL CAST函数</description>
+    </item>
+    
+    <item>
+      <title>SQL语句  连表查询</title>
+      <link>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Thu, 22 Oct 2020 00:21:06 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2/</guid>
+      <description>Mysql联合查询UNION和UNION ALL的使用介绍</description>
+    </item>
+    
+    <item>
+      <title>SQL语句  截取字符串substr</title>
+      <link>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2substr/</link>
+      <pubDate>Wed, 21 Oct 2020 23:21:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2substr/</guid>
+      <description>MySQL SUBSTR()函数 用来截取字符串 syntax：substr(string, start, length) string：目标字符串 start：起始位置（MySQL中</description>
+    </item>
+    
+    <item>
+      <title>SQL语句  字符串拼接concat</title>
+      <link>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5concat/</link>
+      <pubDate>Wed, 21 Oct 2020 23:20:47 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5concat/</guid>
+      <description>MySQL中concat函数 CONCAT(str1, str2, &amp;hellip;) 返回结果为连接str1，str2，···，等参数 产生的字符串。 注： 参数可以为1个或多个 如果任何一个参数为N</description>
+    </item>
+    
+    <item>
+      <title>SQL语句--表复制</title>
+      <link>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E8%A1%A8%E5%A4%8D%E5%88%B6/</link>
+      <pubDate>Wed, 21 Oct 2020 22:49:38 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E8%A1%A8%E5%A4%8D%E5%88%B6/</guid>
+      <description>MySQL表格复制4中类别 仅复制表结构 1 2 CREATE TABLE copy1 LIKE table1 ; 注：从LIKE关键字就可以明白，复制表结构。 复制表结构+数据 1 2 3 CREATE TABLE copy2 SELECT * FROM table2 ; 注：</description>
+    </item>
+    
+    <item>
+      <title>SQL语句--注释方式</title>
+      <link>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E6%B3%A8%E9%87%8A%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Wed, 21 Oct 2020 22:49:09 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E8%AF%AD%E5%8F%A5-%E6%B3%A8%E9%87%8A%E6%96%B9%E5%BC%8F/</guid>
+      <description>MySQL有三种注释方式： 单行注释 1 MySQL syntax #this is a comment 单行注释 1 MySQL syntax -- this is a comment 注意 &amp;ndash; 后面要有空格 多行注释 1 2 3 4 5 MySQL syntax /* this is a comment 1 this is a comment 2 */ MySQL syntax</description>
+    </item>
+    
+    <item>
+      <title>奇点云DataSimba数据中台数据流树状图</title>
+      <link>https://yuallon.github.io/post/%E5%A5%87%E7%82%B9%E4%BA%91datasimba%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%95%B0%E6%8D%AE%E6%B5%81%E6%A0%91%E7%8A%B6%E5%9B%BE/</link>
+      <pubDate>Tue, 20 Oct 2020 23:54:26 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%A5%87%E7%82%B9%E4%BA%91datasimba%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%95%B0%E6%8D%AE%E6%B5%81%E6%A0%91%E7%8A%B6%E5%9B%BE/</guid>
+      <description>上周五入职到现在，在这段实习期间主要是熟悉 奇点云DataSimba数据中台。有关数据中台的解释很多，依我目前的理解，我认为数据中台就是介于数</description>
+    </item>
+    
+    <item>
+      <title>数据仓库学习--数仓分层</title>
+      <link>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E5%AD%A6%E4%B9%A0-%E6%95%B0%E4%BB%93%E5%88%86%E5%B1%82/</link>
+      <pubDate>Tue, 20 Oct 2020 19:03:26 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E5%AD%A6%E4%B9%A0-%E6%95%B0%E4%BB%93%E5%88%86%E5%B1%82/</guid>
+      <description>数据层次的划分 ODS（Operational Data Store）：存放未经过处理的原始数据至数据仓库系统，结构上与源系统保持一致，是数据仓库的数据</description>
+    </item>
     
     <item>
       <title>小王子翻译  前言</title>

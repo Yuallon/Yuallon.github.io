@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PRD on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/prd/</link>
+    <description>Recent content in PRD on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Oct 2020 14:40:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/prd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>产品需求文档PRD</title>
+      <link>https://yuallon.github.io/post/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3prd/</link>
+      <pubDate>Thu, 22 Oct 2020 14:40:55 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3prd/</guid>
+      <description>什么是产品需求文档？ 产品需求文档（Product Requirement Document PRD） 是将 商业需求文档（Business Requirement Document BRD）和 市场需求文档（Market Requirement Document M</description>
+    </item>
+    
+  </channel>
+</rss>

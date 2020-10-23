@@ -6,10 +6,19 @@
     <description>Recent content in 日记 on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Oct 2020 23:36:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 23:54:26 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>奇点云DataSimba数据中台数据流树状图</title>
+      <link>https://yuallon.github.io/post/%E5%A5%87%E7%82%B9%E4%BA%91datasimba%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%95%B0%E6%8D%AE%E6%B5%81%E6%A0%91%E7%8A%B6%E5%9B%BE/</link>
+      <pubDate>Tue, 20 Oct 2020 23:54:26 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%A5%87%E7%82%B9%E4%BA%91datasimba%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%95%B0%E6%8D%AE%E6%B5%81%E6%A0%91%E7%8A%B6%E5%9B%BE/</guid>
+      <description>上周五入职到现在，在这段实习期间主要是熟悉 奇点云DataSimba数据中台。有关数据中台的解释很多，依我目前的理解，我认为数据中台就是介于数</description>
+    </item>
     
     <item>
       <title>租房</title>
