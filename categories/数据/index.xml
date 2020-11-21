@@ -6,10 +6,19 @@
     <description>Recent content in 数据 on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Oct 2020 15:48:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 23:17:23 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/%E6%95%B0%E6%8D%AE/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数据探查</title>
+      <link>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5/</link>
+      <pubDate>Sat, 31 Oct 2020 13:56:14 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5/</guid>
+      <description>前言 最近参与了公司一个项目，前面我根据MRD将B端标签的PRD写完了。后面便给我安排了《B端标签PRD数据探查》。这是我第一次接触到 数据探查</description>
+    </item>
     
     <item>
       <title>数据仓库学习--数仓分层</title>

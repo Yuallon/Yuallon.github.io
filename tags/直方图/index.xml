@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>直方图 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
+    <description>Recent content in 直方图 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 25 Oct 2020 15:42:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E7%9B%B4%E6%96%B9%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Matplotlib散点图</title>
+      <link>https://yuallon.github.io/post/matplotlib%E6%95%A3%E7%82%B9%E5%9B%BE/</link>
+      <pubDate>Sun, 25 Oct 2020 15:42:50 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/matplotlib%E6%95%A3%E7%82%B9%E5%9B%BE/</guid>
+      <description>使用 plt.scatter() 函数来绘制散点图 例子1: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 import numpy as np import matplotlib.pyplot as plt N = 50 x = np.linspace(0., 10., N) y = np.sin(x)**2 + np.cos(x) plt.figure() plt.scatter(x, y) plt.axis(&amp;#39;equal&amp;#39;) plt.xlabel(r&amp;#39;$x$ (rad)&amp;#39;) plt.ylabel(r&amp;#39;$sin^2(x)$&amp;#39;) plt.scatter(x, y, s = 15, label = r&amp;#39;$y = sin^2(x) +</description>
+    </item>
+    
+  </channel>
+</rss>

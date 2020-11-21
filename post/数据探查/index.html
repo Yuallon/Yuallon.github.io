@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>数据探查 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="前言 最近参与了公司一个项目，前面我根据MRD将B端标签的PRD写完了。后面便给我安排了《B端标签PRD数据探查》。这是我第一次接触到 数据探查" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="数据探查" />
+<meta property="og:description" content="前言 最近参与了公司一个项目，前面我根据MRD将B端标签的PRD写完了。后面便给我安排了《B端标签PRD数据探查》。这是我第一次接触到 数据探查" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5/" />
+<meta property="article:published_time" content="2020-10-31T13:56:14+08:00" />
+<meta property="article:modified_time" content="2020-10-31T13:56:14+08:00" />
+<meta itemprop="name" content="数据探查">
+<meta itemprop="description" content="前言 最近参与了公司一个项目，前面我根据MRD将B端标签的PRD写完了。后面便给我安排了《B端标签PRD数据探查》。这是我第一次接触到 数据探查">
+<meta itemprop="datePublished" content="2020-10-31T13:56:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-10-31T13:56:14&#43;08:00" />
+<meta itemprop="wordCount" content="806">
+
+
+
+<meta itemprop="keywords" content="数据仓库," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="数据探查"/>
+<meta name="twitter:description" content="前言 最近参与了公司一个项目，前面我根据MRD将B端标签的PRD写完了。后面便给我安排了《B端标签PRD数据探查》。这是我第一次接触到 数据探查"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">数据探查</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-10-31 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE/"> 数据 </a>
+            </div>
+          <span class="more-meta"> 806 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#数据探查">数据探查</a></li>
+        <li><a href="#参考资料">参考资料</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="前言">前言</h3>
+<p>最近参与了公司一个项目，前面我根据MRD将B端标签的PRD写完了。后面便给我安排了《B端标签PRD数据探查》。这是我第一次接触到 <strong>数据探查</strong> 概念。俗话讲，开始工作之前，一定要弄明白工作目标是什么。在做数据探查任务之前，下面总结一下自己在网上学习到有关 <em>数据探查</em> 的知识总结。</p>
+<h3 id="数据探查">数据探查</h3>
+<p>实习已经有半个月了，期间一直在学习数据仓库相关的知识。首先我们根据从客户数据库拉取到的数据，来构建客户的数据仓库。在数据仓库分层模型中，ODS层也称为原始层，这里面的数据是拉取到最原始的数据表，没有经过任何的处理。ODS层完成后，便开始了真正意义上的数据开发流程。在进行数据开发之前，最重要的事情是要保证 <strong>数据的可靠性</strong>，它是决定最后数据正确性非常关键的一步。</p>
+<p>经过跟同事沟通之后，我要做的事情就是保证后面根据B端标签来拉取数据时，保证我拉取到的数据是标签定义的数据结果，比如交易总金额这个标签（标签定义是：过去3年客户实际购买商品总金额）。为了保证拉取的结果，就要检查</p>
+<ul>
+<li>需要那些表做关联（检查表是否存在）</li>
+<li>需要表中那些关键字（检查关键字是否存在）</li>
+<li>关键字对应的数据列是否正常（检查数据是否重复、缺失、异常等）</li>
+<li>如果上面3步没问题，是否可以拉取数据成功（给出SQL语句）</li>
+</ul>
+<p>完成上述过程，一定要写一个总结性文档。这个文档用来解释：</p>
+<ol>
+<li>业务需求是什么？</li>
+<li>拉取到的数据是什么数据？</li>
+<li>拉取到的数据生成逻辑是什么？是否正确（是否满足业务需求）</li>
+<li>拉取过程中用到了那些表，那些标签，数据结构、数据质量如何？</li>
+</ol>
+<p>总的来讲，数据探查是在拿到业务需求后（根据PRD标签拉取数据），首先从数据整体上确定实现业务需求要用那些数据源，即：数据源 &ndash; &gt; 数据表 &ndash;&gt; 表中结构 &ndash;&gt; 表内数据质量；以及表与表之间的逻辑关系，都要在文档里面阐述清楚。</p>
+<p>这样根据数据探查的文档，才能方便后期数据清洗工作。</p>
+<h3 id="参考资料">参考资料</h3>
+<ul>
+<li><a href="https://blog.csdn.net/li2008xue2008ling/article/details/8245359">数据探查（一）</a></li>
+<li><a href="https://blog.csdn.net/li2008xue2008ling/article/details/8624232?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-10.channel_param">数据探查（二）</a></li>
+<li><a href="https://blog.csdn.net/li2008xue2008ling/article/details/36002421?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160404075619215646530972%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160404075619215646530972&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v28-1-36002421.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5&amp;spm=1018.2118.3001.4449">数据探查（三）</a></li>
+<li><a href="https://blog.csdn.net/weixin_42893650/article/details/90640708?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160404075619215646530972%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160404075619215646530972&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v28-2-90640708.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5&amp;spm=1018.2118.3001.4449">【数据治理】数据质量探查</a></li>
+<li><a href="https://blog.csdn.net/shunqixing/article/details/80045189?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">实战&lt;1&gt;:数据质量检查</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-10-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">数据仓库</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92docplex%E4%B9%A0%E9%A2%98-%E7%9B%92%E5%AD%90%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">线性规划DOCPLEX习题  盒子分配问题</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E6%B7%B7%E5%90%88%E6%95%B4%E6%95%B0%E8%A7%84%E5%88%92milp%E7%AE%97%E6%B3%95/">
+            <span class="next-text nav-default">混合整数规划MILP算法</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E6%95%B0%E6%8D%AE%E6%8E%A2%E6%9F%A5/" class="leancloud_visitors" data-flag-title="数据探查">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">雨</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

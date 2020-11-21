@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>异常值 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E5%BC%82%E5%B8%B8%E5%80%BC/</link>
+    <description>Recent content in 异常值 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Nov 2020 09:55:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E5%BC%82%E5%B8%B8%E5%80%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何剔除异常值</title>
+      <link>https://yuallon.github.io/post/%E5%A6%82%E4%BD%95%E5%89%94%E9%99%A4%E5%BC%82%E5%B8%B8%E5%80%BC/</link>
+      <pubDate>Mon, 09 Nov 2020 09:55:54 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%A6%82%E4%BD%95%E5%89%94%E9%99%A4%E5%BC%82%E5%B8%B8%E5%80%BC/</guid>
+      <description>异常值 异常值outlier：一组测定值中与平均值的偏差超过两倍标准差的测定值。与平均值的偏差超过三倍标准差的测定值，称为高度异常的异常值。在</description>
+    </item>
+    
+  </channel>
+</rss>

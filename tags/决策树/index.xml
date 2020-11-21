@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>决策树 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E5%86%B3%E7%AD%96%E6%A0%91/</link>
+    <description>Recent content in 决策树 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 06 Nov 2020 22:38:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E5%86%B3%E7%AD%96%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>决策树介绍</title>
+      <link>https://yuallon.github.io/post/%E5%86%B3%E7%AD%96%E6%A0%91%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Fri, 06 Nov 2020 22:38:56 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%86%B3%E7%AD%96%E6%A0%91%E4%BB%8B%E7%BB%8D/</guid>
+      <description>###决策树介绍 决策树类似于流程图，其内部每个节点代表一个属性上的“测试”，每一个分支代表测试的结果，每个叶节点代表一个分类。从根节点到叶节</description>
+    </item>
+    
+  </channel>
+</rss>

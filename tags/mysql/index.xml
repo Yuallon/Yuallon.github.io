@@ -6,10 +6,46 @@
     <description>Recent content in Mysql on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Oct 2020 00:21:06 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2020 23:17:23 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL中REGEX操作符介绍</title>
+      <link>https://yuallon.github.io/post/mysql%E4%B8%ADregex%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Tue, 03 Nov 2020 23:17:23 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/mysql%E4%B8%ADregex%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BB%8B%E7%BB%8D/</guid>
+      <description>正则表达式简介 正则表达式是描述搜索模式的特殊字符串。 它是一个强大的工具，为您提供一种简洁灵活的方法来识别基于模式的文本字符，例如字符，单词等</description>
+    </item>
+    
+    <item>
+      <title>MySQL中LIKE操作符介绍</title>
+      <link>https://yuallon.github.io/post/mysql%E4%B8%ADlike%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Tue, 03 Nov 2020 23:10:46 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/mysql%E4%B8%ADlike%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BB%8B%E7%BB%8D/</guid>
+      <description>LIKE操作符通常用于基于模式查询选择数据。以正确的方式使用LIKE运算符对于增加/减少查询性能至关重要。 LIKE操作符允许您根据指定的模式</description>
+    </item>
+    
+    <item>
+      <title>MySQL中IN操作符介绍</title>
+      <link>https://yuallon.github.io/post/mysql%E4%B8%ADin%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Tue, 03 Nov 2020 23:03:19 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/mysql%E4%B8%ADin%E6%93%8D%E4%BD%9C%E7%AC%A6%E4%BB%8B%E7%BB%8D/</guid>
+      <description>IN运算符允许您确定指定的值是否与列表中的值或子查询中的任何值匹配。 下面说明了IN操作符的语法 1 2 3 4 5 6 SELECT column1,column2,... FROM table_name WHERE (expr|column_1) IN (&amp;#39;value1&amp;#39;,&amp;#39;value2&amp;#39;,...); 下面我们更详细的来</description>
+    </item>
+    
+    <item>
+      <title>SQL查找第N高的数据</title>
+      <link>https://yuallon.github.io/post/sql%E6%9F%A5%E6%89%BE%E7%AC%ACn%E9%AB%98%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Mon, 02 Nov 2020 23:38:10 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/sql%E6%9F%A5%E6%89%BE%E7%AC%ACn%E9%AB%98%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <description>题目 编写一个 SQL 查询，获取 Employee 表中第 n 高的薪水（Salary）。 1 2 3 4 5 6 7 +----+--------+ | Id | Salary | +----+--------+ | 1 | 100 | | 2 | 200 | | 3 | 300 | +----+--------+ 例如上述 Employee 表，n = 2</description>
+    </item>
     
     <item>
       <title>SQL语句  连表查询</title>
