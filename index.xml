@@ -6,10 +6,28 @@
     <description>Recent content on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2020 01:38:11 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Nov 2020 20:28:27 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>机器学习之基本概念</title>
+      <link>https://yuallon.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Sun, 29 Nov 2020 20:28:27 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>###基本术语 根据训练数据是否拥有标记信息，机器学习任务可大致划分为两大类：监督学习（supervised learning） 和 无监督学习（u</description>
+    </item>
+    
+    <item>
+      <title>机器学习之集成方法</title>
+      <link>https://yuallon.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%9B%86%E6%88%90%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 24 Nov 2020 19:10:44 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%9B%86%E6%88%90%E6%96%B9%E6%B3%95/</guid>
+      <description>单个学习器很容易会出现过拟合 or 欠拟合问题。为了提高学习器的泛化能力，可以采取一定的策略构建并结合多个学习器来完成学习任务 &amp;ndash; 集成学习（Ense</description>
+    </item>
     
     <item>
       <title>家</title>

@@ -110,5 +110,6 @@ dt_fig = tree.plot_tree(clf,
 - [决策树 – Decision tree](https://easyai.tech/ai-definition/decision-tree/#:~:text=决策树的优缺点%201%20决策树易于理解和解释，可以可视化分析，容易提取出规则；%202%20可以同时处理标称型和数值型数据；%203,比较适合处理有缺失属性的样本；%204%20能够处理不相关的特征；%205%20测试数据集时，运行速度比较快；%206%20在相对短的时间内能够对大型数据源做出可行且效果良好的结果%E3%80%82)
 - [**What is a Decision Tree Diagram**](https://www.lucidchart.com/pages/decision-tree)
 - [Visualize a Decision Tree in 4 Ways with Scikit-Learn and Python](https://mljar.com/blog/visualize-decision-tree/)
-- 
+
+  
 
