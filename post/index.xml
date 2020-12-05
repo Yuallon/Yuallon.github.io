@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 29 Nov 2020 20:28:27 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Dec 2020 20:13:59 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数据开发实习周记20201205</title>
+      <link>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E5%AE%9E%E4%B9%A0%E5%91%A8%E8%AE%B020201205/</link>
+      <pubDate>Sat, 05 Dec 2020 20:13:59 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E5%AE%9E%E4%B9%A0%E5%91%A8%E8%AE%B020201205/</guid>
+      <description>##20201130-1205 实习内容 说起来，这周实习的内容有点乱、杂。 在这里简单说一下GJ项目，这个项目主要包括3个部分： B端标签（我负责）：如总利润、TOP产品、客</description>
+    </item>
     
     <item>
       <title>机器学习之基本概念</title>
