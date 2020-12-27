@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/api/</link>
+    <description>Recent content in API on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Dec 2020 22:40:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>应用程序接口API</title>
+      <link>https://yuallon.github.io/post/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3api/</link>
+      <pubDate>Tue, 22 Dec 2020 22:40:45 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3api/</guid>
+      <description>在实习过程中，经常会听见 API接口开发 之类的字眼。所以一直有两个问题： 什么是API？ 如何做API开发？ Application Programming Interface(API) 从英文字面意思来看，API就是应</description>
+    </item>
+    
+  </channel>
+</rss>

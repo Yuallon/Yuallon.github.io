@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>范数 on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/%E8%8C%83%E6%95%B0/</link>
+    <description>Recent content in 范数 on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Dec 2020 22:44:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/%E8%8C%83%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>范数概念</title>
+      <link>https://yuallon.github.io/post/%E8%8C%83%E6%95%B0%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Tue, 22 Dec 2020 22:44:31 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E8%8C%83%E6%95%B0%E6%A6%82%E5%BF%B5/</guid>
+      <description>最近在学习机器学习课程中，会遇到一些算法是基于 距离概念 来做分类or回归问题。在数学中，这类函数被称为 范数。 ###范数概念 范数是数学中一种基本</description>
+    </item>
+    
+  </channel>
+</rss>

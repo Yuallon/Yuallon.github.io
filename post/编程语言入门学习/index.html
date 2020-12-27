@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>编程语言入门学习 - 愿我如星君如月，夜夜流光相皎洁！</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="雨" /><meta name="description" content="###前言 大家好，我是小雨。今天想跟大家分享一些我对 python学习 过程中的思考。其实这个想法在半年前我就有了。最近有个小伙伴私信我，说是对" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.0 with theme even" />
+
+
+<link rel="canonical" href="https://yuallon.github.io/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="编程语言入门学习" />
+<meta property="og:description" content="###前言 大家好，我是小雨。今天想跟大家分享一些我对 python学习 过程中的思考。其实这个想法在半年前我就有了。最近有个小伙伴私信我，说是对" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yuallon.github.io/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-12-19T23:24:38+08:00" />
+<meta property="article:modified_time" content="2020-12-19T23:24:38+08:00" />
+<meta itemprop="name" content="编程语言入门学习">
+<meta itemprop="description" content="###前言 大家好，我是小雨。今天想跟大家分享一些我对 python学习 过程中的思考。其实这个想法在半年前我就有了。最近有个小伙伴私信我，说是对">
+<meta itemprop="datePublished" content="2020-12-19T23:24:38&#43;08:00" />
+<meta itemprop="dateModified" content="2020-12-19T23:24:38&#43;08:00" />
+<meta itemprop="wordCount" content="3003">
+
+
+
+<meta itemprop="keywords" content="python入门," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="编程语言入门学习"/>
+<meta name="twitter:description" content="###前言 大家好，我是小雨。今天想跟大家分享一些我对 python学习 过程中的思考。其实这个想法在半年前我就有了。最近有个小伙伴私信我，说是对"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">雨</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">雨</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">编程语言入门学习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-12-19 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> Python </a>
+            </div>
+          <span class="more-meta"> 3003 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#函数概念">函数概念</a></li>
+        <li><a href="#学会寻求帮助">学会寻求帮助</a></li>
+        <li><a href="#编程入门">编程入门</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>###前言</p>
+<p>大家好，我是小雨。今天想跟大家分享一些我对 <strong>python学习</strong> 过程中的思考。其实这个想法在半年前我就有了。最近有个小伙伴私信我，说是对 <strong>机器学习</strong> 很感兴趣，但是只有一点点的编程基础。所以在看一些机器学习视频中，<strong>由于看不懂演示代码，而觉得机器学习入门很难</strong> 或者 <strong>由于看不懂演示代码，而觉得编程学习很难</strong>。</p>
+<p><strong>就像学车，不能因为对车体结构不了解，而觉得自己不能开车。</strong></p>
+<p>而今天我录制这个视频的目的就是想试着回答 <strong>编程学习很难吗？</strong> 这个问题。先说一下我个人情况：</p>
+<ol>
+<li>我学的是物理类-天文学专业</li>
+<li>2018年因为科研需求开始接触编程，接触python</li>
+<li>我的python学习主要是自学（看视频+看书）。今年疫情期间花了200块钱报了一个python基础班，为了是跟着别人梳理一下自己的学习内容（两个星期的网上课程）</li>
+</ol>
+<p>总的来讲，我开始学习python编程并没有比任何对编程感兴趣的同学有起点优势，下面是我这两年的学习感悟总结，希望对想学编程语言的小伙伴有所启发。</p>
+<h4 id="hello-world">HELLO WORLD！</h4>
+<p>如果我们决定要学一门编程语言，我们最渴望的就是能在网上找到学习资料or学习视频。刚好B站也有很多 <strong>python入门</strong> 相关的教程。而这些教程最大的特点之一就是：<strong>让我们在python环境中输入「print(&ldquo;hello, world!&quot;)」</strong> 来一次所谓的python入门学习初体验。如果我们运行成功，比较虎的老师会说 <strong>恭喜你已经学会了python</strong>，就像赵本山对做脑筋急转弯的范伟说 <strong>恭喜你，你都会抢答了</strong> 那种既视感。</p>
+<p>可我并没有丝毫的成就感，相反会跟小品中的范伟一样懵圈。</p>
+<p>学习一门语言之前，输入 <strong>print(&ldquo;hello, world!&quot;)</strong> 真的有助于我们学习编程语言吗？至少对我而言，我除了懵圈、疑惑之外，没有任何有促进我学习编程语言。而且，正是这种初始的疑惑，会让我在后续的学习中，因为没有得到解答而开始怀疑我是否学会了python这门语言。</p>
+<p>注：我这里指的解答不是指为什么输入 <strong>print(&ldquo;hello, world!&quot;)</strong>，点击 <strong>运行</strong>，就出现了 <strong>&ldquo;hello, world!&quot;</strong>。</p>
+<h3 id="函数概念">函数概念</h3>
+<p>这篇总结虽然是基于我学习python语言，我觉得也会对学习其他编程语言（C，Java等）有启发。所以我变大言不惭地用 <strong>编程语言入门</strong> 这个标题。</p>
+<p>在进行下面的讲述前，我默认看这个视频的小伙伴满足一下几点：</p>
+<ul>
+<li>具备中学数学（初中）水平</li>
+<li>会使用浏览器，遇到问题有意识去寻求帮助</li>
+</ul>
+<h4 id="函数概念-1">函数概念</h4>
+<p>既然 <strong>print(&ldquo;hello, world!&quot;)</strong> 不是一个好的入门方式（对我而言，我只是觉得它只是一个展示方式，根本谈不上编程入门），那 <strong>什么才是学习编程的入门方式呢？</strong></p>
+<p>我个人觉得，如果想学习编程语言，一定要有 <strong>函数概念</strong>，而且要有 <strong>接受数学符号</strong> 的阅读习惯。</p>
+<p>#####函数表达式 $y=f(x)$</p>
+<p>函数是我们在中学时就接触到的一个概念，简单来讲 <strong>给定一个 $x$，$f(x)$ 输出一个对应的 $y$</strong>。</p>
+<p><img src="/function.jpg" alt="function"></p>
+<p>这个时候我们再看 <strong>print(&ldquo;hello, world!&quot;)</strong> 这段代码，是不是可以理解为 <strong>print()</strong> 本身就是一个函数而已（在python中，带有小括号的就是函数），而这个函数的作用就是你输入什么，它就会返回什么。【去网页运行一下】</p>
+<p>1 = 1</p>
+<p>x=1</p>
+<p>x=y=1</p>
+<h5 id="赋值号-">赋值号 =</h5>
+<p>我们再来审查一下函数表达式： <strong>$y=f(x)$</strong>，在数学上这个表达式读作：$y$ 等于 $f(x)$。</p>
+<ul>
+<li>如果 $f(x)=1$，则 $y=1$</li>
+<li>如果 $f(x)=1+x$，则 $y=1+x$</li>
+</ul>
+<p>也就是通过 <strong>等号=</strong> 作用，$f(x)$ 取什么，$y$ 也取相同结果。因此，我们可以将这个概念推广一下，使 <strong>=</strong> 不仅仅是书面上的相等，而是表示一种 <strong>赋予</strong> 行为（有点想武侠小说内功功法传递，或者理解为文件复制操作）。</p>
+<p><strong>X = Y</strong>：只要 Y 拥有任何属性，X都具有相同的属性（更严谨的数学表达：X，Y互为真子集）</p>
+<p>例如：Y表示一个旅馆，旅馆里面有编号为6个房间，编号为0-6。我们用 Y(0) 表示0号房间</p>
+<p><img src="/room_number.jpg" alt="room_number"></p>
+<p>有了上面的 <strong>赋予</strong> 操作， X(0)也表示0号房间。更专业地我们将这种赋予行为读作 <strong>赋值操作</strong>。</p>
+<h5 id="多项式函数-yfxa_0a_1xa_2x2">多项式函数 $Y=F(x)=a_0+a_1x+a_2x^2+&hellip;$</h5>
+<h5 id="yfxg_0xg_1x">$Y=F(x)=g_0(x)+g_1(x)+&hellip;$</h5>
+<p>有了上面的函数概念和赋值概念，我们应该很容易理解多项数函数表达式，它仅仅是多增加几项而已。在这里重点提到这个概念，是为了重点介绍一种表示方式。</p>
+<p>例子1：</p>
+<p><img src="/%E7%9B%B4%E7%BA%BF%E5%9B%BE.jpg" alt="直线图"></p>
+<p>如果我们要用多项式Y去表示上面的点，我们根据数据点的分布规律可以明显看出我们只需要<strong>$Y=F(x)=x$</strong>，即$a_1=1$，其他系数都为0。为了跟前面的母函数（数学上说法为函数空间）做为区别，我们可以用一下的表示方式 <strong>$Y.a_1=F(x).a_1=x$</strong>（编程语言中用的这种方式），如果你喜欢你也可以这样 **$Y_{a_1}=F(x)_{a_1}=x$**  或者 **$Y^{a_1}=F(x)^{a_1}=x$**。这些只不过用来表示我们取 $Y=F(x)=a_0+a_1x+a_2x^2+&hellip;$ 某一部分功能概念而已。</p>
+<p>例子2:</p>
+<p><img src="/%E4%BA%8C%E6%AC%A1%E6%9B%B2%E7%BA%BF.jpg" alt="二次曲线"></p>
+<p>根据前面的例子1，我们会很快写出来 <strong>$Y.a_2=F(x).a_2=x^2$</strong>，更为简略地可以写为 <strong>$Y.a_1$</strong>（前提你要知道Y的函数空间是什么，这样你读到这个表达式的时候才会知道具体含义）。</p>
+<h4 id="粉笔颜色">粉笔颜色</h4>
+<p>虽然上面我们描述了如何用函数去表示上面两组数据，但是为了真正得到上面两幅图，是不是需要用粉笔画出来呢？根据图1的颜色，我知道图1的画笔颜色是蓝色的（没有色盲）。然而小红同学可能画的图是图3</p>
+<p><img src="/%E7%BA%A2%E8%89%B2%E7%9B%B4%E7%BA%BF.jpg" alt="红色直线"></p>
+<p>为什么在这里要强调这个问题呢？如果对于一个人来讲，根据最后选出的函数方式，他/她可能随意用任何颜色的笔来做图。但是对于电脑（机器）而言，我们必须告诉它你想用什么颜色让电脑呈现出来，在这里我们可以把 <strong>颜色</strong> 看成函数呈现的未知数，是蓝色or红色，我们必须告诉电脑。那如何把这个参数写到表达式里面呢？</p>
+<p>$Y.a_1(x,color=red)$</p>
+<h5 id="总结">总结</h5>
+<p>现在我们重新复习了函数概念，并对函数表达式的写法有了初步的理解，目的是为了我们以后看见长长的表达式而不再困惑，它们仅仅是一种书写或者表示简单的方法罢了。</p>
+<h3 id="学会寻求帮助">学会寻求帮助</h3>
+<p>如果我问：牛顿第二定律的数学表达式是什么？</p>
+<p>你可能会很快的写出 <strong>$F=ma$</strong></p>
+<p>我如果再问：请写出泰勒展开公式</p>
+<p>你会说，我的数学水平只有中学水平，不知道你在说什么，那么现在就请用浏览器寻求<strong>泰勒展开式</strong>这几个字的含义吧。</p>
+<p>如果你说，泰勒展开公式我在高数课程中学过，但是具体的数学表达式我忘记了，那么你可以去翻开高数书找到它。</p>
+<p>无论你通过那种方式，你会给出下面这样的表达式：</p>
+<p>$f(x)=f(x_0)+f&rsquo;(x_0)(x-x_0)+\frac{f&rsquo;'(x_0)}{2!}(x-x_0)^2+···+\frac{f^n(x_0)}{n!}(x-x_0)^n+R_n(x)$</p>
+<p>在这里，我想强调的是 <strong>一定要学会寻求帮助</strong>。可这和学习编程有什么关系呢？</p>
+<p>无论是通过浏览器还是通过翻阅工具书来寻求答案，是不是可以看成 <strong>为了解决我提出的问题，你需要一种or多种工具帮忙，直白的讲你需要把高数书上已有的公式再次写到（导入）我的问卷上？</strong></p>
+<h3 id="编程入门">编程入门</h3>
+<p>前面说了那么多，终于到了编程。</p>
+<p>让我们先来看看Wikipedia给出的定义吧</p>
+<p>A <strong>programming language</strong> is a <strong>formal language</strong> comprising a <strong>set of instructions</strong> that produce various kinds of <strong>output</strong>.</p>
+<p><img src="/Users/huangyulong/Desktop/function.jpg" alt="function"></p>
+<p>是不是跟前面函数概念基本类似呢？所以我们可以把编程语言python看成不同功能函数的集合呢？</p>
+<p>让我们再来看这段代码 <strong>print(&ldquo;hello, world!&quot;)</strong>。是不是就可以把 <strong>&ldquo;hello,world&rdquo;</strong> 看成 X，把 <strong>print()</strong> 看成Y。这个函数的功能就是你对他输入 X 他就原封不动输出这个 X。</p>
+<p>有了这个概念，和前面的知识。我觉得我们可以阅读一段代码试一试，我这里的阅读不是让你理解其中的真正含义，而且 <strong>我们可以理解代码之间的逻辑结构</strong>。【阅读鸢尾花python代码】</p>
+<p>详见鸢尾花</p>
+<h4 id="出错情况">出错情况</h4>
+<p><strong>print(hello, world!)</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+&lt;ipython-input-16-de99187c7dfd&gt; in &lt;module&gt;
+----&gt; 1 print(hello,world)
+
+NameError: name &#39;hello&#39; is not defined
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你是这样输入的，而且报错了，那么恭喜你，开启学习python之旅吧。</p>
+<p>$G(x)=\frac{1}{x}$，就像这个函数一样，输入 $x=0$ 是没有意义的。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">雨</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-12-19
+        
+    </span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">Markdown</span>
+      <span class="item-content"><a class="link-to-markdown" href="https://yuallon.github.io/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/index.md" target="_blank">The Markdown version »</a></span>
+    </p>
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python%E5%85%A5%E9%97%A8/">python入门</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80ddl/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">数据定义语言DDL</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/%E8%8D%A7%E6%83%91%E5%AE%88%E5%BF%83/">
+            <span class="next-text nav-default">荧惑守心</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  <span id="/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="编程语言入门学习">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'AYiTgQH0RnfHqVrLjAG62gYk-gzGzoHsz',
+        appKey: 'OSOD331RCeVUC6vbdHNAO10t',
+        notify:  false ,
+        verify:  false ,
+        avatar:'monsterid',
+        placeholder: '愿我如星君如月，夜夜流光相皎洁！-- 宋·范成大',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1318368321@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/Yulong93522629" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/Yuallon" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.weibo.com/2115265873/profile?topnav=1&amp;wvr=6&amp;is_all=1" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/26331996" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://yuallon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>雨</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

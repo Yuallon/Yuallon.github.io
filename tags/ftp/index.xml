@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FTP on 愿我如星君如月，夜夜流光相皎洁！</title>
+    <link>https://yuallon.github.io/tags/ftp/</link>
+    <description>Recent content in FTP on 愿我如星君如月，夜夜流光相皎洁！</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Dec 2020 22:41:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuallon.github.io/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>文件传输协议FTP</title>
+      <link>https://yuallon.github.io/post/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AEftp/</link>
+      <pubDate>Tue, 22 Dec 2020 22:41:12 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AEftp/</guid>
+      <description>在实习过程中，奇点云公司为了获取到金佰利方的数据，采用了FTP文件系统做为金佰利数据的中转站。然后再讲FTP中的数据拉取到奇点云数据库中。在</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,19 @@
     <description>Recent content in 数据库 on 愿我如星君如月，夜夜流光相皎洁！</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2020 23:17:23 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Dec 2020 11:26:14 +0800</lastBuildDate>
     
 	<atom:link href="https://yuallon.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数据定义语言DDL</title>
+      <link>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80ddl/</link>
+      <pubDate>Mon, 21 Dec 2020 11:26:14 +0800</pubDate>
+      
+      <guid>https://yuallon.github.io/post/%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80ddl/</guid>
+      <description>数据定义语言DDL（Data Definition Language）是SQL语言集中负责数据结构定义与数据库对象定义的语言，由 CREATE、ALTER、DROP</description>
+    </item>
     
     <item>
       <title>MySQL中REGEX操作符介绍</title>
